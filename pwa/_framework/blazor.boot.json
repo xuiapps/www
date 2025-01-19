@@ -1,0 +1,48 @@
+{
+  "mainAssemblyName": "BlankApp.Browser",
+  "resources": {
+    "hash": "sha256-ty3YK4WGEpSkgq6Szed1Tgc7E8ZrYTjXuE4MX3xjDH4=",
+    "fingerprinting": {
+      "BlankApp.Browser.n9oo6rqk2j.wasm": "BlankApp.Browser.wasm",
+      "Core.6ma1i12s96.wasm": "Core.wasm",
+      "System.Console.nmalzfr3jy.wasm": "System.Console.wasm",
+      "System.Private.CoreLib.saw54jicgm.wasm": "System.Private.CoreLib.wasm",
+      "System.Runtime.InteropServices.JavaScript.kw6fp8cq7d.wasm": "System.Runtime.InteropServices.JavaScript.wasm",
+      "Xui.Runtime.Browser.v08hbj9l1u.wasm": "Xui.Runtime.Browser.wasm",
+      "dotnet.native.altfge1lqx.js": "dotnet.native.js",
+      "dotnet.native.dv2uwrn2oj.wasm": "dotnet.native.wasm",
+      "dotnet.js": "dotnet.js",
+      "dotnet.runtime.rubq0v1yiy.js": "dotnet.runtime.js",
+      "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
+      "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
+      "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat"
+    },
+    "jsModuleNative": {
+      "dotnet.native.altfge1lqx.js": "sha256-jpuyacmCZVoYjs3BygKf4V73tEuYcccEYF6oYgNHQLc="
+    },
+    "jsModuleRuntime": {
+      "dotnet.runtime.rubq0v1yiy.js": "sha256-gypqZnsxxUh4y4EJmawvOCaX4hoTaesVGwIgWXwZcNw="
+    },
+    "wasmNative": {
+      "dotnet.native.dv2uwrn2oj.wasm": "sha256-Ccbzy5tbvTEiAWWXlwUT6LcoKnn1rKLQmWOsnGZdxqM="
+    },
+    "icu": {
+      "icudt_CJK.tjcz0u77k5.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
+      "icudt_EFIGS.tptq2av103.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
+      "icudt_no_CJK.lfu7j35m59.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
+    },
+    "coreAssembly": {
+      "BlankApp.Browser.n9oo6rqk2j.wasm": "sha256-Jb0ii9vYWHD5blyvaaqdKqbD81OS6t6yPz/lkKDTU0I=",
+      "Core.6ma1i12s96.wasm": "sha256-/gGHcGu+PM4t5ADnWc8ilBVBEWQGaR2kxWjgfusSHj8=",
+      "System.Console.nmalzfr3jy.wasm": "sha256-8ceD9ZT1u8+Cb5T4OFsMypccTh5Nm6ruiMeXyB5pLSU=",
+      "System.Private.CoreLib.saw54jicgm.wasm": "sha256-PP04yP6F50X6t8kcAv2ErIowq4Fo5+y/yYFbDjdSqaU=",
+      "System.Runtime.InteropServices.JavaScript.kw6fp8cq7d.wasm": "sha256-TBYdT6MRTczxHnozZV0qecPzPzWdGiUSTanfm0knzk0=",
+      "Xui.Runtime.Browser.v08hbj9l1u.wasm": "sha256-IdbDdzQE366oDD0WlP5OnMm5f1unsW6/vH6nAoTc0Lw="
+    },
+    "assembly": {}
+  },
+  "cacheBootResources": true,
+  "debugLevel": 0,
+  "linkerEnabled": true,
+  "globalizationMode": "sharded"
+}

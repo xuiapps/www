@@ -1,0 +1,16 @@
+{
+    "lang": "en-us",
+    "name": "Xui BlankApp PWA Emulator",
+    "short_name": "Xui PWA Emu",
+    "start_url": "/demo/mobile",
+    "background_color": "#FFF",
+    "theme_color": "#8a05FF",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./logo.512x512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

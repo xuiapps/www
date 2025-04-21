@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct ExponentialDecayCurve | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct ExponentialDecayCurve | XUI APPS ">
+      
+      <meta name="description" content="Represents a motion curve where velocity decays exponentially over time. Commonly used to simulate fling or momentum-based motion with smooth slowdown.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Animation_ExponentialDecayCurve.md&amp;value=---%0Auid%3A%20Xui.Core.Animation.ExponentialDecayCurve%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.Animation.ExponentialDecayCurve">
+
+
+
+  <h1 id="Xui_Core_Animation_ExponentialDecayCurve" data-uid="Xui.Core.Animation.ExponentialDecayCurve" class="text-break">
+Struct ExponentialDecayCurve  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Animation.html">Animation</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a motion curve where velocity decays exponentially over time.
+Commonly used to simulate fling or momentum-based motion with smooth slowdown.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct ExponentialDecayCurve</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Animation_ExponentialDecayCurve__ctor_" data-uid="Xui.Core.Animation.ExponentialDecayCurve.#ctor*"></a>
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve__ctor_System_TimeSpan_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Double_" data-uid="Xui.Core.Animation.ExponentialDecayCurve.#ctor(System.TimeSpan,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Double)">
+  ExponentialDecayCurve(TimeSpan, NFloat, NFloat, NFloat, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes an exponential decay motion curve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExponentialDecayCurve(TimeSpan startTime, NFloat startPosition, NFloat initialVelocity, NFloat decayPerSecond, double velocityThreshold = 0.5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The time when motion begins.</p>
+</dd>
+    <dt><code>startPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The initial position.</p>
+</dd>
+    <dt><code>initialVelocity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The initial velocity (can be negative).</p>
+</dd>
+    <dt><code>decayPerSecond</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The decay multiplier per second. A value less than 1, closer to 0 = faster decay.
+Recommended value is <a class="xref" href="Xui.Core.Animation.ExponentialDecayCurve.html#Xui_Core_Animation_ExponentialDecayCurve_Normal">Normal</a>.</p>
+</dd>
+    <dt><code>velocityThreshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The velocity below which motion is considered stopped (defaults to 0.5).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_DecayPerSecond" data-uid="Xui.Core.Animation.ExponentialDecayCurve.DecayPerSecond">
+  DecayPerSecond
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The decay factor per second. Lower values result in faster deceleration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NFloat DecayPerSecond</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_EndTime" data-uid="Xui.Core.Animation.ExponentialDecayCurve.EndTime">
+  EndTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time at which the motion ends, determined by when velocity falls below a defined threshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan EndTime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_Fast" data-uid="Xui.Core.Animation.ExponentialDecayCurve.Fast">
+  Fast
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A faster decay factor (~0.99 per millisecond). Use for snappier motion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly NFloat Fast</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_InitialVelocity" data-uid="Xui.Core.Animation.ExponentialDecayCurve.InitialVelocity">
+  InitialVelocity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The initial velocity at the start of the curve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NFloat InitialVelocity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_Normal" data-uid="Xui.Core.Animation.ExponentialDecayCurve.Normal">
+  Normal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A typical decay factor (~0.998 per millisecond). Use for normal fling decay.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly NFloat Normal</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_StartPosition" data-uid="Xui.Core.Animation.ExponentialDecayCurve.StartPosition">
+  StartPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The starting position of the motion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NFloat StartPosition</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_StartTime" data-uid="Xui.Core.Animation.ExponentialDecayCurve.StartTime">
+  StartTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time at which the motion begins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan StartTime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xui_Core_Animation_ExponentialDecayCurve_FinalPosition_" data-uid="Xui.Core.Animation.ExponentialDecayCurve.FinalPosition*"></a>
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_FinalPosition" data-uid="Xui.Core.Animation.ExponentialDecayCurve.FinalPosition">
+  FinalPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the final position of the motion at <a class="xref" href="Xui.Core.Animation.ExponentialDecayCurve.html#Xui_Core_Animation_ExponentialDecayCurve_EndTime">EndTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat FinalPosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Animation_ExponentialDecayCurve_Item_" data-uid="Xui.Core.Animation.ExponentialDecayCurve.Item*"></a>
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_Item_System_TimeSpan_" data-uid="Xui.Core.Animation.ExponentialDecayCurve.Item(System.TimeSpan)">
+  this[TimeSpan]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evaluates the position of the motion at a given time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat this[TimeSpan time] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The time to evaluate.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The interpolated position at the specified time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_Animation_ExponentialDecayCurve_VelocityAt_" data-uid="Xui.Core.Animation.ExponentialDecayCurve.VelocityAt*"></a>
+
+  <h3 id="Xui_Core_Animation_ExponentialDecayCurve_VelocityAt_System_TimeSpan_" data-uid="Xui.Core.Animation.ExponentialDecayCurve.VelocityAt(System.TimeSpan)">
+  VelocityAt(TimeSpan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evaluates the velocity of the motion at a given time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat VelocityAt(TimeSpan time)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The time to evaluate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The current velocity at the specified time.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Animation/ExponentialDecayCurve.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

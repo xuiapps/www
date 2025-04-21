@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IPathDrawingContext | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IPathDrawingContext | XUI APPS ">
+      
+      <meta name="description" content="Defines methods for constructing and rendering 2D paths, following the HTML5 Canvas path API model. Reference: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Canvas_IPathDrawingContext.md&amp;value=---%0Auid%3A%20Xui.Core.Canvas.IPathDrawingContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.Canvas.IPathDrawingContext">
+
+
+
+  <h1 id="Xui_Core_Canvas_IPathDrawingContext" data-uid="Xui.Core.Canvas.IPathDrawingContext" class="text-break">
+Interface IPathDrawingContext  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Canvas.html">Canvas</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines methods for constructing and rendering 2D paths,
+following the HTML5 Canvas path API model.</p>
+<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPathDrawingContext</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xui.Core.Canvas.SVG.Extensions.html#Xui_Core_Canvas_SVG_Extensions_PathData_Xui_Core_Canvas_IPathDrawingContext_">Extensions.PathData(IPathDrawingContext)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_Arc_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Arc*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_Arc_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_Xui_Core_Canvas_Winding_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Arc(Xui.Core.Math2D.Point,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,Xui.Core.Canvas.Winding)">
+  Arc(Point, NFloat, NFloat, NFloat, Winding)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an arc to the path centered at the specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Arc(Point center, NFloat radius, NFloat startAngle, NFloat endAngle, Winding winding = Winding.ClockWise)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>Center of the arc.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Radius of the arc.</p>
+</dd>
+    <dt><code>startAngle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Start angle in radians.</p>
+</dd>
+    <dt><code>endAngle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>End angle in radians.</p>
+</dd>
+    <dt><code>winding</code> <a class="xref" href="Xui.Core.Canvas.Winding.html">Winding</a></dt>
+    <dd><p>Direction in which the arc is drawn.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_ArcTo_" data-uid="Xui.Core.Canvas.IPathDrawingContext.ArcTo*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_ArcTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Canvas.IPathDrawingContext.ArcTo(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point,System.Runtime.InteropServices.NFloat)">
+  ArcTo(Point, Point, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an arc to the path, connecting two tangents defined by control points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ArcTo(Point cp1, Point cp2, NFloat radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cp1</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>First control point.</p>
+</dd>
+    <dt><code>cp2</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>Second control point.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Arc radius.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_BeginPath_" data-uid="Xui.Core.Canvas.IPathDrawingContext.BeginPath*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_BeginPath" data-uid="Xui.Core.Canvas.IPathDrawingContext.BeginPath">
+  BeginPath()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Begins a new path by resetting the current path list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BeginPath()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_Clip_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Clip*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_Clip" data-uid="Xui.Core.Canvas.IPathDrawingContext.Clip">
+  Clip()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the current clipping region to the current path.
+Subsequent drawing operations are clipped to this region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Clip()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_ClosePath_" data-uid="Xui.Core.Canvas.IPathDrawingContext.ClosePath*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_ClosePath" data-uid="Xui.Core.Canvas.IPathDrawingContext.ClosePath">
+  ClosePath()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the current sub-path by drawing a straight line back to the start point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClosePath()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_CurveTo_" data-uid="Xui.Core.Canvas.IPathDrawingContext.CurveTo*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_CurveTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Canvas.IPathDrawingContext.CurveTo(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  CurveTo(Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a quadratic Bézier curve from the current point to the specified point,
+using the given control point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CurveTo(Point cp1, Point to)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cp1</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>Control point.</p>
+</dd>
+    <dt><code>to</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>End point.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_CurveTo_" data-uid="Xui.Core.Canvas.IPathDrawingContext.CurveTo*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_CurveTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Canvas.IPathDrawingContext.CurveTo(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  CurveTo(Point, Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a cubic Bézier curve from the current point to the specified point,
+using two control points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CurveTo(Point cp1, Point cp2, Point to)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cp1</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>First control point.</p>
+</dd>
+    <dt><code>cp2</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>Second control point.</p>
+</dd>
+    <dt><code>to</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>End point.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_Ellipse_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Ellipse*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_Ellipse_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_Xui_Core_Canvas_Winding_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Ellipse(Xui.Core.Math2D.Point,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,Xui.Core.Canvas.Winding)">
+  Ellipse(Point, NFloat, NFloat, NFloat, NFloat, NFloat, Winding)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an elliptical arc to the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Ellipse(Point center, NFloat radiusX, NFloat radiusY, NFloat rotation, NFloat startAngle, NFloat endAngle, Winding winding = Winding.ClockWise)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>center</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>Center of the ellipse.</p>
+</dd>
+    <dt><code>radiusX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Horizontal radius.</p>
+</dd>
+    <dt><code>radiusY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Vertical radius.</p>
+</dd>
+    <dt><code>rotation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Rotation of the ellipse, in radians.</p>
+</dd>
+    <dt><code>startAngle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Start angle in radians.</p>
+</dd>
+    <dt><code>endAngle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>End angle in radians.</p>
+</dd>
+    <dt><code>winding</code> <a class="xref" href="Xui.Core.Canvas.Winding.html">Winding</a></dt>
+    <dd><p>Direction in which the arc is drawn.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_Fill_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Fill*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_Fill_Xui_Core_Canvas_FillRule_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Fill(Xui.Core.Canvas.FillRule)">
+  Fill(FillRule)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fills the current path using the specified fill rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Fill(FillRule rule = FillRule.NonZero)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rule</code> <a class="xref" href="Xui.Core.Canvas.FillRule.html">FillRule</a></dt>
+    <dd><p>The fill rule to use (NonZero or EvenOdd).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_LineTo_" data-uid="Xui.Core.Canvas.IPathDrawingContext.LineTo*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_LineTo_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Canvas.IPathDrawingContext.LineTo(Xui.Core.Math2D.Point)">
+  LineTo(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Connects the current point to the specified point with a straight line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LineTo(Point to)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>to</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The endpoint of the line.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_MoveTo_" data-uid="Xui.Core.Canvas.IPathDrawingContext.MoveTo*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_MoveTo_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Canvas.IPathDrawingContext.MoveTo(Xui.Core.Math2D.Point)">
+  MoveTo(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves the current point to the specified location without drawing a line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MoveTo(Point to)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>to</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The destination point.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_Rect_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Rect*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_Rect_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Rect(Xui.Core.Math2D.Rect)">
+  Rect(Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a rectangle path to the current path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Rect(Rect rect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_RoundRect_" data-uid="Xui.Core.Canvas.IPathDrawingContext.RoundRect*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_RoundRect_Xui_Core_Math2D_Rect_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Canvas.IPathDrawingContext.RoundRect(Xui.Core.Math2D.Rect,System.Runtime.InteropServices.NFloat)">
+  RoundRect(Rect, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a rounded rectangle path with a uniform radius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RoundRect(Rect rect, NFloat radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to round.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>Corner radius.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_RoundRect_" data-uid="Xui.Core.Canvas.IPathDrawingContext.RoundRect*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_RoundRect_Xui_Core_Math2D_Rect_Xui_Core_Canvas_CornerRadius_" data-uid="Xui.Core.Canvas.IPathDrawingContext.RoundRect(Xui.Core.Math2D.Rect,Xui.Core.Canvas.CornerRadius)">
+  RoundRect(Rect, CornerRadius)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a rounded rectangle path with per-corner radii.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RoundRect(Rect rect, CornerRadius radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle to round.</p>
+</dd>
+    <dt><code>radius</code> <a class="xref" href="Xui.Core.Canvas.CornerRadius.html">CornerRadius</a></dt>
+    <dd><p>Corner radius object defining each corner.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_IPathDrawingContext_Stroke_" data-uid="Xui.Core.Canvas.IPathDrawingContext.Stroke*"></a>
+
+  <h3 id="Xui_Core_Canvas_IPathDrawingContext_Stroke" data-uid="Xui.Core.Canvas.IPathDrawingContext.Stroke">
+  Stroke()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Strokes the current path using the current stroke style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Stroke()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/IPathDrawingContext.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

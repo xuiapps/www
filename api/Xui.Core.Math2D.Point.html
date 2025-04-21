@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Point | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Point | XUI APPS ">
+      
+      <meta name="description" content="Represents a point in 2D space, defined by its  and  coordinates.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Math2D_Point.md&amp;value=---%0Auid%3A%20Xui.Core.Math2D.Point%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.Math2D.Point">
+
+
+
+  <h1 id="Xui_Core_Math2D_Point" data-uid="Xui.Core.Math2D.Point" class="text-break">
+Struct Point  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Math2D.html">Math2D</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a point in 2D space, defined by its <a class="xref" href="Xui.Core.Math2D.Point.html#Xui_Core_Math2D_Point_X">X</a> and <a class="xref" href="Xui.Core.Math2D.Point.html#Xui_Core_Math2D_Point_Y">Y</a> coordinates.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Point</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Point__ctor_" data-uid="Xui.Core.Math2D.Point.#ctor*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point__ctor_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Point.#ctor(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
+  Point(NFloat, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new point with the specified coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point(NFloat x, NFloat y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Xui_Core_Math2D_Point_One" data-uid="Xui.Core.Math2D.Point.One">
+  One
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A point at (1, 1), useful for normalized coordinates or vector math.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Point One</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Point_X" data-uid="Xui.Core.Math2D.Point.X">
+  X
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The X-coordinate of the point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Point_Y" data-uid="Xui.Core.Math2D.Point.Y">
+  Y
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Y-coordinate of the point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Point_Zero" data-uid="Xui.Core.Math2D.Point.Zero">
+  Zero
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A point at the origin (0, 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Point Zero</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Point_Distance_" data-uid="Xui.Core.Math2D.Point.Distance*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_Distance_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.Distance(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  Distance(Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Euclidean distance between two points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NFloat Distance(Point a, Point b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_Equals_" data-uid="Xui.Core.Math2D.Point.Equals*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_Equals_System_Object_" data-uid="Xui.Core.Math2D.Point.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_Equals_" data-uid="Xui.Core.Math2D.Point.Equals*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_Equals_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.Equals(Xui.Core.Math2D.Point)">
+  Equals(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if this point has the same coordinates as another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Point other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_GetHashCode_" data-uid="Xui.Core.Math2D.Point.GetHashCode*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_GetHashCode" data-uid="Xui.Core.Math2D.Point.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_Lerp_" data-uid="Xui.Core.Math2D.Point.Lerp*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_Lerp_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Point.Lerp(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point,System.Runtime.InteropServices.NFloat)">
+  Lerp(Point, Point, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Linearly interpolates between two points by <code class="paramref">step</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point Lerp(Point start, Point end, NFloat step)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The start point.</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The end point.</p>
+</dd>
+    <dt><code>step</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>A value from 0 to 1 indicating the interpolation position.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_SquaredDistance_" data-uid="Xui.Core.Math2D.Point.SquaredDistance*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_SquaredDistance_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.SquaredDistance(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  SquaredDistance(Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the squared Euclidean distance between two points (no square root).
+Useful for performance comparisons or ordering by proximity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NFloat SquaredDistance(Point a, Point b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_TaxicabDistance_" data-uid="Xui.Core.Math2D.Point.TaxicabDistance*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_TaxicabDistance_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.TaxicabDistance(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  TaxicabDistance(Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Manhattan (taxicab) distance between two points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NFloat TaxicabDistance(Point a, Point b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xui_Core_Math2D_Point_TaxicabDistance_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The sum of the absolute horizontal and vertical distances.
+Often used in grid-based or discrete movement systems.</p>
+</div>
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_ToString_" data-uid="Xui.Core.Math2D.Point.ToString*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_ToString" data-uid="Xui.Core.Math2D.Point.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Point_op_Addition_" data-uid="Xui.Core.Math2D.Point.op_Addition*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Addition_Xui_Core_Math2D_Point_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Point.op_Addition(Xui.Core.Math2D.Point,Xui.Core.Math2D.Vector)">
+  operator +(Point, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Offsets a point by a vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point operator +(Point lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_op_Equality_" data-uid="Xui.Core.Math2D.Point.op_Equality*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Equality_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.op_Equality(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  operator ==(Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two points have equal coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Point lhs, Point rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_op_Explicit_" data-uid="Xui.Core.Math2D.Point.op_Explicit*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Explicit_Xui_Core_Math2D_Vector__Xui_Core_Math2D_Point" data-uid="Xui.Core.Math2D.Point.op_Explicit(Xui.Core.Math2D.Vector)~Xui.Core.Math2D.Point">
+  explicit operator Point(Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Explicitly converts a vector to a point (drops directional semantics).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator Point(Vector vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_op_Implicit_" data-uid="Xui.Core.Math2D.Point.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Implicit_System_ValueTuple_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat___Xui_Core_Math2D_Point" data-uid="Xui.Core.Math2D.Point.op_Implicit(System.ValueTuple{System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat})~Xui.Core.Math2D.Point">
+  implicit operator Point((NFloat, NFloat))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a tuple to a point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Point((NFloat, NFloat) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.horizontal">horizontal</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.vertical">vertical</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_op_Inequality_" data-uid="Xui.Core.Math2D.Point.op_Inequality*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Inequality_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.op_Inequality(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  operator !=(Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two points differ in any coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Point lhs, Point rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_op_Subtraction_" data-uid="Xui.Core.Math2D.Point.op_Subtraction*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Subtraction_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.op_Subtraction(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point)">
+  operator -(Point, Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the vector difference from one point to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator -(Point lhs, Point rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_op_Subtraction_" data-uid="Xui.Core.Math2D.Point.op_Subtraction*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Subtraction_Xui_Core_Math2D_Point_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Point.op_Subtraction(Xui.Core.Math2D.Point,Xui.Core.Math2D.Vector)">
+  operator -(Point, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts a vector from a point, offsetting it in the opposite direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point operator -(Point lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Vector | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Vector | XUI APPS ">
+      
+      <meta name="description" content="Represents a 2D vector with X and Y components, commonly used for geometric operations, layout math, and movement in 2D space.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Math2D_Vector.md&amp;value=---%0Auid%3A%20Xui.Core.Math2D.Vector%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.Math2D.Vector">
+
+
+
+  <h1 id="Xui_Core_Math2D_Vector" data-uid="Xui.Core.Math2D.Vector" class="text-break">
+Struct Vector  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Math2D.html">Math2D</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a 2D vector with X and Y components, commonly used for geometric operations,
+layout math, and movement in 2D space.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Vector</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Vector__ctor_" data-uid="Xui.Core.Math2D.Vector.#ctor*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector__ctor_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Vector.#ctor(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
+  Vector(NFloat, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a> struct
+with the specified X and Y components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector(NFloat x, NFloat y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The horizontal component of the vector.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The vertical component of the vector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_Down" data-uid="Xui.Core.Math2D.Vector.Down">
+  Down
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A unit vector pointing down (0, 1).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector Down</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_Left" data-uid="Xui.Core.Math2D.Vector.Left">
+  Left
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A unit vector pointing left (-1, 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector Left</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_One" data-uid="Xui.Core.Math2D.Vector.One">
+  One
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A unit vector (1, 1).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector One</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_Right" data-uid="Xui.Core.Math2D.Vector.Right">
+  Right
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A unit vector pointing right (1, 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector Right</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_Up" data-uid="Xui.Core.Math2D.Vector.Up">
+  Up
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A unit vector pointing up (0, -1).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector Up</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_X" data-uid="Xui.Core.Math2D.Vector.X">
+  X
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The horizontal component of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_Y" data-uid="Xui.Core.Math2D.Vector.Y">
+  Y
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The vertical component of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Vector_Zero" data-uid="Xui.Core.Math2D.Vector.Zero">
+  Zero
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A zero vector (0, 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector Zero</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Vector_Magnitude_" data-uid="Xui.Core.Math2D.Vector.Magnitude*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Magnitude" data-uid="Xui.Core.Math2D.Vector.Magnitude">
+  Magnitude
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the magnitude (length) of the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Magnitude { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Normalized_" data-uid="Xui.Core.Math2D.Vector.Normalized*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Normalized" data-uid="Xui.Core.Math2D.Vector.Normalized">
+  Normalized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a normalized (unit length) version of this vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector Normalized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Vector_Angle_" data-uid="Xui.Core.Math2D.Vector.Angle*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Angle_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Vector.Angle(System.Runtime.InteropServices.NFloat)">
+  Angle(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a unit vector rotated clockwise from the upward direction (0, 1) by the given angle (in radians).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Angle(NFloat radians)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radians</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Angle_" data-uid="Xui.Core.Math2D.Vector.Angle*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Angle_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.Angle(Xui.Core.Math2D.Vector)">
+  Angle(Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the clockwise angle (in radians) from the upward direction (0, 1) to the given vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NFloat Angle(Vector v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Angle_" data-uid="Xui.Core.Math2D.Vector.Angle*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Angle_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.Angle(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  Angle(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the signed angle (in radians) from <code class="paramref">lhs</code> to <code class="paramref">rhs</code>, clockwise from upward.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NFloat Angle(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Clamp_" data-uid="Xui.Core.Math2D.Vector.Clamp*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Clamp_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Vector.Clamp(System.Runtime.InteropServices.NFloat)">
+  Clamp(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new vector with its magnitude limited to the specified maximum.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector Clamp(NFloat max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Cross_" data-uid="Xui.Core.Math2D.Vector.Cross*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Cross_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.Cross(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  Cross(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the 2D cross product (scalar) of two vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NFloat Cross(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Dot_" data-uid="Xui.Core.Math2D.Vector.Dot*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Dot_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.Dot(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  Dot(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the dot product of two vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NFloat Dot(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Equals_" data-uid="Xui.Core.Math2D.Vector.Equals*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Equals_System_Object_" data-uid="Xui.Core.Math2D.Vector.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Equals_" data-uid="Xui.Core.Math2D.Vector.Equals*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Equals_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.Equals(Xui.Core.Math2D.Vector)">
+  Equals(Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if this vector is equal to another vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Vector other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_GetHashCode_" data-uid="Xui.Core.Math2D.Vector.GetHashCode*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_GetHashCode" data-uid="Xui.Core.Math2D.Vector.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Lerp_" data-uid="Xui.Core.Math2D.Vector.Lerp*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Lerp_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Vector.Lerp(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector,System.Runtime.InteropServices.NFloat)">
+  Lerp(Vector, Vector, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Linearly interpolates between two vectors by <code class="paramref">step</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Lerp(Vector start, Vector end, NFloat step)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>end</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>step</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Project_" data-uid="Xui.Core.Math2D.Vector.Project*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Project_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.Project(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  Project(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Projects <code class="paramref">lhs</code> onto <code class="paramref">rhs</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector Project(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_Rotate_" data-uid="Xui.Core.Math2D.Vector.Rotate*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_Rotate_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Vector.Rotate(System.Runtime.InteropServices.NFloat)">
+  Rotate(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rotates the vector counterclockwise by the given angle (in degrees).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector Rotate(NFloat degrees)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>degrees</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_ToString_" data-uid="Xui.Core.Math2D.Vector.ToString*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_ToString" data-uid="Xui.Core.Math2D.Vector.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Addition_" data-uid="Xui.Core.Math2D.Vector.op_Addition*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Addition_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.op_Addition(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  operator +(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds two vectors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator +(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Division_" data-uid="Xui.Core.Math2D.Vector.op_Division*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Division_Xui_Core_Math2D_Vector_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Vector.op_Division(Xui.Core.Math2D.Vector,System.Runtime.InteropServices.NFloat)">
+  operator /(Vector, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides a vector by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator /(Vector v, NFloat f)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>f</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Equality_" data-uid="Xui.Core.Math2D.Vector.op_Equality*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Equality_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.op_Equality(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  operator ==(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if the two vectors have equal components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Implicit_" data-uid="Xui.Core.Math2D.Vector.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Implicit_System_ValueTuple_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat___Xui_Core_Math2D_Vector" data-uid="Xui.Core.Math2D.Vector.op_Implicit(System.ValueTuple{System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat})~Xui.Core.Math2D.Vector">
+  implicit operator Vector((NFloat, NFloat))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly converts a tuple to a <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Vector((NFloat, NFloat) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.horizontal">horizontal</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.vertical">vertical</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Implicit_" data-uid="Xui.Core.Math2D.Vector.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Implicit_Xui_Core_Math2D_Point__Xui_Core_Math2D_Vector" data-uid="Xui.Core.Math2D.Vector.op_Implicit(Xui.Core.Math2D.Point)~Xui.Core.Math2D.Vector">
+  implicit operator Vector(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly converts a <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a> to a <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Vector(Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Inequality_" data-uid="Xui.Core.Math2D.Vector.op_Inequality*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Inequality_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.op_Inequality(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  operator !=(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if any component of the two vectors is different.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Multiply_" data-uid="Xui.Core.Math2D.Vector.op_Multiply*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Multiply_System_Runtime_InteropServices_NFloat_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.op_Multiply(System.Runtime.InteropServices.NFloat,Xui.Core.Math2D.Vector)">
+  operator *(NFloat, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies a scalar by a vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator *(NFloat f, Vector v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>f</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Multiply_" data-uid="Xui.Core.Math2D.Vector.op_Multiply*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Multiply_Xui_Core_Math2D_Vector_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Vector.op_Multiply(Xui.Core.Math2D.Vector,System.Runtime.InteropServices.NFloat)">
+  operator *(Vector, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies a vector by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator *(Vector v, NFloat f)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>f</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Vector_op_Subtraction_" data-uid="Xui.Core.Math2D.Vector.op_Subtraction*"></a>
+
+  <h3 id="Xui_Core_Math2D_Vector_op_Subtraction_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.Vector.op_Subtraction(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Vector)">
+  operator -(Vector, Vector)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts one vector from another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector operator -(Vector lhs, Vector rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Vector.cs/#L7" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

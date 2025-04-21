@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Rect | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Rect | XUI APPS ">
+      
+      <meta name="description" content="Represents a rectangle in 2D space, defined by its origin (, ) and its dimensions (, ).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Math2D_Rect.md&amp;value=---%0Auid%3A%20Xui.Core.Math2D.Rect%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.Math2D.Rect">
+
+
+
+  <h1 id="Xui_Core_Math2D_Rect" data-uid="Xui.Core.Math2D.Rect" class="text-break">
+Struct Rect  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Math2D.html">Math2D</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a rectangle in 2D space, defined by its origin (<a class="xref" href="Xui.Core.Math2D.Rect.html#Xui_Core_Math2D_Rect_X">X</a>, <a class="xref" href="Xui.Core.Math2D.Rect.html#Xui_Core_Math2D_Rect_Y">Y</a>)
+and its dimensions (<a class="xref" href="Xui.Core.Math2D.Rect.html#Xui_Core_Math2D_Rect_Width">Width</a>, <a class="xref" href="Xui.Core.Math2D.Rect.html#Xui_Core_Math2D_Rect_Height">Height</a>).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Rect : INonEnumerableSet&lt;Point&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xui.Core.Set.INonEnumerableSet-1.html">INonEnumerableSet</a>&lt;<a class="xref" href="Xui.Core.Math2D.Point.html">Point</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Xui_Core_Math2D_Rect_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Unlike <a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a>, which represents edge thicknesses around a box,
+<a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a> defines a positioned, sized area used for layout and rendering.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Rect__ctor_" data-uid="Xui.Core.Math2D.Rect.#ctor*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect__ctor_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Rect.#ctor(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
+  Rect(NFloat, NFloat, NFloat, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a> from position and size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect(NFloat x, NFloat y, NFloat width, NFloat height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect__ctor_" data-uid="Xui.Core.Math2D.Rect.#ctor*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect__ctor_Xui_Core_Math2D_Point_Xui_Core_Math2D_Size_" data-uid="Xui.Core.Math2D.Rect.#ctor(Xui.Core.Math2D.Point,Xui.Core.Math2D.Size)">
+  Rect(Point, Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a> from a top-left point and a size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect(Point topLeft, Size size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topLeft</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>size</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect__ctor_" data-uid="Xui.Core.Math2D.Rect.#ctor*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect__ctor_Xui_Core_Math2D_Vector_Xui_Core_Math2D_Size_" data-uid="Xui.Core.Math2D.Rect.#ctor(Xui.Core.Math2D.Vector,Xui.Core.Math2D.Size)">
+  Rect(Vector, Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a> from a top-left vector and a size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect(Vector topLeft, Size size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topLeft</code> <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd></dd>
+    <dt><code>size</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Xui_Core_Math2D_Rect_Height" data-uid="Xui.Core.Math2D.Rect.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The height of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Height</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Rect_Width" data-uid="Xui.Core.Math2D.Rect.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The width of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Width</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Rect_X" data-uid="Xui.Core.Math2D.Rect.X">
+  X
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The X-coordinate of the rectangle’s top-left corner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Math2D_Rect_Y" data-uid="Xui.Core.Math2D.Rect.Y">
+  Y
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Y-coordinate of the rectangle’s top-left corner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Rect_Bottom_" data-uid="Xui.Core.Math2D.Rect.Bottom*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Bottom" data-uid="Xui.Core.Math2D.Rect.Bottom">
+  Bottom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Y-coordinate of the bottom edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Bottom { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_BottomLeft_" data-uid="Xui.Core.Math2D.Rect.BottomLeft*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_BottomLeft" data-uid="Xui.Core.Math2D.Rect.BottomLeft">
+  BottomLeft
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the bottom-left point of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point BottomLeft { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_BottomRight_" data-uid="Xui.Core.Math2D.Rect.BottomRight*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_BottomRight" data-uid="Xui.Core.Math2D.Rect.BottomRight">
+  BottomRight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the bottom-right point of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point BottomRight { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Center_" data-uid="Xui.Core.Math2D.Rect.Center*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Center" data-uid="Xui.Core.Math2D.Rect.Center">
+  Center
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the center point of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point Center { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Left_" data-uid="Xui.Core.Math2D.Rect.Left*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Left" data-uid="Xui.Core.Math2D.Rect.Left">
+  Left
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the X-coordinate of the left edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Left { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Right_" data-uid="Xui.Core.Math2D.Rect.Right*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Right" data-uid="Xui.Core.Math2D.Rect.Right">
+  Right
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the X-coordinate of the right edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Right { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Size_" data-uid="Xui.Core.Math2D.Rect.Size*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Size" data-uid="Xui.Core.Math2D.Rect.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the size of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Size Size { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Top_" data-uid="Xui.Core.Math2D.Rect.Top*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Top" data-uid="Xui.Core.Math2D.Rect.Top">
+  Top
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the Y-coordinate of the top edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Top { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_TopCenter_" data-uid="Xui.Core.Math2D.Rect.TopCenter*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_TopCenter" data-uid="Xui.Core.Math2D.Rect.TopCenter">
+  TopCenter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the top-center point of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point TopCenter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_TopLeft_" data-uid="Xui.Core.Math2D.Rect.TopLeft*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_TopLeft" data-uid="Xui.Core.Math2D.Rect.TopLeft">
+  TopLeft
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the top-left point of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point TopLeft { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_TopRight_" data-uid="Xui.Core.Math2D.Rect.TopRight*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_TopRight" data-uid="Xui.Core.Math2D.Rect.TopRight">
+  TopRight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the top-right point of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point TopRight { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Rect_Contains_" data-uid="Xui.Core.Math2D.Rect.Contains*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Contains_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Rect.Contains(Xui.Core.Math2D.Point)">
+  Contains(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if the specified <code class="paramref">point</code> lies within this rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Equals_" data-uid="Xui.Core.Math2D.Rect.Equals*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Equals_System_Object_" data-uid="Xui.Core.Math2D.Rect.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Equals_" data-uid="Xui.Core.Math2D.Rect.Equals*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Equals_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.Math2D.Rect.Equals(Xui.Core.Math2D.Rect)">
+  Equals(Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if this rectangle is equal to another rectangle in position and size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Rect other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Expand_" data-uid="Xui.Core.Math2D.Rect.Expand*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Expand_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Rect.Expand(System.Runtime.InteropServices.NFloat)">
+  Expand(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a rectangle expanded uniformly in all directions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect Expand(NFloat expand)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>expand</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Expand_" data-uid="Xui.Core.Math2D.Rect.Expand*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Expand_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Rect.Expand(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
+  Expand(NFloat, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a rectangle expanded horizontally and vertically by the specified amounts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect Expand(NFloat h, NFloat v)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>h</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_GetHashCode_" data-uid="Xui.Core.Math2D.Rect.GetHashCode*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_GetHashCode" data-uid="Xui.Core.Math2D.Rect.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_Inset_" data-uid="Xui.Core.Math2D.Rect.Inset*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_Inset_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Rect.Inset(System.Runtime.InteropServices.NFloat)">
+  Inset(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new rectangle that is inset by the same amount on all four sides.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect Inset(NFloat inset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_ToString_" data-uid="Xui.Core.Math2D.Rect.ToString*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_ToString" data-uid="Xui.Core.Math2D.Rect.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Xui_Core_Math2D_Rect_op_Addition_" data-uid="Xui.Core.Math2D.Rect.op_Addition*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_op_Addition_Xui_Core_Math2D_Rect_Xui_Core_Math2D_Frame_" data-uid="Xui.Core.Math2D.Rect.op_Addition(Xui.Core.Math2D.Rect,Xui.Core.Math2D.Frame)">
+  operator +(Rect, Frame)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a rectangle expanded outward by a <a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Rect operator +(Rect rect, Frame frame)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>frame</code> <a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_op_Equality_" data-uid="Xui.Core.Math2D.Rect.op_Equality*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_op_Equality_Xui_Core_Math2D_Rect_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.Math2D.Rect.op_Equality(Xui.Core.Math2D.Rect,Xui.Core.Math2D.Rect)">
+  operator ==(Rect, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if two rectangles are equal in position and size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Rect lhs, Rect rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_op_Implicit_" data-uid="Xui.Core.Math2D.Rect.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_op_Implicit_System_ValueTuple_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat___Xui_Core_Math2D_Rect" data-uid="Xui.Core.Math2D.Rect.op_Implicit(System.ValueTuple{System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat})~Xui.Core.Math2D.Rect">
+  implicit operator Rect((NFloat, NFloat, NFloat, NFloat))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicit conversion from a 4-tuple to a rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Rect((NFloat, NFloat, NFloat, NFloat) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.top">top</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.right">right</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.bottom">bottom</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat,system.runtime.interopservices.nfloat-.left">left</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_op_Inequality_" data-uid="Xui.Core.Math2D.Rect.op_Inequality*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_op_Inequality_Xui_Core_Math2D_Rect_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.Math2D.Rect.op_Inequality(Xui.Core.Math2D.Rect,Xui.Core.Math2D.Rect)">
+  operator !=(Rect, Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns true if any of the rectangle fields are different.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Rect lhs, Rect rhs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lhs</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>rhs</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Rect_op_Subtraction_" data-uid="Xui.Core.Math2D.Rect.op_Subtraction*"></a>
+
+  <h3 id="Xui_Core_Math2D_Rect_op_Subtraction_Xui_Core_Math2D_Rect_Xui_Core_Math2D_Frame_" data-uid="Xui.Core.Math2D.Rect.op_Subtraction(Xui.Core.Math2D.Rect,Xui.Core.Math2D.Frame)">
+  operator -(Rect, Frame)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a rectangle inset inward by a <a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Rect operator -(Rect rect, Frame frame)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+    <dt><code>frame</code> <a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Rect.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

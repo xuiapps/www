@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Window | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Window | XUI APPS ">
+      
+      <meta name="description" content="Represents an abstract cross-platform application window in Xui. Handles input, rendering, layout, and software keyboard integration.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Abstract_Window.md&amp;value=---%0Auid%3A%20Xui.Core.Abstract.Window%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.Abstract.Window">
+
+
+
+  <h1 id="Xui_Core_Abstract_Window" data-uid="Xui.Core.Abstract.Window" class="text-break">
+Class Window  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Abstract.html">Abstract</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an abstract cross-platform application window in Xui.
+Handles input, rendering, layout, and software keyboard integration.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Window : IWindow, IWindow.ISoftKeyboard</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Window</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xui.Core.Abstract.IWindow.html">IWindow</a></div>
+      <div><a class="xref" href="Xui.Core.Abstract.IWindow.html">IWindow</a>.<a class="xref" href="Xui.Core.Abstract.IWindow.ISoftKeyboard.html">ISoftKeyboard</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Xui_Core_Abstract_Window_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This class connects the abstract UI framework with the underlying platform window,
+acting as a root container for layout and visual composition. Subclasses may override
+specific input or rendering behaviors as needed.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Abstract_Window__ctor_" data-uid="Xui.Core.Abstract.Window.#ctor*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window__ctor" data-uid="Xui.Core.Abstract.Window.#ctor">
+  Window()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Xui.Core.Abstract.Window.html">Window</a> class.
+This creates the backing platform window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Window()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Xui_Core_Abstract_Window_OpenWindows" data-uid="Xui.Core.Abstract.Window.OpenWindows">
+  OpenWindows
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a read-only list of all currently open Xui windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;Window&gt; OpenWindows</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Xui.Core.Abstract.Window.html">Window</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xui_Core_Abstract_Window_Actual_" data-uid="Xui.Core.Abstract.Window.Actual*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Actual" data-uid="Xui.Core.Abstract.Window.Actual">
+  Actual
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the underlying platform-specific window instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IWindow Actual { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Actual.IWindow.html">IWindow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_Content_" data-uid="Xui.Core.Abstract.Window.Content*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Content" data-uid="Xui.Core.Abstract.Window.Content">
+  Content
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The root view of the window's content hierarchy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual View? Content { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.View.html">View</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_DisplayArea_" data-uid="Xui.Core.Abstract.Window.DisplayArea*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_DisplayArea" data-uid="Xui.Core.Abstract.Window.DisplayArea">
+  DisplayArea
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the total visible area of the window, including content that may
+be obscured by hardware cutouts, rounded corners, or system UI overlays.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Rect DisplayArea { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xui_Core_Abstract_Window_DisplayArea_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Used by the layout system to determine the full available size.</p>
+</div>
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_RequireKeyboard_" data-uid="Xui.Core.Abstract.Window.RequireKeyboard*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_RequireKeyboard" data-uid="Xui.Core.Abstract.Window.RequireKeyboard">
+  RequireKeyboard
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests that the soft keyboard be shown or hidden (on supported platforms).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequireKeyboard { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_SafeArea_" data-uid="Xui.Core.Abstract.Window.SafeArea*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_SafeArea" data-uid="Xui.Core.Abstract.Window.SafeArea">
+  SafeArea
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the &quot;safe&quot; area of the window, excluding obstructions like notches
+or status bars. Important UI elements should be placed within this area.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Rect SafeArea { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xui_Core_Abstract_Window_SafeArea_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Especially relevant on mobile devices and in emulator scenarios.</p>
+</div>
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_Title_" data-uid="Xui.Core.Abstract.Window.Title*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Title" data-uid="Xui.Core.Abstract.Window.Title">
+  Title
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the window title (where supported by the platform).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_Abstract_Window_Closed_" data-uid="Xui.Core.Abstract.Window.Closed*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Closed" data-uid="Xui.Core.Abstract.Window.Closed">
+  Closed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the window is closed and cleanup should occur.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Closed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_Closing_" data-uid="Xui.Core.Abstract.Window.Closing*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Closing" data-uid="Xui.Core.Abstract.Window.Closing">
+  Closing()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked before the window closes. Returning <code>false</code> can cancel the closure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Closing()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the window may close; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_CreateActualWindow_" data-uid="Xui.Core.Abstract.Window.CreateActualWindow*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_CreateActualWindow" data-uid="Xui.Core.Abstract.Window.CreateActualWindow">
+  CreateActualWindow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the platform-specific window for this abstract window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IWindow CreateActualWindow()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Actual.IWindow.html">IWindow</a></dt>
+    <dd><p>The platform implementation of <a class="xref" href="Xui.Core.Actual.IWindow.html">IWindow</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_DeleteBackwards_" data-uid="Xui.Core.Abstract.Window.DeleteBackwards*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_DeleteBackwards_Xui_Core_Abstract_Events_DeleteBackwardsEventRef__" data-uid="Xui.Core.Abstract.Window.DeleteBackwards(Xui.Core.Abstract.Events.DeleteBackwardsEventRef@)">
+  DeleteBackwards(ref DeleteBackwardsEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests deletion of content preceding the caret or selection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DeleteBackwards(ref DeleteBackwardsEventRef eventRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventRef</code> <a class="xref" href="Xui.Core.Abstract.Events.DeleteBackwardsEventRef.html">DeleteBackwardsEventRef</a></dt>
+    <dd><p>The input event representing a backspace action.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_InsertText_" data-uid="Xui.Core.Abstract.Window.InsertText*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_InsertText_Xui_Core_Abstract_Events_InsertTextEventRef__" data-uid="Xui.Core.Abstract.Window.InsertText(Xui.Core.Abstract.Events.InsertTextEventRef@)">
+  InsertText(ref InsertTextEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests insertion of one or more characters into the current input context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InsertText(ref InsertTextEventRef eventRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventRef</code> <a class="xref" href="Xui.Core.Abstract.Events.InsertTextEventRef.html">InsertTextEventRef</a></dt>
+    <dd><p>The input event containing the text to insert.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_Invalidate_" data-uid="Xui.Core.Abstract.Window.Invalidate*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Invalidate" data-uid="Xui.Core.Abstract.Window.Invalidate">
+  Invalidate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests a visual invalidation/redraw of this window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Invalidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_OnAnimationFrame_" data-uid="Xui.Core.Abstract.Window.OnAnimationFrame*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_OnAnimationFrame_Xui_Core_Abstract_Events_FrameEventRef__" data-uid="Xui.Core.Abstract.Window.OnAnimationFrame(Xui.Core.Abstract.Events.FrameEventRef@)">
+  OnAnimationFrame(ref FrameEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked once per frame to propagate animation timing information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnAnimationFrame(ref FrameEventRef e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Xui.Core.Abstract.Events.FrameEventRef.html">FrameEventRef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_OnMouseDown_" data-uid="Xui.Core.Abstract.Window.OnMouseDown*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_OnMouseDown_Xui_Core_Abstract_Events_MouseDownEventRef__" data-uid="Xui.Core.Abstract.Window.OnMouseDown(Xui.Core.Abstract.Events.MouseDownEventRef@)">
+  OnMouseDown(ref MouseDownEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a mouse button is pressed within the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnMouseDown(ref MouseDownEventRef e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Xui.Core.Abstract.Events.MouseDownEventRef.html">MouseDownEventRef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_OnMouseMove_" data-uid="Xui.Core.Abstract.Window.OnMouseMove*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_OnMouseMove_Xui_Core_Abstract_Events_MouseMoveEventRef__" data-uid="Xui.Core.Abstract.Window.OnMouseMove(Xui.Core.Abstract.Events.MouseMoveEventRef@)">
+  OnMouseMove(ref MouseMoveEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the mouse is moved within the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnMouseMove(ref MouseMoveEventRef e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Xui.Core.Abstract.Events.MouseMoveEventRef.html">MouseMoveEventRef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_OnMouseUp_" data-uid="Xui.Core.Abstract.Window.OnMouseUp*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_OnMouseUp_Xui_Core_Abstract_Events_MouseUpEventRef__" data-uid="Xui.Core.Abstract.Window.OnMouseUp(Xui.Core.Abstract.Events.MouseUpEventRef@)">
+  OnMouseUp(ref MouseUpEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a mouse button is released within the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnMouseUp(ref MouseUpEventRef e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Xui.Core.Abstract.Events.MouseUpEventRef.html">MouseUpEventRef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_OnScrollWheel_" data-uid="Xui.Core.Abstract.Window.OnScrollWheel*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_OnScrollWheel_Xui_Core_Abstract_Events_ScrollWheelEventRef__" data-uid="Xui.Core.Abstract.Window.OnScrollWheel(Xui.Core.Abstract.Events.ScrollWheelEventRef@)">
+  OnScrollWheel(ref ScrollWheelEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the scroll wheel is used within the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnScrollWheel(ref ScrollWheelEventRef e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Xui.Core.Abstract.Events.ScrollWheelEventRef.html">ScrollWheelEventRef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_OnTouch_" data-uid="Xui.Core.Abstract.Window.OnTouch*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_OnTouch_Xui_Core_Abstract_Events_TouchEventRef__" data-uid="Xui.Core.Abstract.Window.OnTouch(Xui.Core.Abstract.Events.TouchEventRef@)">
+  OnTouch(ref TouchEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when touch input occurs within the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnTouch(ref TouchEventRef e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Xui.Core.Abstract.Events.TouchEventRef.html">TouchEventRef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_Render_" data-uid="Xui.Core.Abstract.Window.Render*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Render_Xui_Core_Abstract_Events_RenderEventRef__" data-uid="Xui.Core.Abstract.Window.Render(Xui.Core.Abstract.Events.RenderEventRef@)">
+  Render(ref RenderEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked during the render phase of the UI lifecycle.
+Responsible for triggering layout and visual updates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Render(ref RenderEventRef renderEventRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderEventRef</code> <a class="xref" href="Xui.Core.Abstract.Events.RenderEventRef.html">RenderEventRef</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_Show_" data-uid="Xui.Core.Abstract.Window.Show*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_Show" data-uid="Xui.Core.Abstract.Window.Show">
+  Show()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes the window visible and adds it to the list of open windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Show()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Abstract_Window_WindowHitTest_" data-uid="Xui.Core.Abstract.Window.WindowHitTest*"></a>
+
+  <h3 id="Xui_Core_Abstract_Window_WindowHitTest_Xui_Core_Abstract_Events_WindowHitTestEventRef__" data-uid="Xui.Core.Abstract.Window.WindowHitTest(Xui.Core.Abstract.Events.WindowHitTestEventRef@)">
+  WindowHitTest(ref WindowHitTestEventRef)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the system requests a hit test for window interaction.
+Allows the app to indicate whether a region is draggable, resizable, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WindowHitTest(ref WindowHitTestEventRef evRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>evRef</code> <a class="xref" href="Xui.Core.Abstract.Events.WindowHitTestEventRef.html">WindowHitTestEventRef</a></dt>
+    <dd><p>The hit test event containing pointer position and window bounds.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Window.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

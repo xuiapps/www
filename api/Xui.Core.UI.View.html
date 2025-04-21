@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class View | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class View | XUI APPS ">
+      
+      <meta name="description" content="Base class for all UI elements in the Xui layout engine. A view participates in layout, rendering, and input hit testing, and may contain child views.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_UI_View.md&amp;value=---%0Auid%3A%20Xui.Core.UI.View%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.UI.View">
+
+
+
+  <h1 id="Xui_Core_UI_View" data-uid="Xui.Core.UI.View" class="text-break">
+Class View  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base class for all UI elements in the Xui layout engine.
+A view participates in layout, rendering, and input hit testing, and may contain child views.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class View</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">View</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Xui.Core.UI.ViewCollection.html">ViewCollection</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xui_Core_UI_View_Count_" data-uid="Xui.Core.UI.View.Count*"></a>
+
+  <h3 id="Xui_Core_UI_View_Count" data-uid="Xui.Core.UI.View.Count">
+  Count
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the number of child views. Used by layout containers and traversal logic.
+Leaf views should return 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Direction_" data-uid="Xui.Core.UI.View.Direction*"></a>
+
+  <h3 id="Xui_Core_UI_View_Direction" data-uid="Xui.Core.UI.View.Direction">
+  Direction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The writing direction of this view, which determines the block or inline flow direction.
+Inherited from the parent flow context if set to <a class="xref" href="Xui.Core.UI.Direction.html#Xui_Core_UI_Direction_Inherit">Inherit</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Direction Direction { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.Direction.html">Direction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Flow_" data-uid="Xui.Core.UI.View.Flow*"></a>
+
+  <h3 id="Xui_Core_UI_View_Flow" data-uid="Xui.Core.UI.View.Flow">
+  Flow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls how the layout system treats this view's children.
+Can be inherited or explicitly overridden for advanced layout containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Flow Flow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.Flow.html">Flow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Frame_" data-uid="Xui.Core.UI.View.Frame*"></a>
+
+  <h3 id="Xui_Core_UI_View_Frame" data-uid="Xui.Core.UI.View.Frame">
+  Frame
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The border edge of this view in global coordinates relative to the top-left of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect Frame { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_HorizontalAlignment_" data-uid="Xui.Core.UI.View.HorizontalAlignment*"></a>
+
+  <h3 id="Xui_Core_UI_View_HorizontalAlignment" data-uid="Xui.Core.UI.View.HorizontalAlignment">
+  HorizontalAlignment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The horizontal alignment of this view inside its layout anchor region.
+Used during layout when the view has remaining space within its container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HorizontalAlignment HorizontalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.HorizontalAlignment.html">HorizontalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Item_" data-uid="Xui.Core.UI.View.Item*"></a>
+
+  <h3 id="Xui_Core_UI_View_Item_System_Int32_" data-uid="Xui.Core.UI.View.Item(System.Int32)">
+  this[int]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indexer to access child views by index.
+Layout containers should implement this to expose their children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual View this[int index] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.View.html">View</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Margin_" data-uid="Xui.Core.UI.View.Margin*"></a>
+
+  <h3 id="Xui_Core_UI_View_Margin" data-uid="Xui.Core.UI.View.Margin">
+  Margin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The margin around this view. Margins participate in collapsed margin logic during layout,
+and are external spacing relative to the parent or surrounding siblings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Frame Margin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_MaximumHeight_" data-uid="Xui.Core.UI.View.MaximumHeight*"></a>
+
+  <h3 id="Xui_Core_UI_View_MaximumHeight" data-uid="Xui.Core.UI.View.MaximumHeight">
+  MaximumHeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum height of the border edge box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat MaximumHeight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_MaximumWidth_" data-uid="Xui.Core.UI.View.MaximumWidth*"></a>
+
+  <h3 id="Xui_Core_UI_View_MaximumWidth" data-uid="Xui.Core.UI.View.MaximumWidth">
+  MaximumWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum width of the border edge box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat MaximumWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_MinimumHeight_" data-uid="Xui.Core.UI.View.MinimumHeight*"></a>
+
+  <h3 id="Xui_Core_UI_View_MinimumHeight" data-uid="Xui.Core.UI.View.MinimumHeight">
+  MinimumHeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The minimum height of the border edge box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat MinimumHeight { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_MinimumWidth_" data-uid="Xui.Core.UI.View.MinimumWidth*"></a>
+
+  <h3 id="Xui_Core_UI_View_MinimumWidth" data-uid="Xui.Core.UI.View.MinimumWidth">
+  MinimumWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The minimum width of the border edge box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat MinimumWidth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Parent_" data-uid="Xui.Core.UI.View.Parent*"></a>
+
+  <h3 id="Xui_Core_UI_View_Parent" data-uid="Xui.Core.UI.View.Parent">
+  Parent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The parent view in the visual hierarchy. This is set automatically when the view is added to a container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public View? Parent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.View.html">View</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_VerticalAlignment_" data-uid="Xui.Core.UI.View.VerticalAlignment*"></a>
+
+  <h3 id="Xui_Core_UI_View_VerticalAlignment" data-uid="Xui.Core.UI.View.VerticalAlignment">
+  VerticalAlignment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The vertical alignment of this view inside its layout anchor region.
+Used during layout when the view has remaining space within its container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VerticalAlignment VerticalAlignment { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.VerticalAlignment.html">VerticalAlignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_WritingMode_" data-uid="Xui.Core.UI.View.WritingMode*"></a>
+
+  <h3 id="Xui_Core_UI_View_WritingMode" data-uid="Xui.Core.UI.View.WritingMode">
+  WritingMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The writing mode of this view (e.g. horizontal top-to-bottom or vertical right-to-left).
+Inherited from the parent if set to <a class="xref" href="Xui.Core.UI.WritingMode.html#Xui_Core_UI_WritingMode_Inherit">Inherit</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WritingMode WritingMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.WritingMode.html">WritingMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_UI_View_Arrange_" data-uid="Xui.Core.UI.View.Arrange*"></a>
+
+  <h3 id="Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.UI.View.Arrange(Xui.Core.Math2D.Rect)">
+  Arrange(Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Arranges the view within the specified rectangle, finalizing its layout position and size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect Arrange(Rect rect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle defining the position and exact size for the view.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd><p>The rectangle occupied by the arranged view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_ArrangeCore_" data-uid="Xui.Core.UI.View.ArrangeCore*"></a>
+
+  <h3 id="Xui_Core_UI_View_ArrangeCore_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.UI.View.ArrangeCore(Xui.Core.Math2D.Rect)">
+  ArrangeCore(Rect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs the layout pass by arranging content and children within the view's
+border edge box, using the provided rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ArrangeCore(Rect rect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
+    <dd><p>The final rectangle (position and size) allocated to this view's border edge box.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_HitTest_" data-uid="Xui.Core.UI.View.HitTest*"></a>
+
+  <h3 id="Xui_Core_UI_View_HitTest_Xui_Core_Math2D_Point_" data-uid="Xui.Core.UI.View.HitTest(Xui.Core.Math2D.Point)">
+  HitTest(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the given point (in local coordinates) hits this view’s visual bounds.
+Used for input dispatch and hit testing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HitTest(Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The point to test, relative to this view’s coordinate space.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the point is inside the view’s frame; otherwise <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Measure_" data-uid="Xui.Core.UI.View.Measure*"></a>
+
+  <h3 id="Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_" data-uid="Xui.Core.UI.View.Measure(Xui.Core.Math2D.Size)">
+  Measure(Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measures the view using the specified available size, returning the desired size
+calculated during the layout pass.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Size Measure(Size availableSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>availableSize</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd><p>The maximum space available for the view to occupy.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd><p>The size that the view desires to occupy within the constraints.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_MeasureCore_" data-uid="Xui.Core.UI.View.MeasureCore*"></a>
+
+  <h3 id="Xui_Core_UI_View_MeasureCore_Xui_Core_Math2D_Size_" data-uid="Xui.Core.UI.View.MeasureCore(Xui.Core.Math2D.Size)">
+  MeasureCore(Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines the minimum size that this view's border edge box requires,
+given the maximum available size. Margin is not part of this size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Size MeasureCore(Size availableBorderEdgeSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>availableBorderEdgeSize</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd><p>The maximum size available for the view’s border edge box.
+This size excludes margins, which are handled by the parent layout.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd><p>The desired size of the border edge box based on content and layout logic.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Render_" data-uid="Xui.Core.UI.View.Render*"></a>
+
+  <h3 id="Xui_Core_UI_View_Render_Xui_Core_Canvas_IContext_" data-uid="Xui.Core.UI.View.Render(Xui.Core.Canvas.IContext)">
+  Render(IContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the view using the given rendering context. This should be called after layout is complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Render(IContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IContext.html">IContext</a></dt>
+    <dd><p>The rendering context used to draw the view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_RenderCore_" data-uid="Xui.Core.UI.View.RenderCore*"></a>
+
+  <h3 id="Xui_Core_UI_View_RenderCore_Xui_Core_Canvas_IContext_" data-uid="Xui.Core.UI.View.RenderCore(Xui.Core.Canvas.IContext)">
+  RenderCore(IContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the content and children of this view using the provided rendering context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RenderCore(IContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IContext.html">IContext</a></dt>
+    <dd><p>The drawing context used for rendering visual content to the output surface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_View_Update_" data-uid="Xui.Core.UI.View.Update*"></a>
+
+  <h3 id="Xui_Core_UI_View_Update_Xui_Core_UI_LayoutGuide_" data-uid="Xui.Core.UI.View.Update(Xui.Core.UI.LayoutGuide)">
+  Update(LayoutGuide)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs a full layout pass for a view - measure, arrange and render.</p>
+<p>Flags can limit to a subset of the layout passes, in case a container needs to measure children multiple times,
+or in case a container can rush forward without forking the layout pass into multiple sub-passes.</p>
+<p>The layout method will delegate parts of the execution to <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_MeasureCore_Xui_Core_Math2D_Size_">MeasureCore(Size)</a>, <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_ArrangeCore_Xui_Core_Math2D_Rect_">ArrangeCore(Rect)</a> and <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_RenderCore_Xui_Core_Canvas_IContext_">RenderCore(IContext)</a>.</p>
+<p>If a container needs to call multiple times methods for a child,
+either call the <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_">Measure(Size)</a>, <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_">Arrange(Rect)</a> and <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Render_Xui_Core_Canvas_IContext_">Render(IContext)</a>,
+or construct a <a class="xref" href="Xui.Core.UI.LayoutGuide.html">LayoutGuide</a> with the specific flags and pass it to <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Update_Xui_Core_UI_LayoutGuide_">Update(LayoutGuide)</a>.</p>
+<p>Some containers may override and implement a Layout in a way, that it compacts the flow and avoids fork,
+like a VerticalStack that is placed on fullscreen (with fixed width),
+can arrange children top to bottom calling their Layout directly - eventually going foreach-layout without splitting into foreach-measure, foreach-arrange cycles.
+VerticalStack however, when centered, while it can layout children vertically in a single pass, it can't render, because it needs its height to figure out its position,
+so in these cases it may foreach-layout (measure and arrange) resolve the stack Y position and then foreach-layout (for render).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LayoutGuide Update(LayoutGuide guide)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>guide</code> <a class="xref" href="Xui.Core.UI.LayoutGuide.html">LayoutGuide</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.LayoutGuide.html">LayoutGuide</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

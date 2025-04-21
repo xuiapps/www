@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Xui.Core.UI | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Xui.Core.UI | XUI APPS ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.UI">
+
+  <h1 id="Xui_Core_UI" data-uid="Xui.Core.UI" class="text-break">Namespace Xui.Core.UI</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.HorizontalStack.html">HorizontalStack</a></dt>
+      <dd><p>A layout container that arranges its children horizontally from left to right.</p>
+<p>Each child is measured with unconstrained width and a constrained height.
+The container expands to fit the combined width of all children.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.HorizontalUniformStack.html">HorizontalUniformStack</a></dt>
+      <dd><p>A layout container that arranges its children in a horizontal stack,
+assigning each child the same width.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.VerticalStack.html">VerticalStack</a></dt>
+      <dd><p>A layout container that arranges its children vertically from top to bottom.</p>
+<p>Each child is measured with an unconstrained height and is allowed to take up as much vertical space as needed.
+The container expands to fit the combined height of all children.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.VerticalUniformStack.html">VerticalUniformStack</a></dt>
+      <dd><p>A layout container that arranges its children in a vertical stack,
+giving each child the same height.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.View.html">View</a></dt>
+      <dd><p>Base class for all UI elements in the Xui layout engine.
+A view participates in layout, rendering, and input hit testing, and may contain child views.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.ViewCollection.html">ViewCollection</a></dt>
+      <dd><p>A base class for container views that hold and manage a list of child views.
+Provides methods for adding, removing, rendering, and hit testing children.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.LayoutGuide.html">LayoutGuide</a></dt>
+      <dd><p>Encapsulates the parameters and results of a layout pass (Measure, Arrange, Render) for a view.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.Direction.html">Direction</a></dt>
+      <dd><p>Indicates the semantic inline direction of content, such as left-to-right or right-to-left.
+Used to resolve text alignment, layout flow, and mirroring behavior.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.Flow.html">Flow</a></dt>
+      <dd><p>Controls whether layout and rendering should respect directionality and writing mode.
+Used to suppress mirroring and bidi-aware behavior for diagrams, graphs, and non-linguistic views.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.FlowDirection.html">FlowDirection</a></dt>
+      <dd><p>Represents the resolved physical direction of layout flow along an axis.
+This is derived from <a class="xref" href="Xui.Core.UI.WritingMode.html">WritingMode</a> and <a class="xref" href="Xui.Core.UI.Direction.html">Direction</a>,
+and is used to control stacking, alignment, and layout flow along block or inline axes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.HorizontalAlignment.html">HorizontalAlignment</a></dt>
+      <dd><p>Specifies how a view should be aligned horizontally within its layout bounds.
+Used by parent containers during layout to position the view along the inline axis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html">LayoutGuide.Align</a></dt>
+      <dd><p>Defines alignment of a view within a layout axis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.LayoutGuide.LayoutPass.html">LayoutGuide.LayoutPass</a></dt>
+      <dd><p>Flags indicating which type of layout pass is being performed.
+Multiple passes may be combined (e.g., Measure | Render).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.LayoutGuide.SizeTo.html">LayoutGuide.SizeTo</a></dt>
+      <dd><p>Defines how the view should interpret the size constraints during measurement.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.VerticalAlignment.html">VerticalAlignment</a></dt>
+      <dd><p>Specifies how a view should be aligned vertically within its layout bounds.
+Used by parent containers to control vertical positioning along the block axis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.UI.WritingMode.html">WritingMode</a></dt>
+      <dd><p>Specifies the orientation and flow direction of text and block layout.
+Affects which axis is considered &quot;block&quot; and &quot;inline&quot;.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

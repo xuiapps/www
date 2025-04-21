@@ -1,0 +1,1776 @@
+{
+  "source_base_path": "/Users/cankov/git/xuiapps/code",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "www/ai/gigi.md",
+      "output": {
+        ".html": {
+          "relative_path": "ai/gigi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "www/ai/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ai/toc.html"
+        },
+        ".json": {
+          "relative_path": "ai/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Application.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Application",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Application.yml\" sourcestartlinenumber=\"1\">Represents an abstract base class for Xui applications.\nThis class is paired at runtime with a platform-specific counterpart,\nwhich delegates to actual system APIs on macOS, Windows, Android, etc.</p>\n<p sourcefile=\"www/api/Xui.Core.Abstract.Application.yml\" sourcestartlinenumber=\"5\">Users should subclass <xref href=\"Xui.Core.Abstract.Application\" data-throw-if-not-resolved=\"false\"></xref>, override the <xref href=\"Xui.Core.Abstract.Application.Start\" data-throw-if-not-resolved=\"false\"></xref> method,\nand call <xref href=\"Xui.Core.Abstract.Application.Run\" data-throw-if-not-resolved=\"false\"></xref> to launch the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.DeleteBackwardsEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.DeleteBackwardsEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.DeleteBackwardsEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.DeleteBackwardsEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level input event requesting deletion of content\npositioned logically before the caret or selection range.\nTypically triggered by a &quot;Backspace&quot; key press or an equivalent gesture.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.FrameEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.FrameEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.FrameEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.FrameEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level event dispatched once per frame,\nproviding timing information used for driving animations and visual updates.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.InsertTextEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.InsertTextEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.InsertTextEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.InsertTextEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level input event requesting insertion of text\nat the current caret or selection position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.MouseButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.MouseButton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.MouseButton",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.MouseButton.yml\" sourcestartlinenumber=\"1\">Identifies a specific mouse button involved in a pointer event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.MouseDownEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.MouseDownEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.MouseDownEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.MouseDownEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level input event indicating that a mouse button\nwas pressed at a given position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.MouseMoveEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.MouseMoveEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.MouseMoveEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.MouseMoveEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level input event indicating that the mouse pointer\nhas moved to a new position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.MouseUpEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.MouseUpEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.MouseUpEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.MouseUpEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level input event indicating that a mouse button\nwas released at a given position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.RenderEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.RenderEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.RenderEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.RenderEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level render event dispatched after a timing frame,\nindicating that views should perform layout and rendering operations within a given region.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.ScrollWheelEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.ScrollWheelEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.ScrollWheelEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.ScrollWheelEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level input event generated by a scroll wheel or trackpad gesture,\nindicating a change in scroll position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.Touch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.Touch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.Touch",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.Touch.yml\" sourcestartlinenumber=\"1\">Represents a single touch point within a multi-touch input event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.TouchEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.TouchEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.TouchEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.TouchEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level input event containing one or more touch points,\ntypically originating from a touchscreen or trackpad gesture.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.TouchPhase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.TouchPhase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.TouchPhase",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.TouchPhase.yml\" sourcestartlinenumber=\"1\">Describes the phase of an individual touch point during a touch event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.WindowHitTestEventRef.WindowArea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.WindowHitTestEventRef.WindowArea.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.WindowHitTestEventRef.WindowArea",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.WindowHitTestEventRef.WindowArea.yml\" sourcestartlinenumber=\"1\">Describes the purpose or function of a region within a window.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.WindowHitTestEventRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.WindowHitTestEventRef.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events.WindowHitTestEventRef",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Events.WindowHitTestEventRef.yml\" sourcestartlinenumber=\"1\">Represents a platform-level hit test event that allows the application\nto define how a point within a custom window frame should be interpreted\n(e.g., as a draggable title bar, resize border, or transparent region).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Events.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Events",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.HotReload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.HotReload.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.HotReload",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.HotReload.yml\" sourcestartlinenumber=\"1\">Internal integration point for .NET's MetadataUpdateHandler, enabling partial support\nfor Hot Reload during development. This is not a stable API and should not be used\nby application developers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.IWindow.IDesktopStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.IWindow.IDesktopStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.IWindow.IDesktopStyle",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.IWindow.IDesktopStyle.yml\" sourcestartlinenumber=\"1\">Provides optional desktop-specific window styling hints for platforms\nthat support multiple top-level windows (e.g., Windows, macOS, Linux).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.IWindow.ISoftKeyboard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.IWindow.ISoftKeyboard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.IWindow.ISoftKeyboard",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.IWindow.ISoftKeyboard.yml\" sourcestartlinenumber=\"1\">Represents a handler for software keyboard input.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.IWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.IWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.IWindow",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.IWindow.yml\" sourcestartlinenumber=\"1\">Defines the abstract interface for a platform window in Xui.\nThis surface hosts rendering, input handling, and layout updates.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.Window.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.Window.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract.Window",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Abstract.Window.yml\" sourcestartlinenumber=\"1\">Represents an abstract cross-platform application window in Xui.\nHandles input, rendering, layout, and software keyboard integration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Abstract.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Abstract.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Abstract",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Actual.IDispatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Actual.IDispatcher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Actual.IDispatcher",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Actual.IDispatcher.yml\" sourcestartlinenumber=\"1\">Represents a platform-specific dispatcher for marshaling callbacks onto the main UI thread.\nUsed by the Xui runtime to ensure thread-safe execution of UI logic.</p>\n<p sourcefile=\"www/api/Xui.Core.Actual.IDispatcher.yml\" sourcestartlinenumber=\"4\">Each platform must provide an implementation that posts callbacks to the appropriate runloop or UI thread.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Actual.IRunLoop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Actual.IRunLoop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Actual.IRunLoop",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Actual.IRunLoop.yml\" sourcestartlinenumber=\"1\">Represents a platform-specific run loop responsible for driving the application's lifecycle.\nEach platform must provide an implementation that enters the appropriate system event loop\nand continues running until the application exits.</p>\n<p sourcefile=\"www/api/Xui.Core.Actual.IRunLoop.yml\" sourcestartlinenumber=\"5\">The Xui runtime uses this interface to abstract over platform differences in event dispatch and app execution.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Actual.IRuntime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Actual.IRuntime.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Actual.IRuntime",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Actual.IRuntime.yml\" sourcestartlinenumber=\"1\">Provides a platform-specific implementation of the Xui runtime,\nresponsible for creating and connecting abstract application components to their actual counterparts.</p>\n<p sourcefile=\"www/api/Xui.Core.Actual.IRuntime.yml\" sourcestartlinenumber=\"4\">This interface acts as a bridge between the platform-independent core and the underlying OS-specific APIs\n(e.g., Win32, Cocoa, UIKit), enabling rendering, windowing, and event dispatch.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Actual.IWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Actual.IWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Actual.IWindow",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Actual.IWindow.yml\" sourcestartlinenumber=\"1\">Represents a platform-specific window implementation used by the Xui runtime.\nEach platform (e.g., Windows, macOS, iOS) must provide an implementation of this interface\nto manage window lifecycle, rendering, and input.</p>\n<p sourcefile=\"www/api/Xui.Core.Actual.IWindow.yml\" sourcestartlinenumber=\"5\">This interface is typically paired with an abstract window in the Xui framework,\nand is not used directly by application developers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Actual.Runtime.RuntimeNotAvailable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Actual.Runtime.RuntimeNotAvailable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Actual.Runtime.RuntimeNotAvailable",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Actual.Runtime.RuntimeNotAvailable.yml\" sourcestartlinenumber=\"1\">Exception thrown when <xref href=\"Xui.Core.Actual.Runtime.Current\" data-throw-if-not-resolved=\"false\"></xref> is accessed before it has been initialized.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Actual.Runtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Actual.Runtime.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Actual.Runtime",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Actual.Runtime.yml\" sourcestartlinenumber=\"1\">Provides global access to the platform-specific runtime environment for the current Xui application.</p>\n<p sourcefile=\"www/api/Xui.Core.Actual.Runtime.yml\" sourcestartlinenumber=\"3\">The platform must assign <xref href=\"Xui.Core.Actual.Runtime.Current\" data-throw-if-not-resolved=\"false\"></xref> at startup with a concrete <xref href=\"Xui.Core.Actual.IRuntime\" data-throw-if-not-resolved=\"false\"></xref> implementation,\nwhich wires up platform-specific services like rendering, window creation, and dispatching.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Actual.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Actual.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Actual",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.ConstantDecelerationCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.ConstantDecelerationCurve.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation.ConstantDecelerationCurve",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Animation.ConstantDecelerationCurve.yml\" sourcestartlinenumber=\"1\">Represents a 1D motion curve with constant deceleration (e.g., for scroll or fling).\nStarts at a given position and velocity, then decelerates linearly to a stop.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.CubicMotionCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.CubicMotionCurve.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation.CubicMotionCurve",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Animation.CubicMotionCurve.yml\" sourcestartlinenumber=\"1\">Represents a 1D cubic motion curve over time, interpolating both position and velocity.\nTime is expressed using <xref href=\"System.TimeSpan\" data-throw-if-not-resolved=\"false\"></xref>, and calculations are performed in seconds.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.Easing.CubicBezier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.Easing.CubicBezier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation.Easing.CubicBezier",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Animation.Easing.CubicBezier.yml\" sourcestartlinenumber=\"1\">Represents a CSS-style cubic Bézier easing curve constrained between (0,0) and (1,1).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.Easing.PolynomialEasing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.Easing.PolynomialEasing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation.Easing.PolynomialEasing",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Animation.Easing.PolynomialEasing.yml\" sourcestartlinenumber=\"1\">Represents a 3rd- or 4th-degree polynomial easing function for animation timing curves.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.Easing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.Easing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation.Easing",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Animation.Easing.yml\" sourcestartlinenumber=\"1\">Provides a collection of easing functions and smoothing utilities used in animations.\nAll easing methods are normalized to take a parameter <code>t</code> in the range [0, 1].</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.ExponentialDecayCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.ExponentialDecayCurve.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation.ExponentialDecayCurve",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Animation.ExponentialDecayCurve.yml\" sourcestartlinenumber=\"1\">Represents a motion curve where velocity decays exponentially over time.\nCommonly used to simulate fling or momentum-based motion with smooth slowdown.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.QuadraticMotionCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.QuadraticMotionCurve.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation.QuadraticMotionCurve",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Animation.QuadraticMotionCurve.yml\" sourcestartlinenumber=\"1\">Represents a 1D motion curve under constant acceleration, defined as a quadratic function of time.</p>\n<p sourcefile=\"www/api/Xui.Core.Animation.QuadraticMotionCurve.yml\" sourcestartlinenumber=\"3\">This curve is useful for modeling motion that decelerates smoothly to a stop,\nsuch as fling or scroll-stop animations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Animation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Animation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Animation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.Color.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.Color.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.Color",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.Color.yml\" sourcestartlinenumber=\"1\">Represents a color using red, green, blue, and alpha components, all normalized to the range [0, 1].</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.Colors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.Colors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.Colors",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.Colors.yml\" sourcestartlinenumber=\"1\">Provides web standard named color constants in 32-bit RGBA format (0xRRGGBBAA).\nThese match the named colors from the CSS color specification:\n<a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/named-color\" sourcefile=\"www/api/Xui.Core.Canvas.Colors.yml\" sourcestartlinenumber=\"3\">https://developer.mozilla.org/en-US/docs/Web/CSS/named-color</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.CornerRadius.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.CornerRadius.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.CornerRadius",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.CornerRadius.yml\" sourcestartlinenumber=\"1\">Represents the radius of each corner of a rectangle, allowing for uniform or non-uniform rounding.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.FillRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.FillRule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.FillRule",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.FillRule.yml\" sourcestartlinenumber=\"1\">Specifies the algorithm used to determine the &quot;insideness&quot; of a point in a path,\ncontrolling how filled shapes are rendered.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.Font.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.Font.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.Font",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.Font.yml\" sourcestartlinenumber=\"1\">Describes a font used for text layout and rendering, similar to the CSS font model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.FontStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.FontStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.FontStyle",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.FontStyle.yml\" sourcestartlinenumber=\"1\">Represents a web-like font style, supporting <code>normal</code>, <code>italic</code>, and <code>oblique</code> variations.\nGlobal CSS styles like <code>inherit</code>, <code>unset</code>, and <code>initial</code> are not supported.</p>\n<p sourcefile=\"www/api/Xui.Core.Canvas.FontStyle.yml\" sourcestartlinenumber=\"4\">Reference: <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/font-style\" sourcefile=\"www/api/Xui.Core.Canvas.FontStyle.yml\" sourcestartlinenumber=\"4\">https://developer.mozilla.org/en-US/docs/Web/CSS/font-style</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.GradientStop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.GradientStop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.GradientStop",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.GradientStop.yml\" sourcestartlinenumber=\"1\">Represents a single color stop in a gradient, defined by an offset and a color.\nUsed for both linear and radial gradients.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.IContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.IContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.IContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.IContext.yml\" sourcestartlinenumber=\"1\">Represents a 2D drawing context for the Xui Canvas, modeled after the HTML5 Canvas 2D context API.\nThis interface aggregates all sub-contexts responsible for different aspects of 2D rendering,\nincluding state, drawing primitives, text, images, transformations, and resource management.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.IImageDrawingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.IImageDrawingContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.IImageDrawingContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.IImageDrawingContext.yml\" sourcestartlinenumber=\"1\">Defines methods for drawing image-like content onto the canvas,\nsuch as bitmaps, video frames, or decoded image buffers.</p>\n<p sourcefile=\"www/api/Xui.Core.Canvas.IImageDrawingContext.yml\" sourcestartlinenumber=\"4\">Mirrors the image drawing APIs from the HTML5 Canvas 2D context.\n<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage\" sourcefile=\"www/api/Xui.Core.Canvas.IImageDrawingContext.yml\" sourcestartlinenumber=\"5\">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.IPathDrawingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.IPathDrawingContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.IPathDrawingContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.IPathDrawingContext.yml\" sourcestartlinenumber=\"1\">Defines methods for constructing and rendering 2D paths,\nfollowing the HTML5 Canvas path API model.</p>\n<p sourcefile=\"www/api/Xui.Core.Canvas.IPathDrawingContext.yml\" sourcestartlinenumber=\"4\">Reference: <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths\" sourcefile=\"www/api/Xui.Core.Canvas.IPathDrawingContext.yml\" sourcestartlinenumber=\"4\">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.IPenContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.IPenContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.IPenContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.IPenContext.yml\" sourcestartlinenumber=\"1\">Defines properties and methods for controlling stroke and fill styles in a 2D drawing context,\nincluding line caps, joins, width, dashes, and brush settings for fill and stroke.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.IRectDrawingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.IRectDrawingContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.IRectDrawingContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.IRectDrawingContext.yml\" sourcestartlinenumber=\"1\">Provides convenience methods for drawing filled and stroked rectangles,\nsimilar to the <code>fillRect()</code> and <code>strokeRect()</code> functions in the HTML5 Canvas API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.IStateContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.IStateContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.IStateContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.IStateContext.yml\" sourcestartlinenumber=\"1\">Provides methods to save and restore the current drawing state,\nincluding styles, transforms, and clipping paths.\nMirrors the behavior of the HTML5 Canvas <code>save()</code> and <code>restore()</code> methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.ITextDrawingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.ITextDrawingContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.ITextDrawingContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.ITextDrawingContext.yml\" sourcestartlinenumber=\"1\">Defines methods for drawing text onto the canvas, including alignment and baseline options.\nMirrors the HTML5 Canvas 2D text API for <code>fillText()</code>.\nAlso provides access to text measurement via <xref href=\"Xui.Core.Canvas.ITextMeasureContext\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.ITextMeasureContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.ITextMeasureContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.ITextMeasureContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.ITextMeasureContext.yml\" sourcestartlinenumber=\"1\">Provides functionality for measuring text and setting font properties.\nMirrors the measurement behavior of the HTML5 Canvas 2D context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.ITransformContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.ITransformContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.ITransformContext",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.ITransformContext.yml\" sourcestartlinenumber=\"1\">Provides methods for manipulating the current transformation matrix of the drawing context.\nThis includes translation, scaling, rotation, and applying affine transformations.\nMirrors the transformation API of the HTML5 Canvas 2D context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.LineCap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.LineCap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.LineCap",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.LineCap.yml\" sourcestartlinenumber=\"1\">Specifies the shape used at the ends of lines when stroking paths.\nMirrors the <code>lineCap</code> property in the HTML5 Canvas API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.LineJoin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.LineJoin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.LineJoin",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.LineJoin.yml\" sourcestartlinenumber=\"1\">Specifies how two connected lines are joined when stroking a path.\nMirrors the <code>lineJoin</code> property in the HTML5 Canvas API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.LinearGradient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.LinearGradient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.LinearGradient",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.LinearGradient.yml\" sourcestartlinenumber=\"1\">Represents a linear gradient brush that transitions between colors along a straight line,\nfollowing the same behavior as the HTML5 Canvas <code>createLinearGradient()</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.PaintStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.PaintStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.PaintStyle",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.PaintStyle.yml\" sourcestartlinenumber=\"1\">Specifies the type of brush or fill style used for painting shapes or strokes.\nHelps distinguish between solid colors and gradient fills.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.RadialGradient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.RadialGradient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.RadialGradient",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.RadialGradient.yml\" sourcestartlinenumber=\"1\">Represents a radial gradient brush that transitions colors outward from one circle to another,\nsimilar to <code>createRadialGradient()</code> in the HTML5 Canvas API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.SVG.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.SVG.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.SVG.Extensions",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.SVG.Extensions.yml\" sourcestartlinenumber=\"1\">Provides SVG-related extension methods for the <xref href=\"Xui.Core.Canvas.IPathDrawingContext\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.SVG.PathDataBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.SVG.PathDataBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.SVG.PathDataBuilder",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.SVG.PathDataBuilder.yml\" sourcestartlinenumber=\"1\">A utility for converting parsed SVG path commands into drawing operations\non an <xref href=\"Xui.Core.Canvas.IPathDrawingContext\" data-throw-if-not-resolved=\"false\"></xref> target.</p>\n<p sourcefile=\"www/api/Xui.Core.Canvas.SVG.PathDataBuilder.yml\" sourcestartlinenumber=\"4\">This builder supports both absolute (e.g., <code>M</code>, <code>L</code>, <code>C</code>) and relative (e.g., <code>m</code>, <code>l</code>, <code>c</code>) SVG commands,\nand tracks the current drawing point and control points for smooth curves.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.SVG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.SVG.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.SVG",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.TextAlign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.TextAlign.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.TextAlign",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.TextAlign.yml\" sourcestartlinenumber=\"1\">Specifies the horizontal alignment of text relative to the drawing position.\nMirrors the <code>textAlign</code> property in the HTML5 Canvas 2D API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.TextBaseline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.TextBaseline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.TextBaseline",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.TextBaseline.yml\" sourcestartlinenumber=\"1\">Specifies the vertical alignment of text relative to the drawing position.\nMirrors the <code>textBaseline</code> property in the HTML5 Canvas 2D API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.Winding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.Winding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas.Winding",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Canvas.Winding.yml\" sourcestartlinenumber=\"1\">Specifies the direction in which arcs or elliptical curves are drawn,\naffecting fill and stroke behavior in path-based rendering.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Canvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Canvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Canvas",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.Bezier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.Bezier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.Bezier",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.Bezier.yml\" sourcestartlinenumber=\"1\">Static helper methods for constructing Bézier curves.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.CubicBezier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.CubicBezier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.CubicBezier",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.CubicBezier.yml\" sourcestartlinenumber=\"1\">Represents a cubic Bézier curve defined by four control points.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.CubicSpline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.CubicSpline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.CubicSpline",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.CubicSpline.yml\" sourcestartlinenumber=\"1\">Represents a 4-point spline segment using Catmull–Rom interpolation.\nThe curve interpolates smoothly between <xref href=\"Xui.Core.Curves2D.CubicSpline.P1\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Xui.Core.Curves2D.CubicSpline.P2\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.ICurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.ICurve.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.ICurve",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.ICurve.yml\" sourcestartlinenumber=\"1\">Represents a common interface for evaluable 2D curves.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.LinearBezier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.LinearBezier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.LinearBezier",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.LinearBezier.yml\" sourcestartlinenumber=\"1\">Represents a linear Bézier curve, equivalent to a straight line between two points.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.LinearSpline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.LinearSpline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.LinearSpline",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.LinearSpline.yml\" sourcestartlinenumber=\"1\">Represents a linear spline segment between two points.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.QuadraticBezier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.QuadraticBezier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.QuadraticBezier",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.QuadraticBezier.yml\" sourcestartlinenumber=\"1\">Represents a quadratic Bézier curve defined by three control points.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.QuadraticSpline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.QuadraticSpline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.QuadraticSpline",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.QuadraticSpline.yml\" sourcestartlinenumber=\"1\">Represents a 3-point quadratic spline segment (parabolic arc) defined by a start point, control point, and end point.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.Spline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.Spline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D.Spline",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Curves2D.Spline.yml\" sourcestartlinenumber=\"1\">Provides factory methods for creating spline segments of various degrees.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Curves2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Curves2D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Curves2D",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Math2D.AffineTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Math2D.AffineTransform.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Math2D.AffineTransform",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Math2D.AffineTransform.yml\" sourcestartlinenumber=\"1\">Represents a 2D affine transformation matrix in the form:</p>\n<pre><code class=\"lang-csharp\">| A C Tx |\n| B D Ty |\n| 0 0  1 |</code></pre>\n<p sourcefile=\"www/api/Xui.Core.Math2D.AffineTransform.yml\" sourcestartlinenumber=\"5\">Used for rotating, scaling, translating, and skewing 2D vectors or points.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Math2D.Frame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Math2D.Frame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Math2D.Frame",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Math2D.Frame.yml\" sourcestartlinenumber=\"1\">Represents thickness values for each edge of a rectangular element.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Math2D.Point.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Math2D.Point.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Math2D.Point",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Math2D.Point.yml\" sourcestartlinenumber=\"1\">Represents a point in 2D space, defined by its <xref href=\"Xui.Core.Math2D.Point.X\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Xui.Core.Math2D.Point.Y\" data-throw-if-not-resolved=\"false\"></xref> coordinates.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Math2D.Rect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Math2D.Rect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Math2D.Rect",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Math2D.Rect.yml\" sourcestartlinenumber=\"1\">Represents a rectangle in 2D space, defined by its origin (<xref href=\"Xui.Core.Math2D.Rect.X\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Xui.Core.Math2D.Rect.Y\" data-throw-if-not-resolved=\"false\"></xref>)\nand its dimensions (<xref href=\"Xui.Core.Math2D.Rect.Width\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Xui.Core.Math2D.Rect.Height\" data-throw-if-not-resolved=\"false\"></xref>).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Math2D.Size.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Math2D.Size.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Math2D.Size",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Math2D.Size.yml\" sourcestartlinenumber=\"1\">Represents a two-dimensional size with <xref href=\"Xui.Core.Math2D.Size.Width\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Xui.Core.Math2D.Size.Height\" data-throw-if-not-resolved=\"false\"></xref> components.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Math2D.Vector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Math2D.Vector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Math2D.Vector",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Math2D.Vector.yml\" sourcestartlinenumber=\"1\">Represents a 2D vector with X and Y components, commonly used for geometric operations,\nlayout math, and movement in 2D space.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Math2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Math2D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Math2D",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Set.EmptySet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Set.EmptySet-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Set.EmptySet<T>",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Set.EmptySet-1.yml\" sourcestartlinenumber=\"1\">Represents an empty set — a set that contains no elements.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Set.INonEnumerableSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Set.INonEnumerableSet-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Set.INonEnumerableSet<T>",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.Set.INonEnumerableSet-1.yml\" sourcestartlinenumber=\"1\">Represents a mathematical set as defined by its membership test:\nwhether an element belongs to the set.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.Set.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.Set.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.Set",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.Direction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.Direction",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.Direction.yml\" sourcestartlinenumber=\"1\">Indicates the semantic inline direction of content, such as left-to-right or right-to-left.\nUsed to resolve text alignment, layout flow, and mirroring behavior.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.Flow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.Flow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.Flow",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.Flow.yml\" sourcestartlinenumber=\"1\">Controls whether layout and rendering should respect directionality and writing mode.\nUsed to suppress mirroring and bidi-aware behavior for diagrams, graphs, and non-linguistic views.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.FlowDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.FlowDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.FlowDirection",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.FlowDirection.yml\" sourcestartlinenumber=\"1\">Represents the resolved physical direction of layout flow along an axis.\nThis is derived from <xref href=\"Xui.Core.UI.WritingMode\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Xui.Core.UI.Direction\" data-throw-if-not-resolved=\"false\"></xref>,\nand is used to control stacking, alignment, and layout flow along block or inline axes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.HorizontalAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.HorizontalAlignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.HorizontalAlignment",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.HorizontalAlignment.yml\" sourcestartlinenumber=\"1\">Specifies how a view should be aligned horizontally within its layout bounds.\nUsed by parent containers during layout to position the view along the inline axis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.HorizontalStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.HorizontalStack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.HorizontalStack",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.HorizontalStack.yml\" sourcestartlinenumber=\"1\">A layout container that arranges its children horizontally from left to right.</p>\n<p sourcefile=\"www/api/Xui.Core.UI.HorizontalStack.yml\" sourcestartlinenumber=\"3\">Each child is measured with unconstrained width and a constrained height.\nThe container expands to fit the combined width of all children.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.HorizontalUniformStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.HorizontalUniformStack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.HorizontalUniformStack",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.HorizontalUniformStack.yml\" sourcestartlinenumber=\"1\">A layout container that arranges its children in a horizontal stack,\nassigning each child the same width.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.LayoutGuide.Align.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.LayoutGuide.Align.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.LayoutGuide.Align",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.LayoutGuide.Align.yml\" sourcestartlinenumber=\"1\">Defines alignment of a view within a layout axis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.LayoutGuide.LayoutPass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.LayoutGuide.LayoutPass.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.LayoutGuide.LayoutPass",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.LayoutGuide.LayoutPass.yml\" sourcestartlinenumber=\"1\">Flags indicating which type of layout pass is being performed.\nMultiple passes may be combined (e.g., Measure | Render).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.LayoutGuide.SizeTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.LayoutGuide.SizeTo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.LayoutGuide.SizeTo",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.LayoutGuide.SizeTo.yml\" sourcestartlinenumber=\"1\">Defines how the view should interpret the size constraints during measurement.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.LayoutGuide.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.LayoutGuide.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.LayoutGuide",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.LayoutGuide.yml\" sourcestartlinenumber=\"1\">Encapsulates the parameters and results of a layout pass (Measure, Arrange, Render) for a view.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.VerticalAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.VerticalAlignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.VerticalAlignment",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.VerticalAlignment.yml\" sourcestartlinenumber=\"1\">Specifies how a view should be aligned vertically within its layout bounds.\nUsed by parent containers to control vertical positioning along the block axis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.VerticalStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.VerticalStack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.VerticalStack",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.VerticalStack.yml\" sourcestartlinenumber=\"1\">A layout container that arranges its children vertically from top to bottom.</p>\n<p sourcefile=\"www/api/Xui.Core.UI.VerticalStack.yml\" sourcestartlinenumber=\"3\">Each child is measured with an unconstrained height and is allowed to take up as much vertical space as needed.\nThe container expands to fit the combined height of all children.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.VerticalUniformStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.VerticalUniformStack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.VerticalUniformStack",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.VerticalUniformStack.yml\" sourcestartlinenumber=\"1\">A layout container that arranges its children in a vertical stack,\ngiving each child the same height.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.View.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.View.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.View",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.View.yml\" sourcestartlinenumber=\"1\">Base class for all UI elements in the Xui layout engine.\nA view participates in layout, rendering, and input hit testing, and may contain child views.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.ViewCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.ViewCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.ViewCollection",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.ViewCollection.yml\" sourcestartlinenumber=\"1\">A base class for container views that hold and manage a list of child views.\nProvides methods for adding, removing, rendering, and hit testing children.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.WritingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.WritingMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI.WritingMode",
+      "Summary": "<p sourcefile=\"www/api/Xui.Core.UI.WritingMode.yml\" sourcestartlinenumber=\"1\">Specifies the orientation and flow direction of text and block layout.\nAffects which axis is considered &quot;block&quot; and &quot;inline&quot;.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.UI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Core.UI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": null,
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Middleware.Emulator.Actual.EmulatorPlatform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Middleware.Emulator.Actual.EmulatorPlatform.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Middleware.Emulator.Actual.EmulatorPlatform",
+      "Summary": "<p sourcefile=\"www/api/Xui.Middleware.Emulator.Actual.EmulatorPlatform.yml\" sourcestartlinenumber=\"1\">A runtime middleware layer that intercepts platform calls to inject emulator behavior.</p>\n<p sourcefile=\"www/api/Xui.Middleware.Emulator.Actual.EmulatorPlatform.yml\" sourcestartlinenumber=\"3\">This class wraps a base platform implementation (e.g., Windows or macOS)\nand adapts it to simulate a mobile device environment for desktop testing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Middleware.Emulator.Actual.EmulatorWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Middleware.Emulator.Actual.EmulatorWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Middleware.Emulator.Actual.EmulatorWindow",
+      "Summary": "<p sourcefile=\"www/api/Xui.Middleware.Emulator.Actual.EmulatorWindow.yml\" sourcestartlinenumber=\"1\">A middleware window that wraps a platform window to simulate a mobile device environment\nwhen running on desktop platforms like Windows or macOS.</p>\n<p>\nThis class implements both <xref href=\"Xui.Core.Abstract.IWindow\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Xui.Core.Actual.IWindow\" data-throw-if-not-resolved=\"false\"></xref>,\nacting as a bridge between the abstract UI and the actual system window.\nIt also implements <xref href=\"Xui.Core.Abstract.IWindow.IDesktopStyle\" data-throw-if-not-resolved=\"false\"></xref> to provide emulator-specific\nchrome styling and sizing.\n</p>\n<p>\nThe window draws a rounded-rectangle phone frame, overlays controls like battery and signal indicators,\nand translates desktop mouse events into synthetic mobile touch input.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.Middleware.Emulator.Actual.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.Middleware.Emulator.Actual.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Xui.Middleware.Emulator.Actual",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "www/api/Xui.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Xui.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": null,
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "www/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "www/docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "www/docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "www/docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/images/gigi/avatar.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gigi/avatar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/images/gigi/curious.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/gigi/curious.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/images/gigi/pointing.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/gigi/pointing.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/images/gigi/thinking.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/gigi/thinking.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/images/gigi/winking.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/gigi/winking.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/favicon.16x16.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.16x16.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/favicon.180x180.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.180x180.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/favicon.96x96.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.96x96.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/favicon.svg",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/index.html",
+      "output": {
+        "resource": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/logo.512x512.png",
+      "output": {
+        "resource": {
+          "relative_path": "logo.512x512.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/preview.1200x630.png",
+      "output": {
+        "resource": {
+          "relative_path": "preview.1200x630.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/preview.1200x630.svg",
+      "output": {
+        "resource": {
+          "relative_path": "preview.1200x630.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/preview.800x418.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "preview.800x418.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/preview.800x418.png",
+      "output": {
+        "resource": {
+          "relative_path": "preview.800x418.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "www/index/preview.800x418.svg",
+      "output": {
+        "resource": {
+          "relative_path": "preview.800x418.svg"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

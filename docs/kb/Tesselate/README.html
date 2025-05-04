@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Tessellation | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Tessellation | XUI APPS ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/blob/main/www/docs/kb/Tesselate/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="tessellation">Tessellation</h1>
+
+<p><strong>Xui.Runtime.Software</strong> provides a full software rendering backend that can rasterize vector paths using a scanline-based tessellator.</p>
+<h2 id="overview">Overview</h2>
+<p>Vector paths (<code>Xui.Core.Canvas.Path2D</code>) can be tessellated into triangle polygons for software or GPU-based rendering.</p>
+<p>The tessellation pipeline proceeds through these stages:</p>
+<ol>
+<li><p><strong>Flattening</strong><br>
+Curves (e.g. Bézier, arcs) are approximated with straight-line segments based on a flatness threshold.</p>
+</li>
+<li><p><strong>Contours</strong><br>
+Segments are grouped into closed loops, and winding direction is determined for fill rule evaluation.</p>
+</li>
+<li><p><strong>Scanline Sweep</strong><br>
+A vertical scanline algorithm partitions the shape into spans using either <strong>even-odd</strong> or <strong>non-zero</strong> winding rules.</p>
+</li>
+<li><p><strong>Triangulation</strong><br>
+The spans are tessellated into individual triangles for rasterization.</p>
+</li>
+</ol>
+<hr>
+<h3 id="-pipeline-visualization">📈 Pipeline Visualization</h3>
+<p>The image below shows a sample <code>Path2D</code> progressing through all stages:</p>
+<p><img src="tessellation-process.svg" alt="4 stages visualized"></p>
+<hr>
+<h3 id="-example-heart-shape-tessellation">💖 Example: Heart Shape Tessellation</h3>
+<pre><code class="lang-csharp">var path = new Path2D();
+path.MoveTo(new Point(60, 20));
+path.CurveTo(new Point(100, 0), new Point(100, 60), new Point(60, 80));
+path.CurveTo(new Point(20, 60), new Point(20, 0), new Point(60, 20));
+path.ClosePath();
+
+// Perform tessellation using even-odd fill rule
+var result = PathTesselator.Fill(path, FillRule.EvenOdd);
+
+// Access the generated triangle polygons
+foreach (var triangle in result.Polygons)
+{
+    // Use triangle.A, triangle.B, triangle.C
+}
+</code></pre>
+<hr>
+<h3 id="-curve-flattening-precision">🎯 Curve Flattening Precision</h3>
+<p>The tessellator uses <strong>curve flattening</strong> to convert Bézier paths into line segments. You can control the precision with a <code>flatness</code> parameter:</p>
+<pre><code class="lang-csharp">var tess = PathTesselator.Fill(path, FillRule.EvenOdd, flatness: 0.25f);
+</code></pre>
+<p><img src="tessellation-heart-precise.svg" alt="Normal Quality Heart"></p>
+<hr>
+<h3 id="-example-o-shape-with-hole-even-odd-fill">🟢 Example: &quot;O&quot; Shape with Hole (Even-Odd Fill)</h3>
+<p>This example demonstrates how the tessellator handles holes using the <strong>even-odd</strong> fill rule. The path includes two closed loops: an outer circle and an inner circle forming the hole.</p>
+<pre><code class="lang-csharp">var path = new Path2D();
+
+// Outer circle
+path.MoveTo(new Point(60, 20));
+path.CurveTo(new Point(100, 20), new Point(100, 80), new Point(60, 80));
+path.CurveTo(new Point(20, 80), new Point(20, 20), new Point(60, 20));
+path.ClosePath();
+
+// Inner circle (hole)
+path.MoveTo(new Point(60, 35));
+path.CurveTo(new Point(75, 35), new Point(75, 65), new Point(60, 65));
+path.CurveTo(new Point(45, 65), new Point(45, 35), new Point(60, 35));
+path.ClosePath();
+
+var result = PathTesselator.Fill(path, FillRule.EvenOdd);
+
+foreach (var triangle in result.Polygons)
+{
+    // triangle.A, triangle.B, triangle.C
+}
+</code></pre>
+<p><img src="tessellation-o-even-odd.svg" alt="O with even-odd rule"></p>
+<hr>
+<h3 id="-holes-and-the-non-zero-fill-rule">🕳️ Holes and the Non-Zero Fill Rule</h3>
+<p>When using the <strong>non-zero</strong> fill rule, holes are only excluded if their winding direction cancels out the outer contour. In the example below, both the outer and inner circles are wound in the same direction, so the hole is not excluded — the entire shape is filled.</p>
+<p><img src="tessellation-o-non-zero.svg" alt="O with non-zero rule"></p>
+<p>To produce holes reliably, the <strong>even-odd</strong> fill rule is often preferred for paths with overlapping or nested contours.</p>
+<hr>
+<h3 id="-example-figure-8-with-self-intersecting-path">∞ Example: Figure-8 with Self-Intersecting Path</h3>
+<p>This shape is a single continuous path that loops back on itself to form a twisted “8” structure — like a flattened Möbius strip. The fill rule affects whether the middle crossing cancels or doubles the fill.</p>
+<ul>
+<li><strong>Even-Odd</strong> creates two distinct lobes with a canceling center.</li>
+<li><strong>Non-Zero</strong> fills the entire structure due to cumulative winding.</li>
+</ul>
+<p>Even-Odd</p>
+<p><img src="tessellation-8-even-odd.svg" alt="8 even-odd"></p>
+<p>Non-Zero</p>
+<p><img src="tessellation-8-non-zero.svg" alt="8 non-zero"></p>
+<hr>
+<h3 id="-summary">✅ Summary</h3>
+<p>The Xui tessellation system provides a precise and flexible pipeline for flattening, contour analysis, fill rule evaluation, and triangle generation. This enables fast and reliable vector shape rendering in both software and hardware pipelines, with support for edge cases like self-intersecting paths and holes.</p>
+<p>Use <code>PathTesselator.Fill(...)</code> with the fill rule that best matches your layout or rendering intent — and enjoy pixel-perfect cross-platform rendering with Xui!</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/www/docs/kb/Tesselate/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

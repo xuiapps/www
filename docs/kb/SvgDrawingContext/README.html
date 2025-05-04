@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>SvgDrawingContext | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="SvgDrawingContext | XUI APPS ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/blob/main/www/docs/kb/SvgDrawingContext/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="svgdrawingcontext">SvgDrawingContext</h1>
+
+<p>This article demonstrates how to use Xui’s <code>SvgDrawingContext</code> to draw vector graphics directly into an SVG file, using the same APIs available on native platforms. This backend is ideal for static output, testing, or generating documentation visuals without relying on a GPU or rasterization.</p>
+<p>The example below includes:</p>
+<ul>
+<li>A filled rounded rectangle</li>
+<li>A heart-shaped Bézier path with stroke</li>
+<li>A small filled circle</li>
+</ul>
+<p>The output is written to an SVG file using <code>System.IO.Stream</code>, and the same drawing commands could run on any supported platform (Direct2D, CoreGraphics, Skia) without changes.</p>
+<h2 id="svg-output">SVG Output</h2>
+<p><img src="svg-context-demo.svg" alt="SVG Preview"></p>
+<h2 id="example-code">Example Code</h2>
+<pre><code class="lang-csharp">using Xui.Core.Canvas;
+using Xui.Core.Math2D;
+using static Xui.Core.Canvas.Colors;
+
+var size = new Size(240, 120);
+using var stream = File.Create(&quot;svg-context-demo.svg&quot;);
+using var context = (IContext)new Xui.Runtime.Software.Actual.SvgDrawingContext(size, stream);
+
+// Filled rounded rect background
+context.SetFill(Purple);
+context.BeginPath();
+context.RoundRect(new Rect(10, 10, 220, 100), 16);
+context.Fill(FillRule.NonZero);
+
+// Heart path with stroke
+context.SetStroke(DeepPink);
+context.LineWidth = 2.5f;
+context.BeginPath();
+context.MoveTo(new Point(120, 35));
+context.CurveTo(new Point(150, 5), new Point(180, 60), new Point(120, 90));
+context.CurveTo(new Point(60, 60), new Point(90, 5), new Point(120, 35));
+context.ClosePath();
+context.Stroke();
+
+// Small filled dot
+context.SetFill(Blue);
+context.BeginPath();
+context.Ellipse(new Point(120, 35), 4, 4, 0, 0, 2 * nfloat.Pi, Winding.ClockWise);
+context.Fill(FillRule.NonZero);
+</code></pre>
+<blockquote>
+<p>🔪 This is also a great tool for unit tests and documentation—allowing you to validate and visualize rendering output in a headless environment.</p>
+</blockquote>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/www/docs/kb/SvgDrawingContext/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

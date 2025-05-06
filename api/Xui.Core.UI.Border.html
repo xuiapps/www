@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class VerticalUniformStack | XUI APPS </title>
+      <title>Class Border | XUI APPS </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class VerticalUniformStack | XUI APPS ">
+      <meta name="title" content="Class Border | XUI APPS ">
       
-      <meta name="description" content="A layout container that arranges its children in a vertical stack, giving each child the same height.">
+      <meta name="description" content="A view that draws a background, border, and padding around a single child content view.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_UI_VerticalUniformStack.md&amp;value=---%0Auid%3A%20Xui.Core.UI.VerticalUniformStack%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_UI_Border.md&amp;value=---%0Auid%3A%20Xui.Core.UI.Border%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Xui.Core.UI.VerticalUniformStack">
+        <article data-uid="Xui.Core.UI.Border">
 
 
 
-  <h1 id="Xui_Core_UI_VerticalUniformStack" data-uid="Xui.Core.UI.VerticalUniformStack" class="text-break">
-Class VerticalUniformStack  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/VerticalUniformStack.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Xui_Core_UI_Border" data-uid="Xui.Core.UI.Border" class="text-break">
+Class Border  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,12 @@ Class VerticalUniformStack  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A layout container that arranges its children in a vertical stack,
-giving each child the same height.</p>
+  <div class="markdown summary"><p>A view that draws a background, border, and padding around a single child content view.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class VerticalUniformStack : ViewCollection</code></pre>
+    <pre><code class="lang-csharp hljs">public class Border : View</code></pre>
   </div>
 
 
@@ -114,8 +113,7 @@ giving each child the same height.</p>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="Xui.Core.UI.View.html">View</a></div>
-      <div><a class="xref" href="Xui.Core.UI.ViewCollection.html">ViewCollection</a></div>
-      <div><span class="xref">VerticalUniformStack</span></div>
+      <div><span class="xref">Border</span></div>
     </dd>
   </dl>
 
@@ -124,30 +122,6 @@ giving each child the same height.</p>
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_children">ViewCollection.children</a>
-    </div>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_Count">ViewCollection.Count</a>
-    </div>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_Item_System_Int32_">ViewCollection.this[int]</a>
-    </div>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_Content">ViewCollection.Content</a>
-    </div>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_Add_Xui_Core_UI_View_">ViewCollection.Add(View)</a>
-    </div>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_Remove_Xui_Core_UI_View_">ViewCollection.Remove(View)</a>
-    </div>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_RenderCore_Xui_Core_Canvas_IContext_">ViewCollection.RenderCore(IContext)</a>
-    </div>
-    <div>
-      <a class="xref" href="Xui.Core.UI.ViewCollection.html#Xui_Core_UI_ViewCollection_HitTest_Xui_Core_Math2D_Point_">ViewCollection.HitTest(Point)</a>
-    </div>
     <div>
       <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Parent">View.Parent</a>
     </div>
@@ -183,6 +157,15 @@ giving each child the same height.</p>
     </div>
     <div>
       <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_MaximumHeight">View.MaximumHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Count">View.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Item_System_Int32_">View.this[int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_HitTest_Xui_Core_Math2D_Point_">View.HitTest(Point)</a>
     </div>
     <div>
       <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Update_Xui_Core_UI_LayoutGuide_">View.Update(LayoutGuide)</a>
@@ -225,27 +208,213 @@ giving each child the same height.</p>
 
 
 
-  <h2 id="Xui_Core_UI_VerticalUniformStack_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>
-If the parent provides a constrained height, the container divides
-the available height equally among all children.
-</p>
-<p>
-If the height is unconstrained (infinite), the container measures each child
-to determine the maximum height, and uses that height for all rows.
-</p>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xui_Core_UI_Border_BackgroundColor_" data-uid="Xui.Core.UI.Border.BackgroundColor*"></a>
+
+  <h3 id="Xui_Core_UI_Border_BackgroundColor" data-uid="Xui.Core.UI.Border.BackgroundColor">
+  BackgroundColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the background color inside the border.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color BackgroundColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_Border_BorderColor_" data-uid="Xui.Core.UI.Border.BorderColor*"></a>
+
+  <h3 id="Xui_Core_UI_Border_BorderColor" data-uid="Xui.Core.UI.Border.BorderColor">
+  BorderColor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the color of the border stroke.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color BorderColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_Border_BorderThickness_" data-uid="Xui.Core.UI.Border.BorderThickness*"></a>
+
+  <h3 id="Xui_Core_UI_Border_BorderThickness" data-uid="Xui.Core.UI.Border.BorderThickness">
+  BorderThickness
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the thickness of the border on each side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Frame BorderThickness { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_Border_Content_" data-uid="Xui.Core.UI.Border.Content*"></a>
+
+  <h3 id="Xui_Core_UI_Border_Content" data-uid="Xui.Core.UI.Border.Content">
+  Content
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the content view displayed inside the border.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public View? Content { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.UI.View.html">View</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_Border_CornerRadius_" data-uid="Xui.Core.UI.Border.CornerRadius*"></a>
+
+  <h3 id="Xui_Core_UI_Border_CornerRadius" data-uid="Xui.Core.UI.Border.CornerRadius">
+  CornerRadius
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the corner radius used to round the corners of the border and background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CornerRadius CornerRadius { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.CornerRadius.html">CornerRadius</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_UI_Border_Padding_" data-uid="Xui.Core.UI.Border.Padding*"></a>
+
+  <h3 id="Xui_Core_UI_Border_Padding" data-uid="Xui.Core.UI.Border.Padding">
+  Padding
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the padding between the border and the content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Frame Padding { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Frame.html">Frame</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Xui_Core_UI_VerticalUniformStack_ArrangeCore_" data-uid="Xui.Core.UI.VerticalUniformStack.ArrangeCore*"></a>
+  <a id="Xui_Core_UI_Border_ArrangeCore_" data-uid="Xui.Core.UI.Border.ArrangeCore*"></a>
 
-  <h3 id="Xui_Core_UI_VerticalUniformStack_ArrangeCore_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.VerticalUniformStack.ArrangeCore(Xui.Core.Math2D.Rect,Xui.Core.Canvas.IMeasureContext)">
+  <h3 id="Xui_Core_UI_Border_ArrangeCore_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.Border.ArrangeCore(Xui.Core.Math2D.Rect,Xui.Core.Canvas.IMeasureContext)">
   ArrangeCore(Rect, IMeasureContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/VerticalUniformStack.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs the layout pass by arranging content and children within the view's
@@ -279,11 +448,11 @@ text sizing, and pixel snapping utilities.</p>
 
 
 
-  <a id="Xui_Core_UI_VerticalUniformStack_MeasureCore_" data-uid="Xui.Core.UI.VerticalUniformStack.MeasureCore*"></a>
+  <a id="Xui_Core_UI_Border_MeasureCore_" data-uid="Xui.Core.UI.Border.MeasureCore*"></a>
 
-  <h3 id="Xui_Core_UI_VerticalUniformStack_MeasureCore_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.VerticalUniformStack.MeasureCore(Xui.Core.Math2D.Size,Xui.Core.Canvas.IMeasureContext)">
+  <h3 id="Xui_Core_UI_Border_MeasureCore_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.Border.MeasureCore(Xui.Core.Math2D.Size,Xui.Core.Canvas.IMeasureContext)">
   MeasureCore(Size, IMeasureContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/VerticalUniformStack.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines the minimum size that this view's border edge box requires,
@@ -292,15 +461,13 @@ given the maximum available size. Margin is not part of this size.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Size MeasureCore(Size availableBorderEdgeSize, IMeasureContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Size MeasureCore(Size constraints, IMeasureContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>availableBorderEdgeSize</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
-    <dd><p>The maximum size available for the view’s border edge box.
-This size excludes margins, which are handled by the parent layout.</p>
-</dd>
+    <dt><code>constraints</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
+    <dd></dd>
     <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
     <dd><p>The layout metrics context providing access to platform-specific measurements,
 text sizing, and pixel snapping utilities.</p>
@@ -324,11 +491,44 @@ text sizing, and pixel snapping utilities.</p>
 
 
 
+  <a id="Xui_Core_UI_Border_RenderCore_" data-uid="Xui.Core.UI.Border.RenderCore*"></a>
+
+  <h3 id="Xui_Core_UI_Border_RenderCore_Xui_Core_Canvas_IContext_" data-uid="Xui.Core.UI.Border.RenderCore(Xui.Core.Canvas.IContext)">
+  RenderCore(IContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the content and children of this view using the provided rendering context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RenderCore(IContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IContext.html">IContext</a></dt>
+    <dd><p>The drawing context used for rendering visual content to the output surface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/VerticalUniformStack.cs/#L20" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Border.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

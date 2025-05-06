@@ -89,7 +89,7 @@
 
 
   <h1 id="Xui_Core_UI_View" data-uid="Xui.Core.UI.View" class="text-break">
-Class View  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class View  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.Input.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -121,6 +121,8 @@ A view participates in layout, rendering, and input hit testing, and may contain
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
+      <div><a class="xref" href="Xui.Core.UI.Border.html">Border</a></div>
+      <div><a class="xref" href="Xui.Core.UI.Label.html">Label</a></div>
       <div><a class="xref" href="Xui.Core.UI.ViewCollection.html">ViewCollection</a></div>
     </dd>
   </dl>
@@ -627,9 +629,9 @@ Inherited from the parent if set to <a class="xref" href="Xui.Core.UI.WritingMod
 
   <a id="Xui_Core_UI_View_Arrange_" data-uid="Xui.Core.UI.View.Arrange*"></a>
 
-  <h3 id="Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.UI.View.Arrange(Xui.Core.Math2D.Rect)">
-  Arrange(Rect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.View.Arrange(Xui.Core.Math2D.Rect,Xui.Core.Canvas.IMeasureContext)">
+  Arrange(Rect, IMeasureContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Arranges the view within the specified rectangle, finalizing its layout position and size.</p>
@@ -637,7 +639,7 @@ Inherited from the parent if set to <a class="xref" href="Xui.Core.UI.WritingMod
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Rect Arrange(Rect rect)</code></pre>
+    <pre><code class="lang-csharp hljs">public Rect Arrange(Rect rect, IMeasureContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -645,6 +647,8 @@ Inherited from the parent if set to <a class="xref" href="Xui.Core.UI.WritingMod
     <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
     <dd><p>The rectangle defining the position and exact size for the view.</p>
 </dd>
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -666,9 +670,9 @@ Inherited from the parent if set to <a class="xref" href="Xui.Core.UI.WritingMod
 
   <a id="Xui_Core_UI_View_ArrangeCore_" data-uid="Xui.Core.UI.View.ArrangeCore*"></a>
 
-  <h3 id="Xui_Core_UI_View_ArrangeCore_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.UI.View.ArrangeCore(Xui.Core.Math2D.Rect)">
-  ArrangeCore(Rect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_UI_View_ArrangeCore_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.View.ArrangeCore(Xui.Core.Math2D.Rect,Xui.Core.Canvas.IMeasureContext)">
+  ArrangeCore(Rect, IMeasureContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs the layout pass by arranging content and children within the view's
@@ -677,13 +681,17 @@ border edge box, using the provided rectangle.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void ArrangeCore(Rect rect)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void ArrangeCore(Rect rect, IMeasureContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
     <dd><p>The final rectangle (position and size) allocated to this view's border edge box.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
+    <dd><p>The layout metrics context providing access to platform-specific measurements,
+text sizing, and pixel snapping utilities.</p>
 </dd>
   </dl>
 
@@ -740,9 +748,9 @@ Used for input dispatch and hit testing.</p>
 
   <a id="Xui_Core_UI_View_Measure_" data-uid="Xui.Core.UI.View.Measure*"></a>
 
-  <h3 id="Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_" data-uid="Xui.Core.UI.View.Measure(Xui.Core.Math2D.Size)">
-  Measure(Size)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.View.Measure(Xui.Core.Math2D.Size,Xui.Core.Canvas.IMeasureContext)">
+  Measure(Size, IMeasureContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Measures the view using the specified available size, returning the desired size
@@ -751,7 +759,7 @@ calculated during the layout pass.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Size Measure(Size availableSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public Size Measure(Size availableSize, IMeasureContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -759,6 +767,8 @@ calculated during the layout pass.</p>
     <dt><code>availableSize</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
     <dd><p>The maximum space available for the view to occupy.</p>
 </dd>
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -780,9 +790,9 @@ calculated during the layout pass.</p>
 
   <a id="Xui_Core_UI_View_MeasureCore_" data-uid="Xui.Core.UI.View.MeasureCore*"></a>
 
-  <h3 id="Xui_Core_UI_View_MeasureCore_Xui_Core_Math2D_Size_" data-uid="Xui.Core.UI.View.MeasureCore(Xui.Core.Math2D.Size)">
-  MeasureCore(Size)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_UI_View_MeasureCore_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.View.MeasureCore(Xui.Core.Math2D.Size,Xui.Core.Canvas.IMeasureContext)">
+  MeasureCore(Size, IMeasureContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L266"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines the minimum size that this view's border edge box requires,
@@ -791,7 +801,7 @@ given the maximum available size. Margin is not part of this size.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual Size MeasureCore(Size availableBorderEdgeSize)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual Size MeasureCore(Size availableBorderEdgeSize, IMeasureContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -799,6 +809,10 @@ given the maximum available size. Margin is not part of this size.</p>
     <dt><code>availableBorderEdgeSize</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
     <dd><p>The maximum size available for the view’s border edge box.
 This size excludes margins, which are handled by the parent layout.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
+    <dd><p>The layout metrics context providing access to platform-specific measurements,
+text sizing, and pixel snapping utilities.</p>
 </dd>
   </dl>
 
@@ -819,11 +833,45 @@ This size excludes margins, which are handled by the parent layout.</p>
 
 
 
+  <a id="Xui_Core_UI_View_RaisePointerEvent_" data-uid="Xui.Core.UI.View.RaisePointerEvent*"></a>
+
+  <h3 id="Xui_Core_UI_View_RaisePointerEvent_Xui_Core_UI_Input_PointerEventRef__Xui_Core_UI_Input_EventPhase_" data-uid="Xui.Core.UI.View.RaisePointerEvent(Xui.Core.UI.Input.PointerEventRef@,Xui.Core.UI.Input.EventPhase)">
+  RaisePointerEvent(ref PointerEventRef, EventPhase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.Input.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called during event dispatch to handle a pointer event in a specific event phase.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RaisePointerEvent(ref PointerEventRef e, EventPhase phase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Xui.Core.UI.Input.PointerEventRef.html">PointerEventRef</a></dt>
+    <dd></dd>
+    <dt><code>phase</code> <a class="xref" href="Xui.Core.UI.Input.EventPhase.html">EventPhase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Xui_Core_UI_View_Render_" data-uid="Xui.Core.UI.View.Render*"></a>
 
   <h3 id="Xui_Core_UI_View_Render_Xui_Core_Canvas_IContext_" data-uid="Xui.Core.UI.View.Render(Xui.Core.Canvas.IContext)">
   Render(IContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the view using the given rendering context. This should be called after layout is complete.</p>
@@ -856,7 +904,7 @@ This size excludes margins, which are handled by the parent layout.</p>
 
   <h3 id="Xui_Core_UI_View_RenderCore_Xui_Core_Canvas_IContext_" data-uid="Xui.Core.UI.View.RenderCore(Xui.Core.Canvas.IContext)">
   RenderCore(IContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Renders the content and children of this view using the provided rendering context.</p>
@@ -895,9 +943,9 @@ This size excludes margins, which are handled by the parent layout.</p>
   <div class="markdown level1 summary"><p>Performs a full layout pass for a view - measure, arrange and render.</p>
 <p>Flags can limit to a subset of the layout passes, in case a container needs to measure children multiple times,
 or in case a container can rush forward without forking the layout pass into multiple sub-passes.</p>
-<p>The layout method will delegate parts of the execution to <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_MeasureCore_Xui_Core_Math2D_Size_">MeasureCore(Size)</a>, <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_ArrangeCore_Xui_Core_Math2D_Rect_">ArrangeCore(Rect)</a> and <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_RenderCore_Xui_Core_Canvas_IContext_">RenderCore(IContext)</a>.</p>
+<p>The layout method will delegate parts of the execution to <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_MeasureCore_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_">MeasureCore(Size, IMeasureContext)</a>, <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_ArrangeCore_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_">ArrangeCore(Rect, IMeasureContext)</a> and <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_RenderCore_Xui_Core_Canvas_IContext_">RenderCore(IContext)</a>.</p>
 <p>If a container needs to call multiple times methods for a child,
-either call the <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_">Measure(Size)</a>, <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_">Arrange(Rect)</a> and <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Render_Xui_Core_Canvas_IContext_">Render(IContext)</a>,
+either call the <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_">Measure(Size, IMeasureContext)</a>, <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_">Arrange(Rect, IMeasureContext)</a> and <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Render_Xui_Core_Canvas_IContext_">Render(IContext)</a>,
 or construct a <a class="xref" href="Xui.Core.UI.LayoutGuide.html">LayoutGuide</a> with the specific flags and pass it to <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Update_Xui_Core_UI_LayoutGuide_">Update(LayoutGuide)</a>.</p>
 <p>Some containers may override and implement a Layout in a way, that it compacts the flow and avoids fork,
 like a VerticalStack that is placed on fullscreen (with fixed width),
@@ -937,7 +985,7 @@ so in these cases it may foreach-layout (measure and arrange) resolve the stack 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/View.Input.cs/#L5" class="edit-link">Edit this page</a>
         </div>
 
 

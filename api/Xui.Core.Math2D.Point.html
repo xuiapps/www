@@ -343,7 +343,7 @@ Struct Point  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Xui_Core_Math2D_Point_Equals_System_Object_" data-uid="Xui.Core.Math2D.Point.Equals(System.Object)">
   Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
@@ -382,7 +382,7 @@ Struct Point  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Xui_Core_Math2D_Point_Equals_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.Point.Equals(Xui.Core.Math2D.Point)">
   Equals(Point)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns true if this point has the same coordinates as another.</p>
@@ -419,7 +419,7 @@ Struct Point  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Xui_Core_Math2D_Point_GetHashCode" data-uid="Xui.Core.Math2D.Point.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
@@ -579,7 +579,7 @@ Often used in grid-based or discrete movement systems.</p>
 
   <h3 id="Xui_Core_Math2D_Point_ToString" data-uid="Xui.Core.Math2D.Point.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
@@ -790,6 +790,45 @@ Often used in grid-based or discrete movement systems.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Math2D_Point_op_Multiply_" data-uid="Xui.Core.Math2D.Point.op_Multiply*"></a>
+
+  <h3 id="Xui_Core_Math2D_Point_op_Multiply_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.Point.op_Multiply(Xui.Core.Math2D.Point,System.Runtime.InteropServices.NFloat)">
+  operator *(Point, NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/Point.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Apply an uniform scale to a point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Point operator *(Point v, NFloat f)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+    <dt><code>f</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
     <dd></dd>
   </dl>
 

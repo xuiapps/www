@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct ArcEndpoint | XUI APPS </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct ArcEndpoint | XUI APPS ">
+      
+      <meta name="description" content="Represents a circular or elliptical arc defined by radii, rotation, and endpoint parameters.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Curves2D_ArcEndpoint.md&amp;value=---%0Auid%3A%20Xui.Core.Curves2D.ArcEndpoint%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="XUI APPS">
+            XUI APPS
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xui.Core.Curves2D.ArcEndpoint">
+
+
+
+  <h1 id="Xui_Core_Curves2D_ArcEndpoint" data-uid="Xui.Core.Curves2D.ArcEndpoint" class="text-break">
+Struct ArcEndpoint  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Curves2D.html">Curves2D</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a circular or elliptical arc defined by radii, rotation, and endpoint parameters.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct ArcEndpoint : ICurve</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xui.Core.Curves2D.ICurve.html">ICurve</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Xui_Core_Curves2D_ArcEndpoint_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This arc representation uses start and end points along with size and sweep flags.
+It is commonly used in vector graphics where the arc shape is inferred from geometry and direction flags.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint__ctor_" data-uid="Xui.Core.Curves2D.ArcEndpoint.#ctor*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint__ctor_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Boolean_Xui_Core_Canvas_Winding_" data-uid="Xui.Core.Curves2D.ArcEndpoint.#ctor(Xui.Core.Math2D.Point,Xui.Core.Math2D.Point,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Boolean,Xui.Core.Canvas.Winding)">
+  ArcEndpoint(Point, Point, NFloat, NFloat, NFloat, bool, Winding)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new <a class="xref" href="Xui.Core.Curves2D.ArcEndpoint.html">ArcEndpoint</a> with the given geometry and flags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArcEndpoint(Point start, Point end, NFloat rx, NFloat ry, NFloat rotation, bool largeArc, Winding winding)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>start</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The start point of the arc.</p>
+</dd>
+    <dt><code>end</code> <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The end point of the arc.</p>
+</dd>
+    <dt><code>rx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The horizontal radius.</p>
+</dd>
+    <dt><code>ry</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The vertical radius.</p>
+</dd>
+    <dt><code>rotation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The clockwise rotation in radians applied to the ellipse.</p>
+</dd>
+    <dt><code>largeArc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the arc should be the larger of the two possible arcs.</p>
+</dd>
+    <dt><code>winding</code> <a class="xref" href="Xui.Core.Canvas.Winding.html">Winding</a></dt>
+    <dd><p>The sweep direction (clockwise or counter-clockwise).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_End" data-uid="Xui.Core.Curves2D.ArcEndpoint.End">
+  End
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The end point of the arc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Point End</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_LargeArc" data-uid="Xui.Core.Curves2D.ArcEndpoint.LargeArc">
+  LargeArc
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true, the arc is the longer (greater than 180°) of the two possible arcs between points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool LargeArc</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_RadiusX" data-uid="Xui.Core.Curves2D.ArcEndpoint.RadiusX">
+  RadiusX
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The horizontal radius of the arc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NFloat RadiusX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_RadiusY" data-uid="Xui.Core.Curves2D.ArcEndpoint.RadiusY">
+  RadiusY
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The vertical radius of the arc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NFloat RadiusY</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Rotation" data-uid="Xui.Core.Curves2D.ArcEndpoint.Rotation">
+  Rotation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The clockwise rotation (in radians) applied to the arc's ellipse relative to the X axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NFloat Rotation</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Start" data-uid="Xui.Core.Curves2D.ArcEndpoint.Start">
+  Start
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The start point of the arc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Point Start</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Winding" data-uid="Xui.Core.Curves2D.ArcEndpoint.Winding">
+  Winding
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The direction in which the arc is drawn (clockwise or counter-clockwise).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Winding Winding</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Winding.html">Winding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_Item_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Item*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Item_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Item(System.Runtime.InteropServices.NFloat)">
+  this[NFloat]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the interpolated point on the arc at the specified parameter <code class="paramref">t</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point this[NFloat t] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>A normalized value from 0 to 1 representing the progression along the arc.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_Evaluate_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Evaluate*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Evaluate_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Evaluate(System.Runtime.InteropServices.NFloat)">
+  Evaluate(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evaluates the arc at a normalized parameter <code class="paramref">t</code>, returning the corresponding point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point Evaluate(NFloat t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>A normalized value in the range [0, 1].</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd><p>The corresponding point on the arc.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_Length_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Length*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Length" data-uid="Xui.Core.Curves2D.ArcEndpoint.Length">
+  Length()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Approximates the arc length using uniform sampling with 16 segments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Length()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The approximate total arc length.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_Length_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Length*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Length_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Length(System.Runtime.InteropServices.NFloat)">
+  Length(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Approximates the arc length using recursive adaptive subdivision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NFloat Length(NFloat flatness)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flatness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The maximum allowed error per segment for arc approximation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The computed arc length within the specified flatness tolerance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_Lerp_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Lerp*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Lerp_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Lerp(System.Runtime.InteropServices.NFloat)">
+  Lerp(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the interpolated point on the arc at a given parameter <code class="paramref">t</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point Lerp(NFloat t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>A normalized value in the range [0, 1].</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_Tangent_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Tangent*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_Tangent_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Curves2D.ArcEndpoint.Tangent(System.Runtime.InteropServices.NFloat)">
+  Tangent(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the tangent vector at parameter <code class="paramref">t</code> on the arc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector Tangent(NFloat t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>A normalized value in the range [0, 1].</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
+    <dd><p>The normalized tangent vector at the evaluated point on the arc.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_ToArc3Segments_" data-uid="Xui.Core.Curves2D.ArcEndpoint.ToArc3Segments*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_ToArc3Segments_System_Span_Xui_Core_Curves2D_Arc3Point__System_Int32__" data-uid="Xui.Core.Curves2D.ArcEndpoint.ToArc3Segments(System.Span{Xui.Core.Curves2D.Arc3Point},System.Int32@)">
+  ToArc3Segments(Span&lt;Arc3Point&gt;, out int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Splits this arc into a series of <a class="xref" href="Xui.Core.Curves2D.Arc3Point.html">Arc3Point</a> segments,
+each spanning ≤ 90° and aligned so that one edge is axis-aligned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToArc3Segments(Span&lt;Arc3Point&gt; buffer, out int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="Xui.Core.Curves2D.Arc3Point.html">Arc3Point</a>&gt;</dt>
+    <dd><p>A span to receive the output segments. Must have space for up to 4 entries.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of segments written to <code class="paramref">buffer</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Xui_Core_Curves2D_ArcEndpoint_ToArc3Segments_System_Span_Xui_Core_Curves2D_Arc3Point__System_Int32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method converts the arc into a center-based <a class="xref" href="Xui.Core.Curves2D.Arc.html">Arc</a> representation,
+then delegates to its <a class="xref" href="Xui.Core.Curves2D.Arc.html#Xui_Core_Curves2D_Arc_ToArc3Segments_System_Span_Xui_Core_Curves2D_Arc3Point__System_Int32__">ToArc3Segments(Span&lt;Arc3Point&gt;, out int)</a> method. Each resulting
+<a class="xref" href="Xui.Core.Curves2D.Arc3Point.html">Arc3Point</a> segment spans ≤ 90° and is safe for monotonic tessellation.</p>
+</div>
+
+
+
+
+  <a id="Xui_Core_Curves2D_ArcEndpoint_ToCenterArc_" data-uid="Xui.Core.Curves2D.ArcEndpoint.ToCenterArc*"></a>
+
+  <h3 id="Xui_Core_Curves2D_ArcEndpoint_ToCenterArc" data-uid="Xui.Core.Curves2D.ArcEndpoint.ToCenterArc">
+  ToCenterArc()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts this endpoint-parameterized arc to a center-based <a class="xref" href="Xui.Core.Curves2D.Arc.html">Arc</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Arc ToCenterArc()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Curves2D.Arc.html">Arc</a></dt>
+    <dd><p>A new <a class="xref" href="Xui.Core.Curves2D.Arc.html">Arc</a> representing the same shape.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/ArcEndpoint.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

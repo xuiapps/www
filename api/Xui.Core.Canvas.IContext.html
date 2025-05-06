@@ -104,7 +104,7 @@ including state, drawing primitives, text, images, transformations, and resource
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IContext : IStateContext, IPenContext, IPathDrawingContext, IRectDrawingContext, ITextDrawingContext, ITextMeasureContext, IImageDrawingContext, ITransformContext, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IContext : IMeasureContext, IStateContext, IPenContext, IPathDrawingContext, IPathBuilder, IGlyphPathBuilder, IPathDrawing, IPathClipping, IRectDrawingContext, ITextDrawingContext, ITextMeasureContext, IImageDrawingContext, ITransformContext, IDisposable</code></pre>
   </div>
 
 
@@ -162,49 +162,49 @@ including state, drawing primitives, text, images, transformations, and resource
       <a class="xref" href="Xui.Core.Canvas.IPenContext.html#Xui_Core_Canvas_IPenContext_SetFill_Xui_Core_Canvas_RadialGradient_">IPenContext.SetFill(RadialGradient)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_BeginPath">IPathDrawingContext.BeginPath()</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_BeginPath">IPathBuilder.BeginPath()</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_MoveTo_Xui_Core_Math2D_Point_">IPathDrawingContext.MoveTo(Point)</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_CurveTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_">IPathBuilder.CurveTo(Point, Point, Point)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_LineTo_Xui_Core_Math2D_Point_">IPathDrawingContext.LineTo(Point)</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_Arc_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_Xui_Core_Canvas_Winding_">IPathBuilder.Arc(Point, NFloat, NFloat, NFloat, Winding)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_ClosePath">IPathDrawingContext.ClosePath()</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_ArcTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_">IPathBuilder.ArcTo(Point, Point, NFloat)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_CurveTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_">IPathDrawingContext.CurveTo(Point, Point)</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_Ellipse_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_Xui_Core_Canvas_Winding_">IPathBuilder.Ellipse(Point, NFloat, NFloat, NFloat, NFloat, NFloat, Winding)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_CurveTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_">IPathDrawingContext.CurveTo(Point, Point, Point)</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_Rect_Xui_Core_Math2D_Rect_">IPathBuilder.Rect(Rect)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_Arc_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_Xui_Core_Canvas_Winding_">IPathDrawingContext.Arc(Point, NFloat, NFloat, NFloat, Winding)</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_RoundRect_Xui_Core_Math2D_Rect_System_Runtime_InteropServices_NFloat_">IPathBuilder.RoundRect(Rect, NFloat)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_ArcTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_">IPathDrawingContext.ArcTo(Point, Point, NFloat)</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathBuilder.html#Xui_Core_Canvas_IPathBuilder_RoundRect_Xui_Core_Math2D_Rect_Xui_Core_Canvas_CornerRadius_">IPathBuilder.RoundRect(Rect, CornerRadius)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_Ellipse_Xui_Core_Math2D_Point_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_Xui_Core_Canvas_Winding_">IPathDrawingContext.Ellipse(Point, NFloat, NFloat, NFloat, NFloat, NFloat, Winding)</a>
+      <a class="xref" href="Xui.Core.Canvas.IGlyphPathBuilder.html#Xui_Core_Canvas_IGlyphPathBuilder_MoveTo_Xui_Core_Math2D_Point_">IGlyphPathBuilder.MoveTo(Point)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_Rect_Xui_Core_Math2D_Rect_">IPathDrawingContext.Rect(Rect)</a>
+      <a class="xref" href="Xui.Core.Canvas.IGlyphPathBuilder.html#Xui_Core_Canvas_IGlyphPathBuilder_LineTo_Xui_Core_Math2D_Point_">IGlyphPathBuilder.LineTo(Point)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_RoundRect_Xui_Core_Math2D_Rect_System_Runtime_InteropServices_NFloat_">IPathDrawingContext.RoundRect(Rect, NFloat)</a>
+      <a class="xref" href="Xui.Core.Canvas.IGlyphPathBuilder.html#Xui_Core_Canvas_IGlyphPathBuilder_CurveTo_Xui_Core_Math2D_Point_Xui_Core_Math2D_Point_">IGlyphPathBuilder.CurveTo(Point, Point)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_RoundRect_Xui_Core_Math2D_Rect_Xui_Core_Canvas_CornerRadius_">IPathDrawingContext.RoundRect(Rect, CornerRadius)</a>
+      <a class="xref" href="Xui.Core.Canvas.IGlyphPathBuilder.html#Xui_Core_Canvas_IGlyphPathBuilder_ClosePath">IGlyphPathBuilder.ClosePath()</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_Fill_Xui_Core_Canvas_FillRule_">IPathDrawingContext.Fill(FillRule)</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathDrawing.html#Xui_Core_Canvas_IPathDrawing_Fill_Xui_Core_Canvas_FillRule_">IPathDrawing.Fill(FillRule)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_Stroke">IPathDrawingContext.Stroke()</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathDrawing.html#Xui_Core_Canvas_IPathDrawing_Stroke">IPathDrawing.Stroke()</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.Canvas.IPathDrawingContext.html#Xui_Core_Canvas_IPathDrawingContext_Clip">IPathDrawingContext.Clip()</a>
+      <a class="xref" href="Xui.Core.Canvas.IPathClipping.html#Xui_Core_Canvas_IPathClipping_Clip">IPathClipping.Clip()</a>
     </div>
     <div>
       <a class="xref" href="Xui.Core.Canvas.IRectDrawingContext.html#Xui_Core_Canvas_IRectDrawingContext_StrokeRect_Xui_Core_Math2D_Rect_">IRectDrawingContext.StrokeRect(Rect)</a>

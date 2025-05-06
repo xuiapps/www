@@ -146,7 +146,7 @@ Struct LayoutGuide  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Xui_Core_UI_LayoutGuide_Anchor" data-uid="Xui.Core.UI.LayoutGuide.Anchor">
   Anchor
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The anchor point that defines the alignment constraint for layout.
@@ -180,7 +180,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_ArrangedRect" data-uid="Xui.Core.UI.LayoutGuide.ArrangedRect">
   ArrangedRect
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The final rectangle occupied by the view's border edge box after the Arrange pass.</p>
@@ -242,7 +242,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_DesiredSize" data-uid="Xui.Core.UI.LayoutGuide.DesiredSize">
   DesiredSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The desired size of the view's margin box, produced during the Measure pass.</p>
@@ -273,15 +273,18 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_MeasureContext" data-uid="Xui.Core.UI.LayoutGuide.MeasureContext">
   MeasureContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional context for measuring text content during the Measure pass.</p>
+  <div class="markdown level1 summary"><p>Optional measurement context providing access to platform-specific text metrics
+and precise size calculations during the Measure pass.
+If set, text and layout measurements can use font shaping and pixel snapping
+consistent with the underlying rendering system.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ITextMeasureContext? MeasureContext</code></pre>
+    <pre><code class="lang-csharp hljs">public IMeasureContext? MeasureContext</code></pre>
   </div>
 
 
@@ -289,7 +292,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Xui.Core.Canvas.ITextMeasureContext.html">ITextMeasureContext</a></dt>
+    <dt><a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
     <dd></dd>
   </dl>
 
@@ -335,7 +338,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_RenderContext" data-uid="Xui.Core.UI.LayoutGuide.RenderContext">
   RenderContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional rendering context for drawing during the Render pass.</p>
@@ -366,7 +369,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_XAlign" data-uid="Xui.Core.UI.LayoutGuide.XAlign">
   XAlign
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The horizontal alignment of the view within its allocated space.</p>
@@ -428,7 +431,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_YAlign" data-uid="Xui.Core.UI.LayoutGuide.YAlign">
   YAlign
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The vertical alignment of the view within its allocated space.</p>
@@ -495,7 +498,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_IsArrange" data-uid="Xui.Core.UI.LayoutGuide.IsArrange">
   IsArrange
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns true if this guide represents an Arrange pass.</p>
@@ -527,7 +530,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_IsMeasure" data-uid="Xui.Core.UI.LayoutGuide.IsMeasure">
   IsMeasure
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns true if this guide represents a Measure pass.</p>
@@ -559,7 +562,7 @@ If alignment is <a class="xref" href="Xui.Core.UI.LayoutGuide.Align.html#Xui_Cor
 
   <h3 id="Xui_Core_UI_LayoutGuide_IsRender" data-uid="Xui.Core.UI.LayoutGuide.IsRender">
   IsRender
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns true if this guide represents a Render pass.</p>

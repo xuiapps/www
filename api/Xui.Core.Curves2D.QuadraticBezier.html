@@ -642,6 +642,83 @@ Uses adaptive precision to locate the closest point.</p>
 
 
 
+  <a id="Xui_Core_Curves2D_QuadraticBezier_SplitIntoYMonotonicCurves_" data-uid="Xui.Core.Curves2D.QuadraticBezier.SplitIntoYMonotonicCurves*"></a>
+
+  <h3 id="Xui_Core_Curves2D_QuadraticBezier_SplitIntoYMonotonicCurves" data-uid="Xui.Core.Curves2D.QuadraticBezier.SplitIntoYMonotonicCurves">
+  SplitIntoYMonotonicCurves()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/QuadraticBezier.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Splits the current quadratic Bézier curve into two segments if it is not monotonic in the Y direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MonotonicQuadraticBezier SplitIntoYMonotonicCurves()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Curves2D.MonotonicQuadraticBezier.html">MonotonicQuadraticBezier</a></dt>
+    <dd><p>A <a class="xref" href="Xui.Core.Curves2D.MonotonicQuadraticBezier.html">MonotonicQuadraticBezier</a> instance containing one or two sub-curves, each guaranteed to be monotonic in Y.
+If the curve is already Y-monotonic (i.e., has no vertical extrema within (0,1)), a single-segment result is returned.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xui_Core_Curves2D_QuadraticBezier_SplitIntoYMonotonicCurves_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method analyzes the derivative of the Y component of the curve to determine if a vertical extremum occurs
+within the curve's parameter domain. If a critical point is found in (0,1), the curve is split at that point to ensure
+each resulting segment is Y-monotonic. This is useful for scanline rasterization, tessellation, or other geometry processing
+that requires monotonic segments.</p>
+</div>
+
+
+
+
+  <a id="Xui_Core_Curves2D_QuadraticBezier_Subdivide_" data-uid="Xui.Core.Curves2D.QuadraticBezier.Subdivide*"></a>
+
+  <h3 id="Xui_Core_Curves2D_QuadraticBezier_Subdivide_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Curves2D.QuadraticBezier.Subdivide(System.Runtime.InteropServices.NFloat)">
+  Subdivide(NFloat)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/QuadraticBezier.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subdivides this quadratic Bézier curve at parameter t, returning two curves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (QuadraticBezier, QuadraticBezier) Subdivide(NFloat t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<a class="xref" href="Xui.Core.Curves2D.QuadraticBezier.html">QuadraticBezier</a>, <a class="xref" href="Xui.Core.Curves2D.QuadraticBezier.html">QuadraticBezier</a>)</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Xui_Core_Curves2D_QuadraticBezier_Tangent_" data-uid="Xui.Core.Curves2D.QuadraticBezier.Tangent*"></a>
 
   <h3 id="Xui_Core_Curves2D_QuadraticBezier_Tangent_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Curves2D.QuadraticBezier.Tangent(System.Runtime.InteropServices.NFloat)">

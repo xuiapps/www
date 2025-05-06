@@ -108,6 +108,10 @@ These match the named colors from the CSS color specification:
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">https://developer.mozilla.org/en-US/docs/Web/CSS/named-color</a></p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.Path2D.html">Path2D</a></dt>
+      <dd></dd>
+    </dl>
     <h3 id="structs">
 Structs
 </h3>
@@ -162,11 +166,45 @@ including state, drawing primitives, text, images, transformations, and resource
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.IGlyphPathBuilder.html">IGlyphPathBuilder</a></dt>
+      <dd><p>A lightweight interface for constructing TrueType glyph paths
+using move, line, curve, and close commands.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Xui.Core.Canvas.IImageDrawingContext.html">IImageDrawingContext</a></dt>
       <dd><p>Defines methods for drawing image-like content onto the canvas,
 such as bitmaps, video frames, or decoded image buffers.</p>
 <p>Mirrors the image drawing APIs from the HTML5 Canvas 2D context.
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
+      <dd><p>Defines a measurement context that provides access to platform-specific text metrics,
+supports subpixel snapping for layout precision, and enables accurate text size calculations
+using the underlying rendering engine's font rasterization and shaping systems.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.IPathBuilder.html">IPathBuilder</a></dt>
+      <dd><p>Defines methods for constructing paths,
+following the HTML5 Canvas path API model.</p>
+<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.IPathClipping.html">IPathClipping</a></dt>
+      <dd><p>Defines methods for clipping using a path,
+following the HTML5 Canvas path API model.</p>
+<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.IPathDrawing.html">IPathDrawing</a></dt>
+      <dd><p>Defines methods for drawing a constructed path,
+following the HTML5 Canvas path API model.</p>
+<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#paths</a></p>
 </dd>
     </dl>
     <dl class="jumplist">

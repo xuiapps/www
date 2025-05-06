@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Struct Touch | XUI APPS </title>
+      <title>Struct MonotonicCubicBezier | XUI APPS </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Struct Touch | XUI APPS ">
+      <meta name="title" content="Struct MonotonicCubicBezier | XUI APPS ">
       
-      <meta name="description" content="Represents a single touch point within a multi-touch input event.">
+      
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Abstract_Events_Touch.md&amp;value=---%0Auid%3A%20Xui.Core.Abstract.Events.Touch%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Curves2D_MonotonicCubicBezier.md&amp;value=---%0Auid%3A%20Xui.Core.Curves2D.MonotonicCubicBezier%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,24 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Xui.Core.Abstract.Events.Touch">
+        <article data-uid="Xui.Core.Curves2D.MonotonicCubicBezier">
 
 
 
-  <h1 id="Xui_Core_Abstract_Events_Touch" data-uid="Xui.Core.Abstract.Events.Touch" class="text-break">
-Struct Touch  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Events/Touch.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Xui_Core_Curves2D_MonotonicCubicBezier" data-uid="Xui.Core.Curves2D.MonotonicCubicBezier" class="text-break">
+Struct MonotonicCubicBezier  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/MonotonicCubicBezier.cs/#L3"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Abstract.html">Abstract</a>.<a class="xref" href="Xui.Core.Abstract.Events.html">Events</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.Curves2D.html">Curves2D</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a single touch point within a multi-touch input event.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Touch</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct MonotonicCubicBezier</code></pre>
   </div>
 
 
@@ -137,11 +136,45 @@ Struct Touch  <a class="header-action link-secondary" title="View source" href="
 
 
 
-  <h2 id="Xui_Core_Abstract_Events_Touch_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>This structure contains identifying and positional data for a specific finger
-or contact point on a touch surface. Multiple <a class="xref" href="Xui.Core.Abstract.Events.Touch.html">Touch</a> instances may be
-reported in a single event when handling gestures or complex touch interactions.</p>
-</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Curves2D_MonotonicCubicBezier__ctor_" data-uid="Xui.Core.Curves2D.MonotonicCubicBezier.#ctor*"></a>
+
+  <h3 id="Xui_Core_Curves2D_MonotonicCubicBezier__ctor_Xui_Core_Curves2D_CubicBezier_System_Nullable_Xui_Core_Curves2D_CubicBezier__System_Nullable_Xui_Core_Curves2D_CubicBezier__" data-uid="Xui.Core.Curves2D.MonotonicCubicBezier.#ctor(Xui.Core.Curves2D.CubicBezier,System.Nullable{Xui.Core.Curves2D.CubicBezier},System.Nullable{Xui.Core.Curves2D.CubicBezier})">
+  MonotonicCubicBezier(CubicBezier, CubicBezier?, CubicBezier?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/MonotonicCubicBezier.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MonotonicCubicBezier(CubicBezier first, CubicBezier? second = null, CubicBezier? third = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="Xui.Core.Curves2D.CubicBezier.html">CubicBezier</a></dt>
+    <dd></dd>
+    <dt><code>second</code> <a class="xref" href="Xui.Core.Curves2D.CubicBezier.html">CubicBezier</a>?</dt>
+    <dd></dd>
+    <dt><code>third</code> <a class="xref" href="Xui.Core.Curves2D.CubicBezier.html">CubicBezier</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
   <h2 class="section" id="fields">Fields
@@ -149,18 +182,16 @@ reported in a single event when handling gestures or complex touch interactions.
 
 
 
-  <h3 id="Xui_Core_Abstract_Events_Touch_Index" data-uid="Xui.Core.Abstract.Events.Touch.Index">
-  Index
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Events/Touch.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_Curves2D_MonotonicCubicBezier_First" data-uid="Xui.Core.Curves2D.MonotonicCubicBezier.First">
+  First
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/MonotonicCubicBezier.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>A unique index identifying this touch point during its lifetime.
-Typically assigned by the platform and reused after release.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Index</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly CubicBezier First</code></pre>
   </div>
 
 
@@ -168,7 +199,7 @@ Typically assigned by the platform and reused after release.</p>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="Xui.Core.Curves2D.CubicBezier.html">CubicBezier</a></dt>
     <dd></dd>
   </dl>
 
@@ -181,17 +212,16 @@ Typically assigned by the platform and reused after release.</p>
 
 
 
-  <h3 id="Xui_Core_Abstract_Events_Touch_Phase" data-uid="Xui.Core.Abstract.Events.Touch.Phase">
-  Phase
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Events/Touch.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_Curves2D_MonotonicCubicBezier_Second" data-uid="Xui.Core.Curves2D.MonotonicCubicBezier.Second">
+  Second
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/MonotonicCubicBezier.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The current phase of the touch (e.g., began, moved, ended).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TouchPhase Phase</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly CubicBezier? Second</code></pre>
   </div>
 
 
@@ -199,7 +229,7 @@ Typically assigned by the platform and reused after release.</p>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Xui.Core.Abstract.Events.TouchPhase.html">TouchPhase</a></dt>
+    <dt><a class="xref" href="Xui.Core.Curves2D.CubicBezier.html">CubicBezier</a>?</dt>
     <dd></dd>
   </dl>
 
@@ -212,17 +242,16 @@ Typically assigned by the platform and reused after release.</p>
 
 
 
-  <h3 id="Xui_Core_Abstract_Events_Touch_Position" data-uid="Xui.Core.Abstract.Events.Touch.Position">
-  Position
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Events/Touch.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_Curves2D_MonotonicCubicBezier_Third" data-uid="Xui.Core.Curves2D.MonotonicCubicBezier.Third">
+  Third
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/MonotonicCubicBezier.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The current position of the touch in logical window coordinates.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Point Position</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly CubicBezier? Third</code></pre>
   </div>
 
 
@@ -230,39 +259,7 @@ Typically assigned by the platform and reused after release.</p>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Xui.Core.Math2D.Point.html">Point</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="Xui_Core_Abstract_Events_Touch_Radius" data-uid="Xui.Core.Abstract.Events.Touch.Radius">
-  Radius
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Events/Touch.cs/#L30"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The estimated contact radius of the touch, in logical units.
-Used for gesture recognition or pressure emulation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NFloat Radius</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dt><a class="xref" href="Xui.Core.Curves2D.CubicBezier.html">CubicBezier</a>?</dt>
     <dd></dd>
   </dl>
 
@@ -278,7 +275,7 @@ Used for gesture recognition or pressure emulation.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Abstract/Events/Touch.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Curves2D/MonotonicCubicBezier.cs/#L3" class="edit-link">Edit this page</a>
         </div>
 
 

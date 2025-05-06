@@ -154,7 +154,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform__ctor_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.AffineTransform.#ctor(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
   AffineTransform(NFloat, NFloat, NFloat, NFloat, NFloat, NFloat)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructs an affine transform with the specified matrix coefficients.</p>
@@ -421,7 +421,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_Determinant" data-uid="Xui.Core.Math2D.AffineTransform.Determinant">
   Determinant
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the determinant of the 2×2 linear portion of the matrix.</p>
@@ -456,7 +456,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_Inverse" data-uid="Xui.Core.Math2D.AffineTransform.Inverse">
   Inverse
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the inverse of this affine transform.</p>
@@ -487,6 +487,38 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="Xui_Core_Math2D_AffineTransform_IsIdentity_" data-uid="Xui.Core.Math2D.AffineTransform.IsIdentity*"></a>
+
+  <h3 id="Xui_Core_Math2D_AffineTransform_IsIdentity" data-uid="Xui.Core.Math2D.AffineTransform.IsIdentity">
+  IsIdentity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the current transform is the identity matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsIdentity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -495,7 +527,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_Rotate_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.AffineTransform.Rotate(System.Runtime.InteropServices.NFloat)">
   Rotate(NFloat)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a rotation transform around the origin using the given angle in radians.</p>
@@ -532,7 +564,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_Scale_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.AffineTransform.Scale(Xui.Core.Math2D.Vector)">
   Scale(Vector)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a scaling transform using the specified scale vector.</p>
@@ -569,7 +601,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_Shear_System_Runtime_InteropServices_NFloat_System_Runtime_InteropServices_NFloat_" data-uid="Xui.Core.Math2D.AffineTransform.Shear(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
   Shear(NFloat, NFloat)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a shear (skew) transformation along the X and Y axes.</p>
@@ -610,7 +642,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_ToString" data-uid="Xui.Core.Math2D.AffineTransform.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
@@ -643,7 +675,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_Translate_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.AffineTransform.Translate(Xui.Core.Math2D.Vector)">
   Translate(Vector)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a translation transform using the specified offset vector.</p>
@@ -684,7 +716,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_op_Multiply_Xui_Core_Math2D_AffineTransform_Xui_Core_Math2D_AffineTransform_" data-uid="Xui.Core.Math2D.AffineTransform.op_Multiply(Xui.Core.Math2D.AffineTransform,Xui.Core.Math2D.AffineTransform)">
   operator *(AffineTransform, AffineTransform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Composes two affine transforms using matrix multiplication.</p>
@@ -724,7 +756,7 @@ Struct AffineTransform  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Xui_Core_Math2D_AffineTransform_op_Multiply_Xui_Core_Math2D_AffineTransform_Xui_Core_Math2D_Point_" data-uid="Xui.Core.Math2D.AffineTransform.op_Multiply(Xui.Core.Math2D.AffineTransform,Xui.Core.Math2D.Point)">
   operator *(AffineTransform, Point)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Applies this transform to a <a class="xref" href="Xui.Core.Math2D.Point.html">Point</a>, including translation.</p>
@@ -770,7 +802,7 @@ Use this when transforming coordinates in space (e.g., an element's position).</
 
   <h3 id="Xui_Core_Math2D_AffineTransform_op_Multiply_Xui_Core_Math2D_AffineTransform_Xui_Core_Math2D_Vector_" data-uid="Xui.Core.Math2D.AffineTransform.op_Multiply(Xui.Core.Math2D.AffineTransform,Xui.Core.Math2D.Vector)">
   operator *(AffineTransform, Vector)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Math2D/AffineTransform.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Applies only the linear portion (scale, rotation, shear) of this transform to a <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a>.</p>

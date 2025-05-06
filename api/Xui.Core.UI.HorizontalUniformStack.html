@@ -89,7 +89,7 @@
 
 
   <h1 id="Xui_Core_UI_HorizontalUniformStack" data-uid="Xui.Core.UI.HorizontalUniformStack" class="text-break">
-Class HorizontalUniformStack  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L22"><i class="bi bi-code-slash"></i></a>
+Class HorizontalUniformStack  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -188,13 +188,16 @@ assigning each child the same width.</p>
       <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Update_Xui_Core_UI_LayoutGuide_">View.Update(LayoutGuide)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_">View.Measure(Size)</a>
+      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Measure_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_">View.Measure(Size, IMeasureContext)</a>
     </div>
     <div>
-      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_">View.Arrange(Rect)</a>
+      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Arrange_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_">View.Arrange(Rect, IMeasureContext)</a>
     </div>
     <div>
       <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_Render_Xui_Core_Canvas_IContext_">View.Render(IContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xui.Core.UI.View.html#Xui_Core_UI_View_RaisePointerEvent_Xui_Core_UI_Input_PointerEventRef__Xui_Core_UI_Input_EventPhase_">View.RaisePointerEvent(ref PointerEventRef, EventPhase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -243,23 +246,28 @@ The height of the container is based on the tallest child.
 
   <a id="Xui_Core_UI_HorizontalUniformStack_ArrangeCore_" data-uid="Xui.Core.UI.HorizontalUniformStack.ArrangeCore*"></a>
 
-  <h3 id="Xui_Core_UI_HorizontalUniformStack_ArrangeCore_Xui_Core_Math2D_Rect_" data-uid="Xui.Core.UI.HorizontalUniformStack.ArrangeCore(Xui.Core.Math2D.Rect)">
-  ArrangeCore(Rect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_UI_HorizontalUniformStack_ArrangeCore_Xui_Core_Math2D_Rect_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.HorizontalUniformStack.ArrangeCore(Xui.Core.Math2D.Rect,Xui.Core.Canvas.IMeasureContext)">
+  ArrangeCore(Rect, IMeasureContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Arranges the children into horizontally stacked columns of equal width.</p>
+  <div class="markdown level1 summary"><p>Performs the layout pass by arranging content and children within the view's
+border edge box, using the provided rectangle.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void ArrangeCore(Rect rect)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void ArrangeCore(Rect rect, IMeasureContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>rect</code> <a class="xref" href="Xui.Core.Math2D.Rect.html">Rect</a></dt>
-    <dd><p>The rectangle within which to arrange children.</p>
+    <dd><p>The final rectangle (position and size) allocated to this view's border edge box.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
+    <dd><p>The layout metrics context providing access to platform-specific measurements,
+text sizing, and pixel snapping utilities.</p>
 </dd>
   </dl>
 
@@ -276,9 +284,9 @@ The height of the container is based on the tallest child.
 
   <a id="Xui_Core_UI_HorizontalUniformStack_MeasureCore_" data-uid="Xui.Core.UI.HorizontalUniformStack.MeasureCore*"></a>
 
-  <h3 id="Xui_Core_UI_HorizontalUniformStack_MeasureCore_Xui_Core_Math2D_Size_" data-uid="Xui.Core.UI.HorizontalUniformStack.MeasureCore(Xui.Core.Math2D.Size)">
-  MeasureCore(Size)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Xui_Core_UI_HorizontalUniformStack_MeasureCore_Xui_Core_Math2D_Size_Xui_Core_Canvas_IMeasureContext_" data-uid="Xui.Core.UI.HorizontalUniformStack.MeasureCore(Xui.Core.Math2D.Size,Xui.Core.Canvas.IMeasureContext)">
+  MeasureCore(Size, IMeasureContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Measures the desired size of this layout container and its children,
@@ -287,7 +295,7 @@ based on the available space provided by the parent.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Size MeasureCore(Size availableBorderEdgeSize)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Size MeasureCore(Size availableBorderEdgeSize, IMeasureContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -295,6 +303,8 @@ based on the available space provided by the parent.</p>
     <dt><code>availableBorderEdgeSize</code> <a class="xref" href="Xui.Core.Math2D.Size.html">Size</a></dt>
     <dd><p>The space available for layout, excluding padding and borders.</p>
 </dd>
+    <dt><code>context</code> <a class="xref" href="Xui.Core.Canvas.IMeasureContext.html">IMeasureContext</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -318,7 +328,7 @@ based on the available space provided by the parent.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L22" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/HorizontalUniformStack.cs/#L23" class="edit-link">Edit this page</a>
         </div>
 
 

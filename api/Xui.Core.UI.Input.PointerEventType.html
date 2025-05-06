@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum LayoutGuide.Align | XUI APPS </title>
+      <title>Enum PointerEventType | XUI APPS </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum LayoutGuide.Align | XUI APPS ">
+      <meta name="title" content="Enum PointerEventType | XUI APPS ">
       
-      <meta name="description" content="Defines alignment of a view within a layout axis.">
+      <meta name="description" content="Defines the type of action associated with a pointer event, based on the W3C Pointer Events specification.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_UI_LayoutGuide_Align.md&amp;value=---%0Auid%3A%20Xui.Core.UI.LayoutGuide.Align%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_UI_Input_PointerEventType.md&amp;value=---%0Auid%3A%20Xui.Core.UI.Input.PointerEventType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,26 +84,26 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Xui.Core.UI.LayoutGuide.Align">
+        <article data-uid="Xui.Core.UI.Input.PointerEventType">
 
 
 
 
-  <h1 id="Xui_Core_UI_LayoutGuide_Align" data-uid="Xui.Core.UI.LayoutGuide.Align" class="text-break">
-Enum LayoutGuide.Align  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Xui_Core_UI_Input_PointerEventType" data-uid="Xui.Core.UI.Input.PointerEventType" class="text-break">
+Enum PointerEventType  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Input/PointerEventType.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.UI.html">UI</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xui.html">Xui</a>.<a class="xref" href="Xui.Core.html">Core</a>.<a class="xref" href="Xui.Core.UI.html">UI</a>.<a class="xref" href="Xui.Core.UI.Input.html">Input</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines alignment of a view within a layout axis.</p>
+  <div class="markdown summary"><p>Defines the type of action associated with a pointer event, based on the W3C Pointer Events specification.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum LayoutGuide.Align : byte</code></pre>
+    <pre><code class="lang-csharp hljs">public enum PointerEventType</code></pre>
   </div>
 
 
@@ -117,17 +117,55 @@ Enum LayoutGuide.Align  <a class="header-action link-secondary" title="View sour
   <h2 id="fields">Fields
 </h2>
   <dl class="parameters">
-    <dt id="Xui_Core_UI_LayoutGuide_Align_Center"><code>Center = 1</code></dt>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Cancel"><code>Cancel = 5</code></dt>
   
-  <dd><p>Align to the center.</p>
+  <dd><p>The pointer input was canceled by the system.
+Corresponds to the &quot;pointercancel&quot; event.</p>
 </dd>
-    <dt id="Xui_Core_UI_LayoutGuide_Align_End"><code>End = 2</code></dt>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Down"><code>Down = 2</code></dt>
   
-  <dd><p>Align to the end (bottom or right).</p>
+  <dd><p>A pointer button has been pressed.
+Corresponds to the &quot;pointerdown&quot; event.</p>
 </dd>
-    <dt id="Xui_Core_UI_LayoutGuide_Align_Start"><code>Start = 0</code></dt>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Enter"><code>Enter = 1</code></dt>
   
-  <dd><p>Align to the start (top or left).</p>
+  <dd><p>The pointer has entered the element or one of its descendants.
+Corresponds to the &quot;pointerenter&quot; event.</p>
+</dd>
+    <dt id="Xui_Core_UI_Input_PointerEventType_GotCapture"><code>GotCapture = 8</code></dt>
+  
+  <dd><p>The pointer has been captured by the element.
+Corresponds to the &quot;gotpointercapture&quot; event.</p>
+</dd>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Leave"><code>Leave = 7</code></dt>
+  
+  <dd><p>The pointer has left the element and all its descendants.
+Corresponds to the &quot;pointerleave&quot; event.</p>
+</dd>
+    <dt id="Xui_Core_UI_Input_PointerEventType_LostCapture"><code>LostCapture = 9</code></dt>
+  
+  <dd><p>The pointer capture has been released from the element.
+Corresponds to the &quot;lostpointercapture&quot; event.</p>
+</dd>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Move"><code>Move = 3</code></dt>
+  
+  <dd><p>The pointer has moved while being active.
+Corresponds to the &quot;pointermove&quot; event.</p>
+</dd>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Out"><code>Out = 6</code></dt>
+  
+  <dd><p>The pointer has moved off of the element's hit region.
+Corresponds to the &quot;pointerout&quot; event.</p>
+</dd>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Over"><code>Over = 0</code></dt>
+  
+  <dd><p>The pointer has moved onto the element's hit region.
+Corresponds to the &quot;pointerover&quot; event.</p>
+</dd>
+    <dt id="Xui_Core_UI_Input_PointerEventType_Up"><code>Up = 4</code></dt>
+  
+  <dd><p>A pointer button has been released.
+Corresponds to the &quot;pointerup&quot; event.</p>
 </dd>
   </dl>
 
@@ -136,7 +174,7 @@ Enum LayoutGuide.Align  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/LayoutGuide.cs/#L135" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/UI/Input/PointerEventType.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

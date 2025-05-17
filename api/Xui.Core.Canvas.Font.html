@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Canvas_Font.md&amp;value=---%0Auid%3A%20Xui.Core.Canvas.Font%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/font/apiSpec/new?filename=Xui_Core_Canvas_Font.md&amp;value=---%0Auid%3A%20Xui.Core.Canvas.Font%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font" class="text-break">
-Struct Font  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/Font.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Struct Font  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L3"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -145,14 +145,306 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
 </div>
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xui_Core_Canvas_Font__ctor_" data-uid="Xui.Core.Canvas.Font.#ctor*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font__ctor_System_Runtime_InteropServices_NFloat_System_ReadOnlySpan_System_String__System_Nullable_Xui_Core_Canvas_FontWeight__System_Nullable_Xui_Core_Canvas_FontStyle__System_Nullable_Xui_Core_Canvas_FontStretch__System_Nullable_System_Runtime_InteropServices_NFloat__" data-uid="Xui.Core.Canvas.Font.#ctor(System.Runtime.InteropServices.NFloat,System.ReadOnlySpan{System.String},System.Nullable{Xui.Core.Canvas.FontWeight},System.Nullable{Xui.Core.Canvas.FontStyle},System.Nullable{Xui.Core.Canvas.FontStretch},System.Nullable{System.Runtime.InteropServices.NFloat})">
+  Font(NFloat, ReadOnlySpan&lt;string&gt;, FontWeight?, FontStyle?, FontStretch?, NFloat?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> with specified size and optional styling attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Font(NFloat fontSize, ReadOnlySpan&lt;string&gt; fontFamily = default, FontWeight? fontWeight = null, FontStyle? fontStyle = null, FontStretch? fontStretch = null, NFloat? lineHeight = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fontSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dd><p>The font size in user-space units (e.g., pixels).</p>
+</dd>
+    <dt><code>fontFamily</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The font family (optional; no fallback list).</p>
+</dd>
+    <dt><code>fontWeight</code> <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a>?</dt>
+    <dd><p>The font weight (default: <a class="xref" href="Xui.Core.Canvas.FontWeight.html#Xui_Core_Canvas_FontWeight_Normal">Normal</a>).</p>
+</dd>
+    <dt><code>fontStyle</code> <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a>?</dt>
+    <dd><p>The font style (default: <a class="xref" href="Xui.Core.Canvas.FontStyle.html#Xui_Core_Canvas_FontStyle_Normal">Normal</a>).</p>
+</dd>
+    <dt><code>fontStretch</code> <a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a>?</dt>
+    <dd><p>The font stretch (default: <a class="xref" href="Xui.Core.Canvas.FontStretch.html#Xui_Core_Canvas_FontStretch_Normal">Normal</a>).</p>
+</dd>
+    <dt><code>lineHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a>?</dt>
+    <dd><p>The line height (default: 1.2 × font size).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="fields">Fields
 </h2>
 
 
 
+  <h3 id="Xui_Core_Canvas_Font_Black" data-uid="Xui.Core.Canvas.Font.Black">
+  Black
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight Black</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_Bold" data-uid="Xui.Core.Canvas.Font.Bold">
+  Bold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight Bold</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_Condensed" data-uid="Xui.Core.Canvas.Font.Condensed">
+  Condensed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch Condensed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_Expanded" data-uid="Xui.Core.Canvas.Font.Expanded">
+  Expanded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch Expanded</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_ExtraBold" data-uid="Xui.Core.Canvas.Font.ExtraBold">
+  ExtraBold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight ExtraBold</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_ExtraCondensed" data-uid="Xui.Core.Canvas.Font.ExtraCondensed">
+  ExtraCondensed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch ExtraCondensed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_ExtraExpanded" data-uid="Xui.Core.Canvas.Font.ExtraExpanded">
+  ExtraExpanded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch ExtraExpanded</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_ExtraLight" data-uid="Xui.Core.Canvas.Font.ExtraLight">
+  ExtraLight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight ExtraLight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Xui_Core_Canvas_Font_FontFamily" data-uid="Xui.Core.Canvas.Font.FontFamily">
   FontFamily
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/Font.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The primary font family name. No fallback fonts are supported.</p>
@@ -183,7 +475,7 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Xui_Core_Canvas_Font_FontSize" data-uid="Xui.Core.Canvas.Font.FontSize">
   FontSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/Font.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The font size in user-space units.</p>
@@ -212,9 +504,55 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
 
 
 
+  <h3 id="Xui_Core_Canvas_Font_FontStretch" data-uid="Xui.Core.Canvas.Font.FontStretch">
+  FontStretch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The stretch or width of the font relative to its normal width (100%).
+Values correspond to common CSS/OpenType stretch percentages:</p>
+<pre><code class="lang-csharp"> 50 - Ultra Condensed
+ 62.5 - Extra Condensed
+ 75 - Condensed
+ 87.5 - Semi Condensed
+100 - Normal
+112.5 - Semi Expanded
+125 - Expanded
+150 - Extra Expanded
+200 - Ultra Expanded</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontStretch FontStretch</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Xui_Core_Canvas_Font_FontStretch_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Font stretch controls the horizontal expansion or compression of glyphs.
+A value of 100 indicates normal width. Values less than 100 indicate
+condensed fonts; values greater than 100 indicate expanded fonts.</p>
+</div>
+
+
+
+
+
   <h3 id="Xui_Core_Canvas_Font_FontStyle" data-uid="Xui.Core.Canvas.Font.FontStyle">
   FontStyle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/Font.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The font style (normal, italic, oblique).</p>
@@ -245,7 +583,7 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Xui_Core_Canvas_Font_FontWeight" data-uid="Xui.Core.Canvas.Font.FontWeight">
   FontWeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/Font.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The numeric weight of the font. Matches common web font weights:</p>
@@ -262,7 +600,7 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NFloat FontWeight</code></pre>
+    <pre><code class="lang-csharp hljs">public FontWeight FontWeight</code></pre>
   </div>
 
 
@@ -270,7 +608,67 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.nfloat">NFloat</a></dt>
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_Italic" data-uid="Xui.Core.Canvas.Font.Italic">
+  Italic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStyle Italic</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_Light" data-uid="Xui.Core.Canvas.Font.Light">
+  Light
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight Light</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
     <dd></dd>
   </dl>
 
@@ -285,7 +683,7 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Xui_Core_Canvas_Font_LineHeight" data-uid="Xui.Core.Canvas.Font.LineHeight">
   LineHeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/Font.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The line height in user-space units. Controls vertical spacing between lines.</p>
@@ -314,10 +712,786 @@ Struct Font  <a class="header-action link-secondary" title="View source" href="h
 
 
 
+  <h3 id="Xui_Core_Canvas_Font_Medium" data-uid="Xui.Core.Canvas.Font.Medium">
+  Medium
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight Medium</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_Oblique" data-uid="Xui.Core.Canvas.Font.Oblique">
+  Oblique
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStyle Oblique</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_SemiBold" data-uid="Xui.Core.Canvas.Font.SemiBold">
+  SemiBold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight SemiBold</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_SemiCondensed" data-uid="Xui.Core.Canvas.Font.SemiCondensed">
+  SemiCondensed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch SemiCondensed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_SemiExpanded" data-uid="Xui.Core.Canvas.Font.SemiExpanded">
+  SemiExpanded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch SemiExpanded</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_Thin" data-uid="Xui.Core.Canvas.Font.Thin">
+  Thin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontWeight Thin</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_UltraCondensed" data-uid="Xui.Core.Canvas.Font.UltraCondensed">
+  UltraCondensed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch UltraCondensed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Xui_Core_Canvas_Font_UltraExpanded" data-uid="Xui.Core.Canvas.Font.UltraExpanded">
+  UltraExpanded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.Constants.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly FontStretch UltraExpanded</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_Single__Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.Single)~Xui.Core.Canvas.Font">
+  implicit operator Font(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from a font size.
+Uses normal weight, normal style, normal stretch, and line height = 1.2× size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font(float size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The font size in user-space units (e.g., pixels).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_System_Single___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,System.Single})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, float lineHeight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size and line height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, float lineHeight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,system.single-.size">size</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,system.single-.lineheight">lineHeight</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontStyle_System_Single___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontStyle,System.Single})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontStyle style, float lineHeight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, style, and line height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontStyle style, float lineHeight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,system.single-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,system.single-.style">style</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,system.single-.lineheight">lineHeight</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontStyle_Xui_Core_Canvas_FontStretch_System_Single___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontStyle,Xui.Core.Canvas.FontStretch,System.Single})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontStyle style, FontStretch stretch, float lineHeight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, style, stretch, and line height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontStyle style, FontStretch stretch, float lineHeight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.style">style</a>, <a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.stretch">stretch</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.lineheight">lineHeight</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontStyle_Xui_Core_Canvas_FontStretch___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontStyle,Xui.Core.Canvas.FontStretch})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontStyle style, FontStretch stretch))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, style, and stretch.
+Uses normal weight and line height = 1.2× size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontStyle style, FontStretch stretch) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch-.style">style</a>, <a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch-.stretch">stretch</a>)</dt>
+    <dd><p>The font size, style, and stretch percentage.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontStyle___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontStyle})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontStyle style))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from a font size and style.
+Uses normal weight, normal stretch, and line height = 1.2× size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontStyle style) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontstyle-.style">style</a>)</dt>
+    <dd><p>The font size and font style.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight_System_Single___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight,System.Single})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight, float lineHeight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, weight, and line height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight, float lineHeight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,system.single-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,system.single-.weight">weight</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,system.single-.lineheight">lineHeight</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight_Xui_Core_Canvas_FontStretch_System_Single___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight,Xui.Core.Canvas.FontStretch,System.Single})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight, FontStretch stretch, float lineHeight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, weight, stretch, and line height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight, FontStretch stretch, float lineHeight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstretch,system.single-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstretch,system.single-.weight">weight</a>, <a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstretch,system.single-.stretch">stretch</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstretch,system.single-.lineheight">lineHeight</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight_Xui_Core_Canvas_FontStretch___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight,Xui.Core.Canvas.FontStretch})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight, FontStretch stretch))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, weight, and stretch.
+Uses normal style and line height = 1.2× size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight, FontStretch stretch) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstretch-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstretch-.weight">weight</a>, <a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstretch-.stretch">stretch</a>)</dt>
+    <dd><p>The font size, weight, and stretch percentage.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight_Xui_Core_Canvas_FontStyle_System_Single___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight,Xui.Core.Canvas.FontStyle,System.Single})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight, FontStyle style, float lineHeight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, weight, style, and line height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight, FontStyle style, float lineHeight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,system.single-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,system.single-.weight">weight</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,system.single-.style">style</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,system.single-.lineheight">lineHeight</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight_Xui_Core_Canvas_FontStyle_Xui_Core_Canvas_FontStretch_System_Single___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight,Xui.Core.Canvas.FontStyle,Xui.Core.Canvas.FontStretch,System.Single})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight, FontStyle style, FontStretch stretch, float lineHeight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, weight, style, stretch, and line height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight, FontStyle style, FontStretch stretch, float lineHeight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.weight">weight</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.style">style</a>, <a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.stretch">stretch</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch,system.single-.lineheight">lineHeight</a>)</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight_Xui_Core_Canvas_FontStyle_Xui_Core_Canvas_FontStretch___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight,Xui.Core.Canvas.FontStyle,Xui.Core.Canvas.FontStretch})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight, FontStyle style, FontStretch stretch))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, weight, style, and stretch.
+Uses line height = 1.2× size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight, FontStyle style, FontStretch stretch) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch-.weight">weight</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch-.style">style</a>, <a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle,xui.core.canvas.fontstretch-.stretch">stretch</a>)</dt>
+    <dd><p>The font size, weight, style, and stretch percentage.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight_Xui_Core_Canvas_FontStyle___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight,Xui.Core.Canvas.FontStyle})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight, FontStyle style))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from size, weight, and style.
+Uses normal stretch and line height = 1.2× size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight, FontStyle style) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle-.weight">weight</a>, <a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight,xui.core.canvas.fontstyle-.style">style</a>)</dt>
+    <dd><p>The font size, weight, and style.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xui_Core_Canvas_Font_op_Implicit_" data-uid="Xui.Core.Canvas.Font.op_Implicit*"></a>
+
+  <h3 id="Xui_Core_Canvas_Font_op_Implicit_System_ValueTuple_System_Single_Xui_Core_Canvas_FontWeight___Xui_Core_Canvas_Font" data-uid="Xui.Core.Canvas.Font.op_Implicit(System.ValueTuple{System.Single,Xui.Core.Canvas.FontWeight})~Xui.Core.Canvas.Font">
+  implicit operator Font((float size, FontWeight weight))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implicitly creates a <a class="xref" href="Xui.Core.Canvas.Font.html">Font</a> from a font size and weight.
+Uses normal style, normal stretch, and line height = 1.2× size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Font((float size, FontWeight weight) tuple)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tuple</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight-.size">size</a>, <a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,xui.core.canvas.fontweight-.weight">weight</a>)</dt>
+    <dd><p>The font size and font weight.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xui.Core.Canvas.Font.html">Font</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/Font.cs/#L17" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/Font.ValueTuple.cs/#L3" class="edit-link">Edit this page</a>
         </div>
 
 

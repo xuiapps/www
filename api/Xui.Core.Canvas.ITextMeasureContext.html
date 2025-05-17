@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface ITextMeasureContext | XUI APPS ">
       
-      <meta name="description" content="Provides functionality for measuring text and setting font properties. Mirrors the measurement behavior of the HTML5 Canvas 2D context.">
+      <meta name="description" content="Provides functionality for measuring text and setting font properties. Mirrors the measurement behavior of the HTML5 Canvas 2D context, but returns a full  structure for advanced layout.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/main/apiSpec/new?filename=Xui_Core_Canvas_ITextMeasureContext.md&amp;value=---%0Auid%3A%20Xui.Core.Canvas.ITextMeasureContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/new/font/apiSpec/new?filename=Xui_Core_Canvas_ITextMeasureContext.md&amp;value=---%0Auid%3A%20Xui.Core.Canvas.ITextMeasureContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Xui_Core_Canvas_ITextMeasureContext" data-uid="Xui.Core.Canvas.ITextMeasureContext" class="text-break">
-Interface ITextMeasureContext  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Interface ITextMeasureContext  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,8 @@ Interface ITextMeasureContext  <a class="header-action link-secondary" title="Vi
   </div>
 
   <div class="markdown summary"><p>Provides functionality for measuring text and setting font properties.
-Mirrors the measurement behavior of the HTML5 Canvas 2D context.</p>
+Mirrors the measurement behavior of the HTML5 Canvas 2D context,
+but returns a full <a class="xref" href="Xui.Core.Canvas.TextMetrics.html">TextMetrics</a> structure for advanced layout.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -126,15 +127,16 @@ Mirrors the measurement behavior of the HTML5 Canvas 2D context.</p>
 
   <h3 id="Xui_Core_Canvas_ITextMeasureContext_MeasureText_System_String_" data-uid="Xui.Core.Canvas.ITextMeasureContext.MeasureText(System.String)">
   MeasureText(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Measures the width and height of the specified text string using the current font.</p>
+  <div class="markdown level1 summary"><p>Measures the layout and bounding box metrics of the specified text string
+using the current font.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector MeasureText(string text)</code></pre>
+    <pre><code class="lang-csharp hljs">TextMetrics MeasureText(string text)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -146,9 +148,9 @@ Mirrors the measurement behavior of the HTML5 Canvas 2D context.</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a></dt>
-    <dd><p>A <a class="xref" href="Xui.Core.Math2D.Vector.html">Vector</a> representing the size of the rendered text.
-Typically, X is width and Y is line height or baseline ascent.</p>
+    <dt><a class="xref" href="Xui.Core.Canvas.TextMetrics.html">TextMetrics</a></dt>
+    <dd><p>A <a class="xref" href="Xui.Core.Canvas.TextMetrics.html">TextMetrics</a> structure containing both string-specific
+and font-wide metrics.</p>
 </dd>
   </dl>
 
@@ -166,7 +168,7 @@ Typically, X is width and Y is line height or baseline ascent.</p>
 
   <h3 id="Xui_Core_Canvas_ITextMeasureContext_SetFont_Xui_Core_Canvas_Font_" data-uid="Xui.Core.Canvas.ITextMeasureContext.SetFont(Xui.Core.Canvas.Font)">
   SetFont(Font)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the font used for all subsequent text drawing and measurement operations.</p>
@@ -199,7 +201,7 @@ Typically, X is width and Y is line height or baseline ascent.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/font/Xui/Core/Core/Canvas/ITextMeasureContext.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

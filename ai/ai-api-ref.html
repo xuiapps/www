@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/blob/main/www/ai/ai-api-ref.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/xuiapps/code/blob/font/www/ai/ai-api-ref.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="xui-api-reference-for-ai-consumption">Xui API Reference for AI Consumption</h1>
 
-<p><em>Generated on 2025-05-06 18:41 UTC</em></p>
+<p><em>Generated on 2025-05-17 10:29 UTC</em></p>
 <p>This document is an automatically generated API reference extracted directly from the Xui source code.
 It is optimized for AI models to efficiently understand the framework.</p>
 <h2 id="assembly-core">Assembly: Core</h2>
@@ -2231,6 +2231,34 @@ public enum FillRule
     EvenOdd
 }
 </code></pre>
+<h3 id="canvasfontconstantscs">Canvas/Font.Constants.cs</h3>
+<pre><code class="lang-csharp">namespace Xui.Core.Canvas;
+public ref partial struct Font
+{
+#pragma warning disable CS1591
+    // FontWeight re-exports
+    public static readonly FontWeight Thin = FontWeight.Thin;
+    public static readonly FontWeight ExtraLight = FontWeight.ExtraLight;
+    public static readonly FontWeight Light = FontWeight.Light;
+    public static readonly FontWeight Medium = FontWeight.Medium;
+    public static readonly FontWeight SemiBold = FontWeight.SemiBold;
+    public static readonly FontWeight Bold = FontWeight.Bold;
+    public static readonly FontWeight ExtraBold = FontWeight.ExtraBold;
+    public static readonly FontWeight Black = FontWeight.Black;
+    // FontStretch re-exports
+    public static readonly FontStretch UltraCondensed = FontStretch.UltraCondensed;
+    public static readonly FontStretch ExtraCondensed = FontStretch.ExtraCondensed;
+    public static readonly FontStretch Condensed = FontStretch.Condensed;
+    public static readonly FontStretch SemiCondensed = FontStretch.SemiCondensed;
+    public static readonly FontStretch SemiExpanded = FontStretch.SemiExpanded;
+    public static readonly FontStretch Expanded = FontStretch.Expanded;
+    public static readonly FontStretch ExtraExpanded = FontStretch.ExtraExpanded;
+    public static readonly FontStretch UltraExpanded = FontStretch.UltraExpanded;
+    // FontStyle re-exports
+    public static readonly FontStyle Italic = FontStyle.Italic;
+    public static readonly FontStyle Oblique = FontStyle.Oblique;
+}
+</code></pre>
 <h3 id="canvasfontcs">Canvas/Font.cs</h3>
 <pre><code class="lang-csharp">namespace Xui.Core.Canvas;
 /// &lt;summary&gt;
@@ -2247,7 +2275,7 @@ public enum FillRule
 /// &lt;item&gt;&lt;description&gt;Font weight is numeric and roughly corresponds to CSS values between 100–900.&lt;/description&gt;&lt;/item&gt;
 /// &lt;/list&gt;
 /// &lt;/remarks&gt;
-public ref struct Font
+public ref partial struct Font
 {
     /// &lt;summary&gt;
     /// The primary font family name. No fallback fonts are supported.
@@ -2261,6 +2289,7 @@ public ref struct Font
     /// The font style (normal, italic, oblique).
     /// &lt;/summary&gt;
     public FontStyle FontStyle;
+    // Not implemented: FontVariant
     /// &lt;summary&gt;
     /// The numeric weight of the font. Matches common web font weights:
     /// &lt;code&gt;
@@ -2275,11 +2304,349 @@ public ref struct Font
     /// 900 - Black
     /// &lt;/code&gt;
     /// &lt;/summary&gt;
-    public nfloat FontWeight;
+    public FontWeight FontWeight;
+    /// &lt;summary&gt;
+    /// The stretch or width of the font relative to its normal width (100%).
+    /// Values correspond to common CSS/OpenType stretch percentages:
+    /// &lt;code&gt;
+    ///  50 - Ultra Condensed
+    ///  62.5 - Extra Condensed
+    ///  75 - Condensed
+    ///  87.5 - Semi Condensed
+    /// 100 - Normal
+    /// 112.5 - Semi Expanded
+    /// 125 - Expanded
+    /// 150 - Extra Expanded
+    /// 200 - Ultra Expanded
+    /// &lt;/code&gt;
+    /// &lt;/summary&gt;
+    /// &lt;remarks&gt;
+    /// Font stretch controls the horizontal expansion or compression of glyphs.
+    /// A value of 100 indicates normal width. Values less than 100 indicate
+    /// condensed fonts; values greater than 100 indicate expanded fonts.
+    /// &lt;/remarks&gt;
+    public FontStretch FontStretch;
     /// &lt;summary&gt;
     /// The line height in user-space units. Controls vertical spacing between lines.
     /// &lt;/summary&gt;
     public nfloat LineHeight;
+    /// &lt;summary&gt;
+    /// Initializes a &lt;see cref = &quot;Font&quot;/&gt; with specified size and optional styling attributes.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;fontSize&quot;&gt;The font size in user-space units (e.g., pixels).&lt;/param&gt;
+    /// &lt;param name = &quot;fontFamily&quot;&gt;The font family (optional; no fallback list).&lt;/param&gt;
+    /// &lt;param name = &quot;fontWeight&quot;&gt;The font weight (default: &lt;see cref = &quot;FontWeight.Normal&quot;/&gt;).&lt;/param&gt;
+    /// &lt;param name = &quot;fontStyle&quot;&gt;The font style (default: &lt;see cref = &quot;FontStyle.Normal&quot;/&gt;).&lt;/param&gt;
+    /// &lt;param name = &quot;fontStretch&quot;&gt;The font stretch (default: &lt;see cref = &quot;FontStretch.Normal&quot;/&gt;).&lt;/param&gt;
+    /// &lt;param name = &quot;lineHeight&quot;&gt;The line height (default: 1.2 × font size).&lt;/param&gt;
+    public Font(nfloat fontSize, ReadOnlySpan&lt;string&gt; fontFamily = default, FontWeight? fontWeight = null, FontStyle? fontStyle = null, FontStretch? fontStretch = null, nfloat? lineHeight = null)
+    {
+    }
+}
+</code></pre>
+<h3 id="canvasfontvaluetuplecs">Canvas/Font.ValueTuple.cs</h3>
+<pre><code class="lang-csharp">namespace Xui.Core.Canvas;
+public ref partial struct Font
+{
+    /// &lt;summary&gt;
+    /// Implicitly creates a &lt;see cref = &quot;Font&quot;/&gt; from a font size.
+    /// Uses normal weight, normal style, normal stretch, and line height = 1.2× size.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;size&quot;&gt;The font size in user-space units (e.g., pixels).&lt;/param&gt;
+    public static implicit operator Font(float size)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Implicitly creates a &lt;see cref = &quot;Font&quot;/&gt; from a font size and weight.
+    /// Uses normal style, normal stretch, and line height = 1.2× size.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;tuple&quot;&gt;The font size and font weight.&lt;/param&gt;
+    public static implicit operator Font((float size, FontWeight weight) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Implicitly creates a &lt;see cref = &quot;Font&quot;/&gt; from a font size and style.
+    /// Uses normal weight, normal stretch, and line height = 1.2× size.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;tuple&quot;&gt;The font size and font style.&lt;/param&gt;
+    public static implicit operator Font((float size, FontStyle style) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Implicitly creates a &lt;see cref = &quot;Font&quot;/&gt; from size, weight, and style.
+    /// Uses normal stretch and line height = 1.2× size.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;tuple&quot;&gt;The font size, weight, and style.&lt;/param&gt;
+    public static implicit operator Font((float size, FontWeight weight, FontStyle style) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Implicitly creates a &lt;see cref = &quot;Font&quot;/&gt; from size, weight, and stretch.
+    /// Uses normal style and line height = 1.2× size.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;tuple&quot;&gt;The font size, weight, and stretch percentage.&lt;/param&gt;
+    public static implicit operator Font((float size, FontWeight weight, FontStretch stretch) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Implicitly creates a &lt;see cref = &quot;Font&quot;/&gt; from size, style, and stretch.
+    /// Uses normal weight and line height = 1.2× size.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;tuple&quot;&gt;The font size, style, and stretch percentage.&lt;/param&gt;
+    public static implicit operator Font((float size, FontStyle style, FontStretch stretch) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Implicitly creates a &lt;see cref = &quot;Font&quot;/&gt; from size, weight, style, and stretch.
+    /// Uses line height = 1.2× size.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;tuple&quot;&gt;The font size, weight, style, and stretch percentage.&lt;/param&gt;
+    public static implicit operator Font((float size, FontWeight weight, FontStyle style, FontStretch stretch) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Creates a &lt;see cref = &quot;Font&quot;/&gt; from size and line height.
+    /// &lt;/summary&gt;
+    public static implicit operator Font((float size, float lineHeight) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Creates a &lt;see cref = &quot;Font&quot;/&gt; from size, weight, and line height.
+    /// &lt;/summary&gt;
+    public static implicit operator Font((float size, FontWeight weight, float lineHeight) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Creates a &lt;see cref = &quot;Font&quot;/&gt; from size, style, and line height.
+    /// &lt;/summary&gt;
+    public static implicit operator Font((float size, FontStyle style, float lineHeight) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Creates a &lt;see cref = &quot;Font&quot;/&gt; from size, weight, style, and line height.
+    /// &lt;/summary&gt;
+    public static implicit operator Font((float size, FontWeight weight, FontStyle style, float lineHeight) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Creates a &lt;see cref = &quot;Font&quot;/&gt; from size, weight, stretch, and line height.
+    /// &lt;/summary&gt;
+    public static implicit operator Font((float size, FontWeight weight, FontStretch stretch, float lineHeight) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Creates a &lt;see cref = &quot;Font&quot;/&gt; from size, style, stretch, and line height.
+    /// &lt;/summary&gt;
+    public static implicit operator Font((float size, FontStyle style, FontStretch stretch, float lineHeight) tuple)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Creates a &lt;see cref = &quot;Font&quot;/&gt; from size, weight, style, stretch, and line height.
+    /// &lt;/summary&gt;
+    public static implicit operator Font((float size, FontWeight weight, FontStyle style, FontStretch stretch, float lineHeight) tuple)
+    {
+    }
+}
+</code></pre>
+<h3 id="canvasfontmetricscs">Canvas/FontMetrics.cs</h3>
+<pre><code class="lang-csharp">namespace Xui.Core.Canvas;
+/// &lt;summary&gt;
+/// Represents font-defined metrics used for vertical alignment and em box sizing.
+/// These values are constant for a given font and size.
+/// &lt;/summary&gt;
+public readonly struct FontMetrics
+{
+    /// &lt;summary&gt;
+    /// Maximum ascent defined by the font (not necessarily used glyphs).
+    /// &lt;/summary&gt;
+    public readonly nfloat FontBoundingBoxAscent;
+    /// &lt;summary&gt;
+    /// Maximum descent defined by the font.
+    /// &lt;/summary&gt;
+    public readonly nfloat FontBoundingBoxDescent;
+    /// &lt;summary&gt;
+    /// Height from baseline to top of the em square.
+    /// &lt;/summary&gt;
+    public readonly nfloat EmHeightAscent;
+    /// &lt;summary&gt;
+    /// Height from baseline to bottom of the em square.
+    /// &lt;/summary&gt;
+    public readonly nfloat EmHeightDescent;
+    /// &lt;summary&gt;
+    /// Position of the alphabetic baseline (typically 0, used for alignment).
+    /// &lt;/summary&gt;
+    public readonly nfloat AlphabeticBaseline;
+    /// &lt;summary&gt;
+    /// Vertical position of the hanging baseline (used in scripts like Devanagari).
+    /// &lt;/summary&gt;
+    public readonly nfloat HangingBaseline;
+    /// &lt;summary&gt;
+    /// Vertical position of the ideographic baseline (used in CJK layout).
+    /// &lt;/summary&gt;
+    public readonly nfloat IdeographicBaseline;
+    /// &lt;summary&gt;
+    /// Total line height used for layout purposes, typically equal to or greater than the font's em height.
+    /// This value reflects the line spacing set by the user or framework, not derived from glyph bounds.
+    /// &lt;/summary&gt;
+    public readonly nfloat LineHeight;
+    /// &lt;summary&gt;
+    /// Total height of the font bounding box.
+    /// &lt;/summary&gt;
+    public nfloat FontBoundingBoxHeight
+    {
+        get
+        {
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Total height of the em box.
+    /// &lt;/summary&gt;
+    public nfloat EmHeight
+    {
+        get
+        {
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Initializes a new &lt;see cref = &quot;FontMetrics&quot;/&gt; instance.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;fontAscent&quot;&gt;Maximum vertical extent above the baseline from the font’s bounding box.&lt;/param&gt;
+    /// &lt;param name = &quot;fontDescent&quot;&gt;Maximum vertical extent below the baseline from the font’s bounding box.&lt;/param&gt;
+    /// &lt;param name = &quot;emAscent&quot;&gt;Ascent to the top of the em square.&lt;/param&gt;
+    /// &lt;param name = &quot;emDescent&quot;&gt;Descent to the bottom of the em square.&lt;/param&gt;
+    /// &lt;param name = &quot;alphabeticBaseline&quot;&gt;Position of the alphabetic baseline (typically 0).&lt;/param&gt;
+    /// &lt;param name = &quot;hangingBaseline&quot;&gt;Position of the hanging baseline for scripts that use it.&lt;/param&gt;
+    /// &lt;param name = &quot;ideographicBaseline&quot;&gt;Position of the ideographic baseline for CJK layout.&lt;/param&gt;
+    /// &lt;param name = &quot;lineHeight&quot;&gt;Total line height to be used for layout spacing, including any extra leading or padding.&lt;/param&gt;
+    public FontMetrics(nfloat fontAscent, nfloat fontDescent, nfloat emAscent, nfloat emDescent, nfloat alphabeticBaseline, nfloat hangingBaseline, nfloat ideographicBaseline, nfloat lineHeight)
+    {
+    }
+}
+</code></pre>
+<h3 id="canvasfontstretchcs">Canvas/FontStretch.cs</h3>
+<pre><code class="lang-csharp">namespace Xui.Core.Canvas;
+/// &lt;summary&gt;
+/// Represents the stretch or width percentage of a font, relative to its normal width (100%).
+/// &lt;/summary&gt;
+/// &lt;remarks&gt;
+/// Values less than 100 represent condensed fonts; values greater than 100 are expanded.
+/// Font stretch supports comparison operators for ordering and matching.
+/// &lt;/remarks&gt;
+public readonly struct FontStretch : IComparable&lt;FontStretch&gt;, IEquatable&lt;FontStretch&gt;
+{
+    /// &lt;summary&gt;
+    /// The numeric percentage value of the font stretch.
+    /// &lt;/summary&gt;
+    public readonly nfloat Value;
+    /// &lt;summary&gt;
+    /// Initializes a new &lt;see cref = &quot;FontStretch&quot;/&gt; with the specified numeric value.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;value&quot;&gt;The numeric width percentage (e.g., 100 = normal).&lt;/param&gt;
+    public FontStretch(nfloat value) =&gt; Value = value;
+    /// &lt;summary&gt;Implicitly converts a &lt;see cref = &quot;FontStretch&quot;/&gt; to &lt;see cref = &quot;nfloat&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator nfloat(FontStretch stretch)
+    {
+    }
+
+    /// &lt;summary&gt;Implicitly converts a &lt;see cref = &quot;nfloat&quot;/&gt; to &lt;see cref = &quot;FontStretch&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator FontStretch(nfloat value)
+    {
+    }
+
+    /// &lt;summary&gt;Implicitly converts a &lt;see cref = &quot;float &quot;/&gt; to &lt;see cref = &quot;FontStretch&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator FontStretch(float value)
+    {
+    }
+
+    /// &lt;summary&gt;Implicitly converts an &lt;see cref = &quot;int &quot;/&gt; to &lt;see cref = &quot;FontStretch&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator FontStretch(int value)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if two stretch values are equal.&lt;/summary&gt;
+    public static bool operator ==(FontStretch a, FontStretch b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if two stretch values are not equal.&lt;/summary&gt;
+    public static bool operator !=(FontStretch a, FontStretch b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left stretch is less than the right.&lt;/summary&gt;
+    public static bool operator &lt;(FontStretch a, FontStretch b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left stretch is less than or equal to the right.&lt;/summary&gt;
+    public static bool operator &lt;=(FontStretch a, FontStretch b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left stretch is greater than the right.&lt;/summary&gt;
+    public static bool operator&gt;(FontStretch a, FontStretch b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left stretch is greater than or equal to the right.&lt;/summary&gt;
+    public static bool operator &gt;=(FontStretch a, FontStretch b)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public int CompareTo(FontStretch other)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public bool Equals(FontStretch other)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public override bool Equals(object? obj)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public override int GetHashCode()
+    {
+    }
+
+    // --- Predefined Stretch Values ---
+    /// &lt;summary&gt;Font stretch 50% – Ultra Condensed. Very narrow glyph width.&lt;/summary&gt;
+    public static readonly FontStretch UltraCondensed = 50;
+    /// &lt;summary&gt;Font stretch 62.5% – Extra Condensed. Narrower than Condensed.&lt;/summary&gt;
+    public static readonly FontStretch ExtraCondensed = 62.5f;
+    /// &lt;summary&gt;Font stretch 75% – Condensed. Common for space-constrained text.&lt;/summary&gt;
+    public static readonly FontStretch Condensed = 75;
+    /// &lt;summary&gt;Font stretch 87.5% – Semi Condensed. Slightly narrower than normal.&lt;/summary&gt;
+    public static readonly FontStretch SemiCondensed = 87.5f;
+    /// &lt;summary&gt;Font stretch 100% – Normal. Default glyph width.&lt;/summary&gt;
+    public static readonly FontStretch Normal = 100;
+    /// &lt;summary&gt;Font stretch 112.5% – Semi Expanded. Slightly wider than normal.&lt;/summary&gt;
+    public static readonly FontStretch SemiExpanded = 112.5f;
+    /// &lt;summary&gt;Font stretch 125% – Expanded. Wider glyph appearance.&lt;/summary&gt;
+    public static readonly FontStretch Expanded = 125;
+    /// &lt;summary&gt;Font stretch 150% – Extra Expanded. Significantly wider.&lt;/summary&gt;
+    public static readonly FontStretch ExtraExpanded = 150;
+    /// &lt;summary&gt;Font stretch 200% – Ultra Expanded. Very wide glyphs.&lt;/summary&gt;
+    public static readonly FontStretch UltraExpanded = 200;
 }
 </code></pre>
 <h3 id="canvasfontstylecs">Canvas/FontStyle.cs</h3>
@@ -2378,6 +2745,116 @@ public struct FontStyle
     public static FontStyle CustomOblique(nfloat obliqueAngle)
     {
     }
+}
+</code></pre>
+<h3 id="canvasfontweightcs">Canvas/FontWeight.cs</h3>
+<pre><code class="lang-csharp">namespace Xui.Core.Canvas;
+/// &lt;summary&gt;
+/// Represents the numeric weight of a font, corresponding to CSS font weights (100–900).
+/// &lt;/summary&gt;
+/// &lt;remarks&gt;
+/// Font weights are numeric and allow comparison using operators like &lt;c&gt;&amp;lt;&lt;/c&gt;, &lt;c&gt;&amp;gt;=&lt;/c&gt;, etc.
+/// &lt;/remarks&gt;
+public readonly struct FontWeight : IComparable&lt;FontWeight&gt;, IEquatable&lt;FontWeight&gt;
+{
+    /// &lt;summary&gt;
+    /// The numeric value of the font weight.
+    /// &lt;/summary&gt;
+    public readonly nfloat Value;
+    /// &lt;summary&gt;
+    /// Creates a new &lt;see cref = &quot;FontWeight&quot;/&gt; with the specified numeric value.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;value&quot;&gt;The numeric font weight value.&lt;/param&gt;
+    public FontWeight(nfloat value) =&gt; Value = value;
+    /// &lt;summary&gt;Implicitly converts a &lt;see cref = &quot;FontWeight&quot;/&gt; to &lt;see cref = &quot;nfloat&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator nfloat(FontWeight weight)
+    {
+    }
+
+    /// &lt;summary&gt;Implicitly converts a &lt;see cref = &quot;nfloat&quot;/&gt; to &lt;see cref = &quot;FontWeight&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator FontWeight(nfloat value)
+    {
+    }
+
+    /// &lt;summary&gt;Implicitly converts a &lt;see cref = &quot;float &quot;/&gt; to &lt;see cref = &quot;FontWeight&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator FontWeight(float value)
+    {
+    }
+
+    /// &lt;summary&gt;Implicitly converts an &lt;see cref = &quot;int &quot;/&gt; to &lt;see cref = &quot;FontWeight&quot;/&gt;.&lt;/summary&gt;
+    public static implicit operator FontWeight(int value)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if two font weights are equal.&lt;/summary&gt;
+    public static bool operator ==(FontWeight a, FontWeight b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if two font weights are not equal.&lt;/summary&gt;
+    public static bool operator !=(FontWeight a, FontWeight b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left font weight is less than the right.&lt;/summary&gt;
+    public static bool operator &lt;(FontWeight a, FontWeight b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left font weight is less than or equal to the right.&lt;/summary&gt;
+    public static bool operator &lt;=(FontWeight a, FontWeight b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left font weight is greater than the right.&lt;/summary&gt;
+    public static bool operator&gt;(FontWeight a, FontWeight b)
+    {
+    }
+
+    /// &lt;summary&gt;Returns &lt;c&gt;true&lt;/c&gt; if the left font weight is greater than or equal to the right.&lt;/summary&gt;
+    public static bool operator &gt;=(FontWeight a, FontWeight b)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public int CompareTo(FontWeight other)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public bool Equals(FontWeight other)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public override bool Equals(object? obj)
+    {
+    }
+
+    /// &lt;inheritdoc/&gt;
+    public override int GetHashCode()
+    {
+    }
+
+    // --- Predefined Weights ---
+    /// &lt;summary&gt;Font weight 100 – Thin. The lightest possible weight.&lt;/summary&gt;
+    public static readonly FontWeight Thin = 100;
+    /// &lt;summary&gt;Font weight 200 – Extra Light. Slightly heavier than Thin.&lt;/summary&gt;
+    public static readonly FontWeight ExtraLight = 200;
+    /// &lt;summary&gt;Font weight 300 – Light. Common for minimalist design.&lt;/summary&gt;
+    public static readonly FontWeight Light = 300;
+    /// &lt;summary&gt;Font weight 400 – Normal. Standard weight for body text.&lt;/summary&gt;
+    public static readonly FontWeight Normal = 400;
+    /// &lt;summary&gt;Font weight 500 – Medium. Slightly heavier than normal.&lt;/summary&gt;
+    public static readonly FontWeight Medium = 500;
+    /// &lt;summary&gt;Font weight 600 – Semi Bold. Between medium and bold.&lt;/summary&gt;
+    public static readonly FontWeight SemiBold = 600;
+    /// &lt;summary&gt;Font weight 700 – Bold. Common for emphasis and headings.&lt;/summary&gt;
+    public static readonly FontWeight Bold = 700;
+    /// &lt;summary&gt;Font weight 800 – Extra Bold. Heavier than Bold.&lt;/summary&gt;
+    public static readonly FontWeight ExtraBold = 800;
+    /// &lt;summary&gt;Font weight 900 – Black. The heaviest available weight.&lt;/summary&gt;
+    public static readonly FontWeight Black = 900;
 }
 </code></pre>
 <h3 id="canvasgradientstopcs">Canvas/GradientStop.cs</h3>
@@ -2789,19 +3266,21 @@ public interface ITextDrawingContext : ITextMeasureContext
 namespace Xui.Core.Canvas;
 /// &lt;summary&gt;
 /// Provides functionality for measuring text and setting font properties.
-/// Mirrors the measurement behavior of the HTML5 Canvas 2D context.
+/// Mirrors the measurement behavior of the HTML5 Canvas 2D context,
+/// but returns a full &lt;see cref = &quot;TextMetrics&quot;/&gt; structure for advanced layout.
 /// &lt;/summary&gt;
 public interface ITextMeasureContext
 {
     /// &lt;summary&gt;
-    /// Measures the width and height of the specified text string using the current font.
+    /// Measures the layout and bounding box metrics of the specified text string
+    /// using the current font.
     /// &lt;/summary&gt;
     /// &lt;param name = &quot;text&quot;&gt;The text string to measure.&lt;/param&gt;
     /// &lt;returns&gt;
-    /// A &lt;see cref = &quot;Vector&quot;/&gt; representing the size of the rendered text.
-    /// Typically, X is width and Y is line height or baseline ascent.
+    /// A &lt;see cref = &quot;TextMetrics&quot;/&gt; structure containing both string-specific
+    /// and font-wide metrics.
     /// &lt;/returns&gt;
-    Vector MeasureText(string text);
+    TextMetrics MeasureText(string text);
     /// &lt;summary&gt;
     /// Sets the font used for all subsequent text drawing and measurement operations.
     /// &lt;/summary&gt;
@@ -2927,6 +3406,59 @@ public enum LineJoin
     /// Lines are joined with a beveled corner by connecting the outer corners of the strokes.
     /// &lt;/summary&gt;
     Bevel = 2
+}
+</code></pre>
+<h3 id="canvaslinemetricscs">Canvas/LineMetrics.cs</h3>
+<pre><code class="lang-csharp">namespace Xui.Core.Canvas;
+/// &lt;summary&gt;
+/// Represents text layout metrics that depend on the specific string being measured.
+/// Includes actual bounding box and visual advance width.
+/// &lt;/summary&gt;
+public readonly struct LineMetrics
+{
+    /// &lt;summary&gt;
+    /// Advance width of the string, including kerning and shaping.
+    /// This is how far the cursor should advance after drawing the text.
+    /// &lt;/summary&gt;
+    public readonly nfloat Width;
+    /// &lt;summary&gt;
+    /// Distance from the text origin to the furthest left pixel of any glyph.
+    /// May be negative for italic or overhanging glyphs.
+    /// &lt;/summary&gt;
+    public readonly nfloat ActualBoundingBoxLeft;
+    /// &lt;summary&gt;
+    /// Distance from the text origin to the furthest right pixel of any glyph.
+    /// &lt;/summary&gt;
+    public readonly nfloat ActualBoundingBoxRight;
+    /// &lt;summary&gt;
+    /// Distance from the baseline to the topmost pixel of any glyph.
+    /// &lt;/summary&gt;
+    public readonly nfloat ActualBoundingBoxAscent;
+    /// &lt;summary&gt;
+    /// Distance from the baseline to the bottommost pixel of any glyph.
+    /// &lt;/summary&gt;
+    public readonly nfloat ActualBoundingBoxDescent;
+    /// &lt;summary&gt;
+    /// Full height of the visual bounding box (ascent + descent).
+    /// &lt;/summary&gt;
+    public nfloat ActualHeight
+    {
+        get
+        {
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Initializes a new &lt;see cref = &quot;LineMetrics&quot;/&gt; instance.
+    /// &lt;/summary&gt;
+    /// &lt;param name = &quot;width&quot;&gt;Advance width of the rendered text.&lt;/param&gt;
+    /// &lt;param name = &quot;left&quot;&gt;Furthest left pixel offset relative to the origin.&lt;/param&gt;
+    /// &lt;param name = &quot;right&quot;&gt;Furthest right pixel offset relative to the origin.&lt;/param&gt;
+    /// &lt;param name = &quot;ascent&quot;&gt;Maximum pixel height above the baseline.&lt;/param&gt;
+    /// &lt;param name = &quot;descent&quot;&gt;Maximum pixel depth below the baseline.&lt;/param&gt;
+    public LineMetrics(nfloat width, nfloat left, nfloat right, nfloat ascent, nfloat descent)
+    {
+    }
 }
 </code></pre>
 <h3 id="canvaspaintstylecs">Canvas/PaintStyle.cs</h3>
@@ -3361,6 +3893,59 @@ public enum TextBaseline
     /// The bottom of the em box is aligned with the drawing position.
     /// &lt;/summary&gt;
     Bottom
+}
+</code></pre>
+<h3 id="canvastextmetricscs">Canvas/TextMetrics.cs</h3>
+<pre><code class="lang-csharp">using Xui.Core.Math2D;
+
+namespace Xui.Core.Canvas;
+/// &lt;summary&gt;
+/// Composite structure combining string-specific and font-specific text metrics.
+/// Used for precise layout, alignment, and rendering across all platforms.
+/// &lt;/summary&gt;
+public readonly struct TextMetrics
+{
+    /// &lt;summary&gt;
+    /// Metrics specific to the given text string (shaping, kerning, bounding box).
+    /// &lt;/summary&gt;
+    public readonly LineMetrics Line;
+    /// &lt;summary&gt;
+    /// Metrics derived from the current font and size, independent of input string.
+    /// &lt;/summary&gt;
+    public readonly FontMetrics Font;
+    /// &lt;summary&gt;
+    /// Creates a new composite text metrics structure.
+    /// &lt;/summary&gt;
+    public TextMetrics(LineMetrics line, FontMetrics font)
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Returns the visual bounding box of the text string, relative to the origin.
+    /// X may be negative for glyphs that extend left of the starting point.
+    /// &lt;/summary&gt;
+    public Rect BoundingBox
+    {
+        get
+        {
+        }
+    }
+
+    public Size Size
+    {
+        get
+        {
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Implicitly converts the text metrics to a &lt;see cref = &quot;Size&quot;/&gt;, using the
+    /// advance width and total height of the string. The width corresponds to
+    /// how far the cursor should advance, not the visual width.
+    /// &lt;/summary&gt;
+    public static implicit operator Size(TextMetrics metrics)
+    {
+    }
 }
 </code></pre>
 <h3 id="canvaswindingcs">Canvas/Winding.cs</h3>
@@ -6676,11 +7261,15 @@ namespace Xui.Core.UI
         /// &lt;summary&gt;
         /// Gets or sets the font style (e.g., normal, italic, oblique).
         /// &lt;/summary&gt;
-        public FontStyle FontStyle { get; set; } = FontStyle.Italic;
+        public FontStyle FontStyle { get; set; } = FontStyle.Normal;
         /// &lt;summary&gt;
         /// Gets or sets the font weight (e.g., normal, bold, numeric weight).
         /// &lt;/summary&gt;
-        public int FontWeight { get; set; } = 600;
+        public FontWeight FontWeight { get; set; } = FontWeight.Normal;
+        /// &lt;summary&gt;
+        /// Gets or sets the font stretch (e.g., condensed, semi-expanded etc.).
+        /// &lt;/summary&gt;
+        public FontStretch FontStretch { get; set; } = FontStretch.Normal;
         /// &lt;summary&gt;
         /// Gets or sets the line height of the text.
         /// &lt;/summary&gt;
@@ -7061,7 +7650,7 @@ public abstract partial class View
     /// &lt;/summary&gt;
     /// &lt;param name = &quot;rect&quot;&gt;The rectangle defining the position and exact size for the view.&lt;/param&gt;
     /// &lt;returns&gt;The rectangle occupied by the arranged view.&lt;/returns&gt;
-    public Rect Arrange(Rect rect, IMeasureContext context)
+    public Rect Arrange(Rect rect, IMeasureContext context, Size? desiredSize = null)
     {
     }
 
@@ -7253,7 +7842,7 @@ public enum WritingMode : byte
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/xuiapps/code/blob/main/www/ai/ai-api-ref.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/xuiapps/code/blob/font/www/ai/ai-api-ref.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

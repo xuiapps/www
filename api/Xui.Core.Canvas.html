@@ -131,6 +131,17 @@ Structs
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.FontMetrics.html">FontMetrics</a></dt>
+      <dd><p>Represents font-defined metrics used for vertical alignment and em box sizing.
+These values are constant for a given font and size.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.FontStretch.html">FontStretch</a></dt>
+      <dd><p>Represents the stretch or width percentage of a font, relative to its normal width (100%).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Xui.Core.Canvas.FontStyle.html">FontStyle</a></dt>
       <dd><p>Represents a web-like font style, supporting <code>normal</code>, <code>italic</code>, and <code>oblique</code> variations.
 Global CSS styles like <code>inherit</code>, <code>unset</code>, and <code>initial</code> are not supported.</p>
@@ -138,9 +149,20 @@ Global CSS styles like <code>inherit</code>, <code>unset</code>, and <code>initi
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.FontWeight.html">FontWeight</a></dt>
+      <dd><p>Represents the numeric weight of a font, corresponding to CSS font weights (100–900).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Xui.Core.Canvas.GradientStop.html">GradientStop</a></dt>
       <dd><p>Represents a single color stop in a gradient, defined by an offset and a color.
 Used for both linear and radial gradients.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.LineMetrics.html">LineMetrics</a></dt>
+      <dd><p>Represents text layout metrics that depend on the specific string being measured.
+Includes actual bounding box and visual advance width.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -153,6 +175,12 @@ following the same behavior as the HTML5 Canvas <code>createLinearGradient()</co
       <dt><a class="xref" href="Xui.Core.Canvas.RadialGradient.html">RadialGradient</a></dt>
       <dd><p>Represents a radial gradient brush that transitions colors outward from one circle to another,
 similar to <code>createRadialGradient()</code> in the HTML5 Canvas API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xui.Core.Canvas.TextMetrics.html">TextMetrics</a></dt>
+      <dd><p>Composite structure combining string-specific and font-specific text metrics.
+Used for precise layout, alignment, and rendering across all platforms.</p>
 </dd>
     </dl>
     <h3 id="interfaces">
@@ -243,7 +271,8 @@ Also provides access to text measurement via <a class="xref" href="Xui.Core.Canv
     <dl class="jumplist">
       <dt><a class="xref" href="Xui.Core.Canvas.ITextMeasureContext.html">ITextMeasureContext</a></dt>
       <dd><p>Provides functionality for measuring text and setting font properties.
-Mirrors the measurement behavior of the HTML5 Canvas 2D context.</p>
+Mirrors the measurement behavior of the HTML5 Canvas 2D context,
+but returns a full <a class="xref" href="Xui.Core.Canvas.TextMetrics.html">TextMetrics</a> structure for advanced layout.</p>
 </dd>
     </dl>
     <dl class="jumplist">
